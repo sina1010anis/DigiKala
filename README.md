@@ -31,5 +31,6 @@ Used the latest versions now
 
 ## TODO :
 
--[ ] FrontEnd
-- - Index Page
+-[ ] v-1.0
+- Create DataBase
+
