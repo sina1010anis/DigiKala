@@ -1,0 +1,310 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: IRANS;
+    src: url("./font/IRANYekanBlack.ttf");
+}
+@font-face {
+    font-family: IRANY;
+    src: url("./font/IRANSansWeb.ttf");
+}
+a{
+    text-decoration: none;
+}
+#shit{
+    width: 100%;
+}
+#row{
+    width: 100%;
+    max-width: 1366px;
+    margin:auto ;
+}
+.header-index-page{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.group-basket{
+    width: 20px;
+    padding: 5px ;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+.group-icon-header{
+    display: inline-block;
+}
+.group-basket:hover{
+    background-color: #fff1f1;
+}
+.group-basket .fa-shopping-bag{
+    font-size: 20px;
+    padding-right: 17px;
+    border-right: 1px solid #E0E0E2;
+    color: #60646B;
+}
+.basket-number{
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    padding: 2px;
+    box-sizing: border-box;
+    font-size: 10px;
+    border-radius: 3px;
+    color: white;
+    background-color: #EF394E;
+}
+.btn-register{
+    padding: 8px 10px;
+    font-size: 13px;
+    bottom: 4px;
+    position: relative;
+    margin-left: 30px;
+    font-family: IRANY;
+    text-decoration: none;
+    border-radius: 5px ;
+    color: #b8b8b8;
+    border: 1px solid #E0E0E2;
+}
+.btn-register .fa-user{
+    position: relative;
+    top: 3px;
+    right: 2px;
+}
+.logo-index-page{
+    width: 147px;
+    position: relative;
+    top: -27px;
+    height: 93px;
+}
+.group-logo{
+    float: right;
+}
+.group-input-search{
+    float: right;
+    position: relative;
+}
+.group-input-search .fa-search{
+    position: absolute;
+    top: 12px;
+    color: #b1b1b1;
+    right: 12px;
+}
+.input-search-index-page{
+    width: 500px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: IRANY;
+    direction: rtl;
+    text-align: right;
+    padding: 5px 33px 5px 10px;
+    font-size: 12px;
+    background-color: #F0F0F1;
+}
+.btn-search-for-mobile , .group-btn-search-for-mobile{
+    display: none;
+}
+.view-card-min{
+    width: 280px;
+    position: absolute;
+    top: 41px;
+    z-index: 5;
+    background-color: white;
+    left: 0;
+    display: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(62, 62, 62,  0.5);
+}
+.view-card-min-count-product{
+    float: right;
+    text-align: right;
+    direction: rtl;
+    font-size: 12px;
+    color: #777777;
+    font-family: IRANY;
+}
+.view-card-min-view-all-product a{
+    color: #3e8fd7;
+    font-size: 12px;
+    font-family: IRANY;
+    margin-left: 15px;
+    text-decoration: none;
+}
+.view-card-min-view-all-product .fa-caret-left{
+    position: relative;
+    top: 1px;
+    right: 10px;
+}
+.line{
+    width: 100%;height: 1px;
+    background-color: #e9e9e9;
+    margin: 10px 0 0 0;
+}
+.view-products-card{
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+}
+.item-card{
+    padding: 0;
+    margin: 0;
+}
+.item-card li{
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
+    list-style: none;
+    height:100px ;
+    box-sizing:border-box;
+    padding: 10px;
+}
+.item-card li:nth-child(1){
+    margin-top: 0!important;
+}
+.item-card li img{
+    width: 80px;
+    height: 80px;
+    float: right;
+}
+.name-product-view-card{
+    direction: rtl;
+    font-family: IRANY;
+    font-size: 10px;
+    color: #838383;
+}
+.number-product-view-card{
+    direction: rtl;
+    float: right;
+    font-family: IRANY;
+    font-size: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #535353;
+}
+.delete-product-card{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #EF5562;
+}
+.view-total-price{
+    width: 100%;
+    height:62px ;
+}
+.total-price{
+    color: #8c8c8c;
+    font-size: 12px;
+    text-align: right;
+    direction: rtl;
+    line-height: 32px;
+    float: right;
+    font-family: IRANY;
+}
+.btn-buy-view-card{
+    padding: 5px 25px;
+    font-family: IRANY;
+    float: left;
+    color:white;
+    border-radius: 7px;
+    margin-top: 18px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color:#EF394E ;
+}
+.btn-icon-card-min{
+    background-color: unset;
+    border: none;
+    outline: none;
+}
+.view-list-user-panel{
+    width: 150px;
+    position: absolute;
+    top: 57px;
+    z-index: 5;
+    left: 81px;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: IRANY;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(62, 62, 62,  0.5);
+}
+.my-order-panel{
+    text-decoration: none!important;
+    color: #7a7a7a;
+    font-size: 12px;
+}
+.btn-logout{
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: IRANY;
+    margin-top: 10px;
+    background-color: #EF394E;
+}
+.view-list-user-panel span p{
+    font-size: 12px;
+}
+@media (max-width: 900px) {
+    .btn-register{
+        position: unset;
+    }
+    .group-input-search{
+        display: none;
+    }
+    .group-btn-search-for-mobile{
+        display: inline-block;
+    }
+    .btn-search-for-mobile{
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: 6px;
+        background-color: #f3f3f3;
+        right: 1px;
+        padding: 5px;
+        border-radius: 5px;
+        color: #777777;
+    }
+}
+@media (max-width: 450px){
+    .group-user span{
+        display: none;
+
+    }
+    .group-user .fa-user{
+        position: relative;
+        left: 30px;
+        top: 5px;
+        display: inline-block;
+        background-color: #f3f3f3;
+        right: 1px;
+        padding: 5px;
+        border-radius: 5px;
+        color: #777777;
+    }
+    .group-user a{
+        padding: unset;
+        font-size: unset;
+        margin-left: unset;
+        font-family: IRANY;
+        text-decoration: unset;
+        border-radius: unset ;
+        color: unset;
+        border: unset;
+    }
+}
