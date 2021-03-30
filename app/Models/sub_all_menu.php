@@ -11,8 +11,8 @@ class sub_all_menu extends Model
 
     protected $guarded =[];
 
-    public function sub_all_menus(){
-        return $this->belongsTo(sub_all_menu::class ,'all_menu_id' ,'id');
+    public function down_all_menus(){
+        return $this->hasMany(down_all_menu::class ,'sub_all_menu_id' ,'id');
     }
 
     public $timestamps =false;

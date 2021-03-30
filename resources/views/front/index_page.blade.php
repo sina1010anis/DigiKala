@@ -11,6 +11,8 @@
     <div id="row">
         <div id="app">
             @include('front.include.header')
+            @include('front.include.navbar')
+            @include('front.include.page_slider')
         </div>
     </div>
 </div>
