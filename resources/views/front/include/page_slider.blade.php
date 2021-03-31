@@ -1,7 +1,8 @@
 <div class="slider-page">
     <span class="span-right-slider-page slider">
-        <img src="{{'data/image/image banner/slider_1.jpg'}}" alt="">
-        <img src="{{'data/image/image banner/slider_2.jpg'}}" alt="">
+        @foreach($sliders as $slider)
+            <a href=""><img src="{{'data/image/image banner'.'/'.$slider->address}}" title="{{$slider->title}}" alt="{{$slider->alt}}"></a>
+        @endforeach
 {{--            <img width="100%" height="100%" style="border-radius: 5px" src="{{url('data/image/image banner/slider_1.jpg')}}" alt="">--}}
     </span>
     <span class="span-left-slider-page">

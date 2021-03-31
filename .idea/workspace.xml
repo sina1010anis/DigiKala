@@ -2,25 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/View/banner_slider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/min_slide_1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/min_slide_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/slider_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/slider_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/slider.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/slider_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/slider_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/slider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/include/products.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/include/page_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/page_slider.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/index_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/index_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/section/index_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/section/index_page.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +201,7 @@
       <workItem from="1617110754149" duration="1398000" />
       <workItem from="1617115191171" duration="9184000" />
       <workItem from="1617130997076" duration="431000" />
-      <workItem from="1617165015018" duration="1991000" />
+      <workItem from="1617165015018" duration="4786000" />
     </task>
     <servers />
   </component>

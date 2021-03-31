@@ -5,5 +5,6 @@
 @include('front.include.header')
 @include('front.include.navbar')
 @include('front.include.page_slider')
+@include('front.include.products')
 
 @endsection

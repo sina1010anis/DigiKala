@@ -36,4 +36,5 @@ Used the latest versions now
 - Index Page
 - - End Headre
 - - End NavBar
+- - End Slider
 
