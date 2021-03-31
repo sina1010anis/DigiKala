@@ -11,5 +11,6 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , min_menu::class);
         \Illuminate\Support\Facades\View::composer(['*'] , all_menu::class);
         \Illuminate\Support\Facades\View::composer(['*'] , sub_all_menu::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , banner_slider::class);
     }
 }

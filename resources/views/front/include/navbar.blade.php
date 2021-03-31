@@ -22,7 +22,7 @@
     </button>
 </nav>
 <div class="view-all-menu-item">
-    <div class="group-item-all-menu">
+    <div style="z-index: 2" class="group-item-all-menu">
         @foreach($sub_all_menus as $sub_all_menu)
             <span v-if="{{$sub_all_menu->all_menu_id}} == all_menu_id" class="group-item-select-menu">
             <h4> <i class="fas fa-angle-down"></i> {{$sub_all_menu->name}} </h4>
@@ -38,7 +38,8 @@
         </span>
         @endforeach
     </div>
-    <div class="group-item-navbar">
+    <div style="
+z-index: 2" class="group-item-navbar">
         <button class="none-btn" @click="hideMenuBar">
             <i class="fas fa-chevron-up icon-exit-all-menu"></i>
         </button>

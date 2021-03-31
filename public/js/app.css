@@ -1,0 +1,601 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: IRANS;
+    src: url(/fonts/IRANYekanBlack.ttf?2a305840abb4eceed90cc049cdb04aea);
+}
+
+@font-face {
+    font-family: IRANY;
+    src: url(/fonts/IRANSansWeb.ttf?84fda3e85b2ec3885be12fd7d550129a);
+}
+
+a {
+    text-decoration: none;
+}
+
+#shit {
+    width: 100%;
+}
+
+#row {
+    width: 100%;
+    max-width: 1366px;
+    margin: auto;
+}
+
+.header-index-page {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.group-basket {
+    width: 20px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+}
+
+.group-icon-header {
+    display: inline-block;
+}
+
+.group-basket:hover {
+    background-color: #fff1f1;
+}
+
+.group-basket .fa-shopping-bag {
+    font-size: 20px;
+    padding-right: 17px;
+    border-right: 1px solid #E0E0E2;
+    color: #60646B;
+}
+
+.basket-number {
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    padding: 2px;
+    box-sizing: border-box;
+    font-size: 10px;
+    border-radius: 3px;
+    color: white;
+    background-color: #EF394E;
+}
+
+.btn-register {
+    padding: 8px 10px;
+    font-size: 13px;
+    bottom: 4px;
+    position: relative;
+    margin-left: 30px;
+    font-family: IRANY;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #b8b8b8;
+    border: 1px solid #E0E0E2;
+}
+
+.btn-register .fa-user {
+    position: relative;
+    top: 3px;
+    right: 2px;
+}
+
+.logo-index-page {
+    width: 132px;
+    position: relative;
+    top: 2px;
+    left: 8px;
+    height: 37px;
+}
+
+.group-logo {
+    float: right;
+}
+
+.group-input-search {
+    float: right;
+    position: relative;
+}
+
+.group-input-search .fa-search {
+    position: absolute;
+    top: 12px;
+    color: #b1b1b1;
+    right: 12px;
+}
+
+.input-search-index-page {
+    width: 500px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-family: IRANY;
+    direction: rtl;
+    text-align: right;
+    padding: 5px 33px 5px 10px;
+    font-size: 12px;
+    background-color: #F0F0F1;
+}
+
+.btn-search-for-mobile, .group-btn-search-for-mobile {
+    display: none;
+}
+
+.view-card-min {
+    width: 280px;
+    position: absolute;
+    top: 41px;
+    z-index: 5;
+    background-color: white;
+    left: 0;
+    display: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(62, 62, 62, 0.5);
+}
+
+.view-card-min-count-product {
+    float: right;
+    text-align: right;
+    direction: rtl;
+    font-size: 12px;
+    color: #777777;
+    font-family: IRANY;
+}
+
+.view-card-min-view-all-product a {
+    color: #3e8fd7;
+    font-size: 12px;
+    font-family: IRANY;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.view-card-min-view-all-product .fa-caret-left {
+    position: relative;
+    top: 1px;
+    right: 10px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: #e9e9e9;
+    margin: 10px 0 0 0;
+}
+
+.view-products-card {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+}
+
+.item-card {
+    padding: 0;
+    margin: 0;
+}
+
+.item-card li {
+    margin-top: 5px;
+    width: 100%;
+    position: relative;
+    list-style: none;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.item-card li:nth-child(1) {
+    margin-top: 0 !important;
+}
+
+.item-card li img {
+    width: 80px;
+    height: 80px;
+    float: right;
+}
+
+.name-product-view-card {
+    direction: rtl;
+    font-family: IRANY;
+    font-size: 10px;
+    color: #838383;
+}
+
+.number-product-view-card {
+    direction: rtl;
+    float: right;
+    font-family: IRANY;
+    font-size: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: #535353;
+}
+
+.delete-product-card {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #EF5562;
+}
+
+.view-total-price {
+    width: 100%;
+    height: 62px;
+}
+
+.total-price {
+    color: #8c8c8c;
+    font-size: 12px;
+    text-align: right;
+    direction: rtl;
+    line-height: 32px;
+    float: right;
+    font-family: IRANY;
+}
+
+.btn-buy-view-card {
+    padding: 5px 25px;
+    font-family: IRANY;
+    float: left;
+    color: white;
+    border-radius: 7px;
+    margin-top: 18px;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: #EF394E;
+}
+
+.btn-icon-card-min {
+    background-color: unset;
+    border: none;
+    outline: none;
+}
+
+.view-list-user-panel {
+    width: 150px;
+    position: absolute;
+    top: 57px;
+    z-index: 5;
+    left: 81px;
+    background-color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: IRANY;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(62, 62, 62, 0.5);
+}
+
+.my-order-panel {
+    text-decoration: none !important;
+    color: #7a7a7a;
+    font-size: 12px;
+}
+
+.btn-logout {
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: IRANY;
+    margin-top: 10px;
+    background-color: #EF394E;
+}
+
+.nax-bar-index-page {
+    width: 100%;
+    height: 50px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0px 10px 10px rgba(226, 226, 226, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.view-list-user-panel span p {
+    font-size: 12px;
+}
+
+.group-location i {
+    color: #3b3b3b;
+    position: relative;
+    top: 2px;
+}
+
+.group-location {
+    padding: 5px;
+}
+
+.group-menu-index-page {
+    float: right;
+}
+
+.ul-nav-bar {
+    margin: 0;
+    padding: 0;
+}
+
+.ul-nav-bar li {
+    float: right;
+    padding: 7px 16px;
+    font-family: IRANY;
+    font-size: 12px;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+}
+
+.ul-nav-bar li:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    opacity: 0;
+    background-color: #EF394E;
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    transition: 0.4s;
+}
+
+.ul-nav-bar li:hover:after {
+    content: '';
+    opacity: 1;
+    width: 100%;
+}
+
+.group-location span {
+    font-size: 12px;
+    color: #3b3b3b;
+    position: relative;
+    bottom: 2px;
+    left: 10px;
+    font-family: IRANSansWeb;
+}
+
+.group-location {
+    width: 90px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.group-location:hover {
+    background-color: #fff1f1;
+}
+
+.li-action-edit {
+    padding-left: 50px;
+    border-left: 1px solid #ececec;
+}
+
+.btn-btn-search-for-mobile-menu {
+    background-color: unset;
+    border: none;
+    outline: none;
+    float: right;
+}
+.logo-index-page-menu{
+    display: none;
+}
+.blur-web{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #464646;
+    top: 0;
+    display: none;
+    left: 0;
+    opacity: 42.5%;
+}
+.view-all-menu-item{
+    width: 100%;
+    height: auto;
+    display: none;
+    position: relative;
+    background-color: red;
+}
+.group-item-all-menu{
+    width: 80%;
+    position: absolute;
+    top: 0;
+    max-height: 380px;
+    min-height: 380px;
+    left:0 ;
+    box-sizing: border-box;
+    padding: 5px 18px;
+    display: inline-block;
+    background-color: #ffffff;
+}
+.group-item-navbar{
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right:0 ;
+    display: inline-block;
+    height: auto;
+    background-color: #ffffff;
+}
+.group-item-navbar div{
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #6b6b6b;
+    font-family: IRANY;
+
+}
+.group-item-navbar div:hover{
+    background-color: #fcfcfc;
+}
+.group-item-select-menu{
+    float: right;
+    margin: 0 10px;
+}
+.group-item-select-menu *{
+    font-family: IRANY;
+}
+.group-item-select-menu p{
+    font-size: 12px;
+    cursor: pointer;
+}
+.group-item-select-menu p:hover {
+    color: #EF5461;
+}
+.group-item-select-menu h4{
+    font-size: 15px;
+    cursor: default;
+}
+.icon-exit-all-menu{
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    left: 0;
+    padding: 5px;
+    color: #727272;
+}
+.icon-exit-all-menu:hover{
+    background-color: #ffe7e7;
+    color: #474747;
+}
+.none-btn{
+    background-color: unset;
+    border:none ;
+    outline: none;
+}
+.slider-page{
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    padding: 10px;
+    z-index: 2;
+}
+.span-right-slider-page{
+    width: 64.5%;
+    height: 100%;
+    float: right;
+}
+.span-left-slider-page{
+    width: 34.5%;
+    height: 100%;
+    float: left;
+}
+.slider-page-for-img-left{
+    width: 100%;
+    height: 48.6%;
+    margin: 5px 0;
+    float: left;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.slider-page-for-img-left img{
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 900px) {
+    .view-all-menu-item{
+        display: none;
+    }
+    .logo-index-page-menu{
+        left: 20%;
+        display: inline-block;
+    }
+    .ul-nav-bar li {
+        float: unset;
+        text-align: right;
+    }
+
+    .li-action-edit {
+        padding-left: unset;
+        border-left: unset;
+    }
+
+    .group-menu-index-page {
+        background-color: white;
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 250px;
+        padding: 10px 20px;
+        z-index: 10;
+        box-shadow: 1px 1px 10px rgba(93, 93, 93, 0.5);
+        box-sizing: border-box;
+        top: 0;
+        right: 0;
+        /*display: none;*/
+    }
+
+    .group-menu-index-page li {
+        margin: 20px 0 !important;
+    }
+
+    .btn-register {
+        position: unset;
+    }
+
+    .group-input-search {
+        display: none;
+    }
+
+    .group-btn-search-for-mobile {
+        display: inline-block;
+    }
+
+    .btn-search-for-mobile {
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: 6px;
+        background-color: #f3f3f3;
+        right: 1px;
+        padding: 5px;
+        border-radius: 5px;
+        color: #777777;
+    }
+}
+
+@media (max-width: 450px) {
+    .group-user span {
+        display: none;
+
+    }
+
+    .group-user .fa-user {
+        position: relative;
+        left: 30px;
+        top: 5px;
+        display: inline-block;
+        background-color: #f3f3f3;
+        right: 1px;
+        padding: 5px;
+        border-radius: 5px;
+        color: #777777;
+    }
+
+    .group-user a {
+        padding: unset;
+        font-size: unset;
+        margin-left: unset;
+        font-family: IRANY;
+        text-decoration: unset;
+        border-radius: unset;
+        color: unset;
+        border: unset;
+    }
+}
+
