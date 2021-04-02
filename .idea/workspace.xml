@@ -2,72 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/View/banner_center.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/banner_up.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/discounted_products.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/market_product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/product_mobile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/spicer_product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/tools_mobile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/watch_product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/24.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/card.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/ex.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/ok.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_buy_good.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_center_1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_center_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_center_3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_center_4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_super_index_page.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_up_1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_up_2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_up_3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image banner/banner_up_4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/A10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/A70.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/A80.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/AKG.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/JBL.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/MIC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/S21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/SonyV.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/VR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/VR2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/be.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/ch10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/g10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/g5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/jbl1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/jbl2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/jbl3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/m3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/m4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/mi3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/mi4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/mi5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/ms10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/p1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/p2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/p3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/p4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/s10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/tools1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/tools2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/tools3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/tools4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/image product/z5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/include/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/digikala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/digikala.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/section/index_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/section/index_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,6 +146,8 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
     </include_path>
   </component>
   <component name="ProjectId" id="1qI22VOofM2wot3MkBKFVUDEhl7" />
@@ -264,6 +215,7 @@
       <workItem from="1617256166017" duration="6682000" />
       <workItem from="1617278280157" duration="4692000" />
       <workItem from="1617286395363" duration="4632000" />
+      <workItem from="1617371329247" duration="8548000" />
     </task>
     <servers />
   </component>

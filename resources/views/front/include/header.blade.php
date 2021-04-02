@@ -37,21 +37,21 @@
 
     @if(!auth()->check())
         <div class="group-user group-icon-header">
-            <a class="btn-register" href="">
+            <a class="btn-register" href="{{route('login')}}">
                 <i class="fas fa-user"></i>
                 <span>ورود به حساب کاربری</span>
             </a>
         </div>
     @else
         <div class="group-user group-icon-header">
-            <button class="btn-register" style="background-color: unset;outline: none;cursor: pointer">
+            <button class="btn-register btn-register-ok" style="background-color: unset;outline: none;cursor: pointer">
                 <i class="fas fa-user"></i>
-                sina na
+                {{auth()->user()->name}}
             </button>
         </div>
         <div class="view-list-user-panel">
             <span>
-                <p align="right">sina na</p>
+                <p align="right">{{auth()->user()->name}}</p>
                 <p align="right"><span class="view-card-min-view-all-product"><a href=""> <i class="fas fa-caret-left"></i>مشاهده پروفایل</a></span></p>
             </span>
             <div class="line"></div>
@@ -61,7 +61,8 @@
                 </p>
             </a>
             <div class="line"></div>
-            <form action="">
+            <form action="{{route('logout')}}" method="post">
+                @csrf
                 <button class="btn-logout">خروج از حساب کاربری</button>
             </form>
         </div>

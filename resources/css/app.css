@@ -269,6 +269,7 @@ a {
 
 .view-list-user-panel {
     width: 150px;
+    display: none;
     position: absolute;
     top: 57px;
     z-index: 5;
@@ -864,6 +865,131 @@ footer .div-view-tb{
 }
 .group-et span li a{
     color: #484848!important;
+}
+.page-group-form{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.group-login-register{
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+}
+.group-logo-for-form-login-register img{
+    width: 100%;
+    margin: auto;
+    transform: scale(0.5);
+}
+.group-text-for-form-login-register h3{
+    text-align: right;
+    font-family:IRANYekan ;
+    color: #4a4a4a;
+}
+.text-right{
+    display: block;width: 100%;text-align: right
+}
+.group-input-for-login-register input[type=email],.group-input-for-login-register input[type=password],.group-input-for-login-register input[type=text]{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #d9d9d9;
+    font-family: IRANYekan;
+    border-radius: 5px;
+    text-align: right;
+    direction: rtl;
+    outline: none;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.input-register-S{
+    margin: 10px 0!important;
+}
+.label-form-register-login{
+    font-family: IRANYekan;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #8f8f8f;
+}
+.group-check-box-form-login{
+    margin-top: 10px;
+}
+.btn-form-for-login-register{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #EF394E;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-family: IRANYekan;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+.btn-forget-password{
+    color: #8f9fff;
+    font-family: IRANYekan;
+    font-size: 13px;
+}
+.group-icon-google-form-login-register{
+    padding: 30px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.group-icon-google-form-login-register i{
+    color: #39afef;
+    cursor: pointer;
+    font-size: 20px;
+}
+.invalid-feedback p{
+    text-align: center;
+    font-size: 13px;
+    color: #EF394E;
+    direction: rtl;
+    font-family: IRANYekan;
+}
+.err-input-form-register-login{
+    border: 1px solid #EF394E!important;
+}
+.input-pass input{
+    width: 48%!important;
+}
+.fl-right{
+    float: right;
+}
+
+.fl-left{
+    float: left;
+}
+.view-err{
+    background-color: #fffafa;
+    border-radius: 5px;
+}
+.view-err p{
+    text-align: center;
+    direction: rtl;
+    color: #ff1e1e;
+    margin: 0;
+    padding: 5px;
+    font-family: IRANYekan;
+}
+.p-el{
+    font-family: IRANYekan;
+    font-size: 10px;
+    color: #6d6d6d;
 }
 @media (max-width: 650px) {
     .group-et span{

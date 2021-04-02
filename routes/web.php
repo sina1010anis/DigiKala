@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.section.index_page');
-});
+Route::get('/', function () {return view('front.section.index_page');});
+Route::get('/google-login', [\App\Http\Controllers\auth::class , 'redirectToProvider'])->name('google_login');
+Route::get('/callback', [\App\Http\Controllers\auth::class , 'handleProviderCallback'])->name('callback');
 
 Auth::routes();
 

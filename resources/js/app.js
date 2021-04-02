@@ -35,6 +35,16 @@ const app = createApp({
         }
     },
     mounted() {
+        $(".btn-register-ok").hover(()=>{
+            $(".view-list-user-panel").stop().slideDown()
+        },()=>{
+            $(".view-list-user-panel").stop().slideUp()
+        })
+        $(".view-list-user-panel").hover(()=>{
+            $(".view-list-user-panel").stop().slideDown()
+        },()=>{
+            $(".view-list-user-panel").stop().slideUp()
+        })
         $('.responsive-group2').slick({
             dots: true,
             infinite: false,

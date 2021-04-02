@@ -1,73 +1,104 @@
-@extends('layouts.app')
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ورود</title>
+    <script src="https://kit.fontawesome.com/d4c29863c5.js" crossorigin="anonymous"></script>
+</head>
+<body style="background-color:white">
+<div id="shit">
+    <div id="row">
+        <div id="app">
+            <div class="page-group-form">
+                <div class="group-login-register">
+                    <div class="group-logo-for-form-login-register">
+                        <img src="{{url('data/image/digikala-3.png')}}" alt="">
+                    </div>
+                    <div class="group-text-for-form-login-register">
+                        <h3>ورود</h3>
+                    </div>
+                    <div class="group-input-for-login-register">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                            <div class="form-group row">
+                                <label for="email"
+                                       class="label-form-register-login text-right col-md-4 col-form-label text-md-right">{{ __('ادرس ایمیل') }}</label>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                                <div class="col-md-6">
+                                    <input value="{{old('email')}}"  class="@error('email') err-input-form-register-login @enderror" id="email" type="email" name="email" value="{{ old('email') }}">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
+                                    @error('email')
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+                                            <p>{{ $message }}</p>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                            <div class="form-group row">
+                                <label for="password"
+                                       class="label-form-register-login text-right col-md-4 col-form-label text-md-right">{{ __('رمز عبور') }}</label>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                <div class="col-md-6">
+                                    <input id="password" type="password"
+                                           class="form-control @error('password') err-input-form-register-login @enderror" name="password">
+
+                                    @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                            <p>{{ $message }}</p>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
-                    </form>
+
+                            <div class="form-group row group-check-box-form-login">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="remember"
+                                               id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                        <label style="position: relative;bottom: 3px"
+                                               class="label-form-register-login form-check-label" for="remember">
+                                            {{ __('منو به خاطر بسپار') }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" class="btn-form-for-login-register btn btn-primary">
+                                        {{ __('ورود به دیجی کالا') }}
+                                    </button>
+
+                                    @if (Route::has('password.request'))
+                                        <a class="text-right btn btn-link btn-forget-password"
+                                           href="{{ route('password.request') }}">
+                                            {{ __('فراموشی رمز عبور') }}
+                                        </a>
+                                        <a class="text-right btn btn-link btn-forget-password"
+                                           href="{{ route('register') }}">
+                                            {{ __('صفحه ثبت نام') }}
+                                        </a>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="group-icon-google-form-login-register">
+                                <a href="{{route('google_login')}}">
+                                    <i class="fab fa-google" title="ورود با حساب گوگل"></i>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-@endsection
+<script src="{{url('js/app.js')}}"></script>
+</body>
+</html>

@@ -116,6 +116,8 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/type" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/league/oauth1-client" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/socialite" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

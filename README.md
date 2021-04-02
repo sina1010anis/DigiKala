@@ -34,7 +34,9 @@ Used the latest versions now
 -[ ] v-1.0
 - Create DataBase
 - Index Page
-- - End Headre
+- - End Header
 - - End NavBar
 - - End Slider
+- - End Page Login
+- - End Page Register
 
