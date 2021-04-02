@@ -29,6 +29,11 @@ Used the latest versions now
 
 <hr>
 
+## TIPS :
+- <p style="font-family: IRANYekan;color: #ff3c3c">If it gets out of responsive mode by resizing the site, please refresh once</p>
+- - <p style="font-family: IRANYekan;color: #ff3c3c">اگر با تغییر سایز سایت از حالت واکنش گرا خارج شد لطفا یک بار رفرش کنید</p>
+    
+
 ## TODO :
 
 -[ ] v-1.0
