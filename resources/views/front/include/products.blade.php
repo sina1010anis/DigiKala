@@ -6,9 +6,10 @@
         <div class="view-product-buy-good-list">
             <div class="view-product-buy-good-list-all responsive">
                 @foreach($discounted_products as $discounted_product)
-                    <a href="#" class="view-product-buy-good-list-one">
+                    <a href="{{route('product.show' , ['slug'=>$discounted_product->slug])}}"
+                       class="view-product-buy-good-list-one">
                         <img src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
-                        <p class="title-view-product-buy-good-list-one">{{$discounted_product->name}}</p>
+                        <p class="view-products-slider-name" align="center">{{$discounted_product->name}}</p>
                         <div class="price-view-product-buy-good-list-one">
                             <span class="off-view-product-buy-good-list-one">{{$discounted_product->off}}%</span>
                             <span class="price-off-view-product-buy-good-list-one">{{$discounted_product->price}}</span>
@@ -38,9 +39,10 @@
         <div class="view-product-buy-good-list view-product-buy-good-list2">
             <div class="view-product-buy-good-list-all responsive">
                 @foreach($market_products as $discounted_product)
-                    <a href="#" class="view-product-buy-good-list-one">
+                    <a href="{{route('product.show' , ['slug'=>$discounted_product->slug])}}"
+                       class="view-product-buy-good-list-one">
                         <img src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
-                        <p class="title-view-product-buy-good-list-one">{{$discounted_product->name}}</p>
+                        <p class="view-products-slider-name" align="center">{{$discounted_product->name}}</p>
                         <div class="price-view-product-buy-good-list-one">
                             @if($discounted_product->off > 0)
                                 <span class="off-view-product-buy-good-list-one">{{$discounted_product->off}}%</span>
@@ -73,7 +75,7 @@
                     <span title="محصول test">
                         <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
-                        <p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p>
+                        <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
                             <div class="add-off-product">
                                 <a class="number-off-price">{{$mobile_product->off}}%</a>
@@ -100,25 +102,26 @@
                 <div class="responsive-group3">
                     @foreach($mobile_products as $mobile_product)
                         @if($mobile_product->off > 0)
-                            <div class="item-off-mobile">
-                                <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}" alt="">
-                                <p class="view-products-slider-name" align="center">متن تستی</p>
-                                <div class="add-off-product">
-                                    <a class="number-off-price">{{$mobile_product->off}}%</a>
-                                    <p class="view-products-slider-price-back-off">{{$mobile_product->price}} تومان</p>
+                                <div class="item-off-mobile">
+                                    <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}" alt="">
+                                    <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
+                                    <div class="add-off-product">
+                                        <a class="number-off-price">{{$mobile_product->off}}%</a>
+                                        <p class="view-products-slider-price-back-off">{{$mobile_product->price}}
+                                            تومان</p>
+                                    </div>
+
+                                    <?php
+                                    if ($mobile_product->off > 0) {
+                                        $price_back = $mobile_product->price * ($mobile_product->off / 100);
+                                        $price_next = $mobile_product->price - $price_back;
+                                        echo '<p class="view-products-slider-price">' . $price_next . 'تومان' . '</p>';
+                                    } else {
+                                        echo '<p class="view-products-slider-price">' . $mobile_product->price . 'تومان' . '</p>';
+                                    }
+
+                                    ?>
                                 </div>
-
-                                <?php
-                                if ($mobile_product->off > 0) {
-                                    $price_back = $mobile_product->price * ($mobile_product->off / 100);
-                                    $price_next = $mobile_product->price - $price_back;
-                                    echo '<p class="view-products-slider-price">' . $price_next . 'تومان' . '</p>';
-                                } else {
-                                    echo '<p class="view-products-slider-price">' . $mobile_product->price . 'تومان' . '</p>';
-                                }
-
-                                ?>
-                            </div>
                         @endif
                     @endforeach
                 </div>
@@ -142,7 +145,7 @@
                     <span title="محصول test">
                         <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
-                        <p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p>
+                        <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
                             <div class="add-off-product">
                                 <a class="number-off-price">{{$mobile_product->off}}%</a>
@@ -174,7 +177,7 @@
                     <span title="محصول test">
                         <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
-                        <p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p>
+                        <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
                             <div class="add-off-product">
                                 <a class="number-off-price">{{$mobile_product->off}}%</a>
@@ -206,7 +209,7 @@
                     <span title="محصول test">
                         <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
-                        <p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p>
+                        <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
                             <div class="add-off-product">
                                 <a class="number-off-price">{{$mobile_product->off}}%</a>

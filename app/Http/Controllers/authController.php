@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 
-class auth extends Controller
+class authController extends Controller
 {
     public function redirectToProvider()
     {

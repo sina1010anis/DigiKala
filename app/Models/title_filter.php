@@ -10,7 +10,7 @@ class title_filter extends Model
     use HasFactory;
     protected $guarded =[];
     public $timestamps= false;
-    public function all_menus(){
-        return $this->belongsTo(all_menu::class);
+    public function sub_menus(){
+        return $this->belongsTo(sub_all_menu::class);
     }
 }

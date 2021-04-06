@@ -40,7 +40,7 @@ Used the latest versions now
 
 ## TODO :
 
--[ ] v-1.0
+[ ] v-1.0
 - Create DataBase
 - Index Page
 - - End Header
@@ -48,4 +48,6 @@ Used the latest versions now
 - - End Slider
 - - End Page Login
 - - End Page Register
+- - End Product introduction
+- - End View Filter Page(imperfect)
 

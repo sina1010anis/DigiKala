@@ -17,5 +17,10 @@ class down_all_menu extends Model
     public function sub_all_menus(){
         return $this->belongsTo(sub_all_menu::class);
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     public $timestamps = false;
 }

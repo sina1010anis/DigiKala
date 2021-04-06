@@ -23,7 +23,7 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
-                            <div class="form-group row">
+                            <div>
                                 <div class="input-pass">
                                     <label for="password"
                                            class="label-form-register-login text-right col-md-4 col-form-label text-md-right"></label>
@@ -40,7 +40,7 @@
                                     <label for="password"
                                            class="label-form-register-login text-right col-md-4 col-form-label text-md-right"></label>
 
-                                    <div class="col-md-6">
+                                    <div >
                                         <input value="{{old('email')}}"  placeholder="ایمیل" id="password" type="email"
                                                class="input-register-S fl-left form-control @error('password') err-input-form-register-login @enderror"
                                                name="email">
@@ -50,12 +50,12 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row">
+                            <div >
                                 <div class="input-pass">
                                     <label for="password"
                                            class="label-form-register-login text-right col-md-4 col-form-label text-md-right"></label>
 
-                                    <div class="col-md-6">
+                                    <div>
                                         <input  placeholder="رمز عبور" id="password" type="password"
                                                class="input-register-S fl-right form-control @error('password') err-input-form-register-login @enderror"
                                                name="password">
@@ -67,7 +67,7 @@
                                     <label for="password"
                                            class="label-form-register-login text-right col-md-4 col-form-label text-md-right"></label>
 
-                                    <div class="col-md-6">
+                                    <div>
                                         <input placeholder="تکرار رمز عبور" id="password" type="password"
                                                class="input-register-S fl-left form-control @error('password') err-input-form-register-login @enderror"
                                                name="password_confirmation">
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group row mb-0">
+                            <div>
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn-form-for-login-register btn btn-primary">
                                         {{ __('ثبت نام در دیجی کالا') }}

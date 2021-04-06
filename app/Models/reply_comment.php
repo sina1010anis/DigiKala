@@ -14,6 +14,6 @@ class reply_comment extends Model
         return $this->belongsTo(comment_product::class);
     }
     public function users(){
-        return $this->belongsTo(product::class);
+        return $this->belongsTo(User::class , 'user_id' , 'id');
     }
 }

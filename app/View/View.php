@@ -21,5 +21,14 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , tools_mobile::class);
         \Illuminate\Support\Facades\View::composer(['*'] , watch_product::class);
         \Illuminate\Support\Facades\View::composer(['*'] , spicer_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , products::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , image_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , properties_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , brand_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , attr_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , comment_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , attr_good_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , attr_not_good_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , reply_comment::class);
     }
 }

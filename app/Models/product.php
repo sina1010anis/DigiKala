@@ -17,4 +17,11 @@ class product extends Model
     public function down_all_menus(){
         return $this->belongsTo(all_menu::class);
     }
+    public function brands(){
+        return $this->belongsTo(brand::class);
+    }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

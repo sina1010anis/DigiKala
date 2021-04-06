@@ -27,7 +27,7 @@
             <span v-if="{{$sub_all_menu->all_menu_id}} == all_menu_id" class="group-item-select-menu">
             <h4> <i class="fas fa-angle-down"></i> {{$sub_all_menu->name}} </h4>
                 @foreach($sub_all_menu->down_all_menus as $name)
-                    <p align="right">{{$name->name}}</p>
+                    <a style="color: #585858" href="{{route('menu_view' , ['slug'=>$name->slug])}}"><p align="right">{{$name->name}}</p></a>
                 @endforeach
 <!--            <p align="right">موبایل</p>
             <p align="right">موبایل</p>
