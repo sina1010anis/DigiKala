@@ -38,4 +38,9 @@ class ProductController extends Controller
     {
         return resolve(repository::class)->new_comment($request);
     }
+
+    public function filterProduct(Request $request)
+    {
+        return resolve(repository::class)->filter_product($request);
+    }
 }

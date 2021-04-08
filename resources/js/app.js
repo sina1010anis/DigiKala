@@ -19,8 +19,24 @@ const app = createApp({
         text_title:'',
         good_product:[],
         not_good_product:[],
+        filter_menu:[],
+        menu_id:0,
+        text_filter:''
     }),
     methods: {
+        sendFilterBack(){
+            axios.post('/product/filter' , {
+                id:this.menu_id,
+                item_filter:this.filter_menu
+            }).then((res)=>{
+                console.log(res.data)
+                $(".view-product-menu-search").html( res.data)
+            })
+        },
+        setFilterSend(id){
+            this.menu_id = id;
+            this.filter_menu.push(this.text_filter)
+        },
         showPageNewComment(){
           $(".group-form-new-comment").stop().fadeIn();
           $(".blur-web").stop().fadeIn();

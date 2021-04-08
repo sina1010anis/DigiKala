@@ -289,6 +289,7 @@ a {
     color: white;
     border-radius: 5px;
     width: 100%;
+    outline:none!important;
     padding: 5px 0;
     font-size: 12px;
     border: none;

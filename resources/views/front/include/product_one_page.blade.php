@@ -205,7 +205,7 @@
                                class="set-font color-b-700 view-good-product-not-good">
                                 <i class="fas fa-plus-square good-product"></i> @{{ii}} </p>
                             <p v-for="i in {{$comment->vote_bad}}" dir="rtl" align="right"
-                               class="set-font color-b-700 view-good-product-not-good">
+                               class="set-font f-12 color-b-700 view-good-product-not-good">
                                 <i class="fas fa-minus-square not-product">@{{ i }}</i></p>
 
                         </div>
@@ -221,11 +221,13 @@
                                                                                                 class="far fa-thumbs-down color-b-700"></i><span
                                     class="f-11"> {{$comment->dislike}} </span>
                             </button>
-                            <button @click="viewPageReplyComment('{{$comment->id}}')" class="btn-et">
-                                <i style="color: green" class="fas fa-reply-all color-b-700"></i><span
-                                    class="f-11">
+                            @auth()
+                                <button @click="viewPageReplyComment('{{$comment->id}}')" class="btn-et">
+                                    <i style="color: green" class="fas fa-reply-all color-b-700"></i><span
+                                        class="f-11">
                                 </span>
-                            </button>
+                                </button>
+                            @endauth
 
                         </div>
                         @foreach($reply_comments as $reply_comment)

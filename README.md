@@ -36,6 +36,8 @@ Used the latest versions now
 ## TIPS :
 - <p style="font-family: IRANYekan;color: #ff3c3c">If it gets out of responsive mode by resizing the site, please refresh once</p>
 - - <p style="font-family: IRANYekan;color: #ff3c3c">اگر با تغییر سایز سایت از حالت واکنش گرا خارج شد لطفا یک بار رفرش کنید</p>
+- To test the filter section, please go to the mobile category
+- - برای تست بخش فیلتر لطفا به دسته موبایل بروید
     
 
 ## TODO :
@@ -48,6 +50,6 @@ Used the latest versions now
 - - End Slider
 - - End Page Login
 - - End Page Register
-- - End Product introduction(fix)
-- - End View Filter Page(imperfect)
+- - End Product introduction
+- - End Filter Page
 

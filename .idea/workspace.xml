@@ -2,17 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_08_054503_add_vote_to_comment_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/comment_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/comment_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/comment_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/comment_all.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/include/product_one_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/product_one_page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/view_product_and_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/view_product_and_menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +228,9 @@
       <workItem from="1617712028775" duration="11798000" />
       <workItem from="1617771284787" duration="327000" />
       <workItem from="1617775207921" duration="6283000" />
-      <workItem from="1617858415114" duration="5399000" />
+      <workItem from="1617858415114" duration="6008000" />
+      <workItem from="1617885163821" duration="5305000" />
+      <workItem from="1617907643748" duration="1251000" />
     </task>
     <servers />
   </component>

@@ -13,9 +13,8 @@
             <div class="view-product-menu-search">
                 @foreach($data as $i)
                     <div class="products-menu  @if($i->off > 0) border-off @endif">
-                        <img class="img-product-menu" src="{{url('data/image/image product/').'/'.$i->image}}"
-                             alt="img-product-menu">
-                        <a href="{{route('product.show' , ['slug'=>$i->slug])}}"><p class="p-product-menu">{{$i->name}}</p></a>
+                        <img class="img-product-menu" src="{{url('data/image/image product/').'/'.$i->image}}" alt="img-product-menu">
+                        <a href="{{route('product.show' , ['slug'=>$i->slug])}}"><p  class="p-product-menu">{{$i->name}}</p></a>
                         @if($i->off > 0)
                             <div class="add-off-product">
                                 <a class="number-off-price">{{$i->off}}%</a>
@@ -41,19 +40,17 @@
                     <a class="title-name-filter text-right">{{$i->name}}</a>
                     <div class="line"></div>
                     <div class="item-filter">
-                        <form @submit.prevent="test" action="">
-                            <select name="" id="">
-                                @foreach($attr_filter as $ii)
-                                    @if($ii->title_filter_id == $i->id)
-                                        <option value="{{$ii->id}}">{{$ii->name}}</option>
-                                    @endif
-                                @endforeach
-                            </select>
-                            <button type="submit">اعمال فیلتر</button>
-                        </form>
+                        <select @change="setFilterSend({{$menu_id}})" v-model="text_filter" name="" id="">
+                            @foreach($attr_filter as $ii)
+                                @if($ii->title_filter_id == $i->id)
+                                    <option value="{{$ii->id}}">{{$ii->name}}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     </div>
                 </div>
             </div>
         @endforeach
+        <button @click="sendFilterBack" class="btn-logout" type="submit">اعمال فیلتر</button>
     </div>
 </div>
