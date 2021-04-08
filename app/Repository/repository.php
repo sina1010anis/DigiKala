@@ -5,9 +5,11 @@ namespace App\Repository;
 
 
 use App\Events\ReplyComment;
+use App\Models\attr_comment;
 use App\Models\attr_filter;
 use App\Models\comment_product;
 use App\Models\product;
+use App\Models\property;
 use App\Models\title_filter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -83,5 +85,29 @@ class repository
             'text' => 'required|min:10'
         ]);
         event(new ReplyComment($id , $request->text , $email));
+    }
+
+    public function new_comment(Request $request )
+    {
+        $comment_product = new comment_product();
+        $attr_comment_good = new attr_comment();
+        $attr_comment_bad = new attr_comment();
+        if ($request->ajax()){
+            $v=$request->validate([
+                'title' => 'required',
+                'comment' => 'required'
+            ]);
+            $comment_product_id=comment_product::orderBy('id' , 'DESC')->first();
+            $comment_product->title = $request->title;
+            $comment_product->text = $request->comment;
+            $comment_product->status =1;
+            $comment_product->user_id = auth()->user()->id;
+            $comment_product->product_id = $request->id;
+            $vote_good_json=json_encode($request->vote_good,JSON_FORCE_OBJECT);
+            $vote_bad_json=json_encode($request->vote_bad,JSON_FORCE_OBJECT);
+            $comment_product->vote_good = $vote_good_json;
+            $comment_product->vote_bad = $vote_bad_json;
+            $comment_product->save();
+        }
     }
 }

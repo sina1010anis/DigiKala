@@ -33,4 +33,9 @@ class ProductController extends Controller
         resolve(repository::class)->new_reply_comment($request , $id);
         return redirect()->back()->with('msg' , 'نظر شما بعد از تایید مدیر ثبت خواهد شد');
     }
+
+    public function newComment(Request $request)
+    {
+        return resolve(repository::class)->new_comment($request);
+    }
 }

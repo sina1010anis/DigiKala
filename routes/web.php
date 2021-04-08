@@ -25,6 +25,7 @@ Route::get('/logout' , function (){
 Route::prefix('product')->group(function (){
     Route::post('/new/comment/reply/{id}' , [\App\Http\Controllers\ProductController::class , 'replyComment'])->name('product.replyComment');
     Route::get('/view/{slug}' , [\App\Http\Controllers\ProductController::class , 'show'])->name('product.show');
+    Route::post('/new/comment' , [\App\Http\Controllers\ProductController::class , 'newComment'])->name('product.newComment');
 });
 Auth::routes();
 

@@ -13,8 +13,50 @@ const app = createApp({
         srcBackOneProduct: '',
         id_comment: '',
         address_comment: '/product/new/comment/reply/',
+        text_vote_good:'',
+        text_vote_not_good:'',
+        text_comment:'',
+        text_title:'',
+        good_product:[],
+        not_good_product:[],
     }),
     methods: {
+        showPageNewComment(){
+          $(".group-form-new-comment").stop().fadeIn();
+          $(".blur-web").stop().fadeIn();
+        },
+        send_comment(id ){
+            if (this.text_comment != '' || this.text_title != ''){
+                axios.post('/product/new/comment' , {
+                    'title':this.text_title,
+                    'comment':this.text_comment,
+                    'vote_good':this.good_product,
+                    'vote_bad':this.not_good_product,
+                    'id':id,
+                }).then((res)=>{
+                    console.log(res.data)
+                    $(".group-form-new-comment").stop().fadeOut();
+                    $(".blur-web").stop().fadeOut();
+                    $(".view-err-sm").html('با تشکر از نظر شما').fadeIn().css({'padding':'5px 20px'})
+                    setTimeout(function (){
+                        $(".view-err-sm").fadeOut()
+                    },2000)
+                })
+            }
+        },
+        set_vote_good(){
+            if (this.text_vote_good != ''){
+                this.good_product.push(this.text_vote_good)
+                this.text_vote_good = ''
+            }
+        },
+        set_vote_not_good(){
+            if (this.text_vote_not_good != ''){
+                this.not_good_product.push(this.text_vote_not_good)
+                this.text_vote_not_good = ''
+            }
+
+        },
         viewPageReplyComment(id){
             this.id_comment = id
             $(".blur-web").fadeIn()
@@ -94,6 +136,7 @@ const app = createApp({
     mounted() {
         $(".blur-web").click(function (){
             $('.page-reply-comment-product').fadeOut()
+            $('.group-form-new-comment').fadeOut()
         })
         $(".view-err-sm").click(()=>{
             $(".view-err-sm").fadeOut()

@@ -10,6 +10,8 @@ class comment_product extends Model
     use HasFactory;
     protected $guarded =[];
 
+    protected $attributes =['dislike' => 0 , 'like' => 0];
+
     public function products(){
         return $this->belongsTo(product::class);
     }

@@ -201,20 +201,13 @@
                         <p class="text-comment set-font">{{$comment->text}}</p>
                         <div class="line"></div>
                         <div>
-                            @foreach($attr_good_product as $good)
-                                @if($good->comment_id == $comment->id)
-                                    <p dir="rtl" align="right" class="set-font color-b-700 view-good-product-not-good">
-                                        <i
-                                            class="fas fa-plus-square good-product"></i> {{$good->name}} </p>
-                                @endif
-                            @endforeach
-                            @foreach($attr_not_good_product as $not_good)
-                                @if($good->comment_id == $comment->id)
-                                    <p dir="rtl" align="right" class="set-font color-b-700 view-good-product-not-good">
-                                        <i
-                                            class="fas fa-minus-square not-product"></i> {{$not_good->name}} </p>
-                                @endif
-                            @endforeach
+                            <p v-for="ii in {{$comment->vote_good}}" dir="rtl" align="right"
+                               class="set-font color-b-700 view-good-product-not-good">
+                                <i class="fas fa-plus-square good-product"></i> @{{ii}} </p>
+                            <p v-for="i in {{$comment->vote_bad}}" dir="rtl" align="right"
+                               class="set-font color-b-700 view-good-product-not-good">
+                                <i class="fas fa-minus-square not-product">@{{ i }}</i></p>
+
                         </div>
                         <div class="line"></div>
                         <div>
@@ -274,3 +267,35 @@
         <button>ارسال پاسخ</button>
     </form>
 </div>
+@auth()
+    <div @click="showPageNewComment" class="view-new-comment">
+        <i class="far fa-comment-dots"></i>
+    </div>
+    <div class="group-form-new-comment group-input-for-login-register">
+        <h4 class="set-font color-b-800" align="center">نظر جدید</h4>
+        <div class="line"></div>
+        <form @submit.prevent="send_comment('{{$data->id}}')" action="" method="post">
+            @csrf
+            <input v-model="text_title" type="text" name="title" placeholder="موضوع کامنت ...">
+            <textarea v-model="text_comment" class="set-font" type="text" name="title"
+                      placeholder="متن پیام ..."></textarea>
+            <span class="group-good-product fl-right">
+                <p class="set-font color-b-700 f-10" align="center">نقاط قوت</p>
+                <input v-model="text_vote_good" type="text" class="fl-right set-font input-set-voet">
+                <select class="fl-left" name="" id="">
+                    <option v-for="i in good_product" value="">@{{i}}</option>
+                </select>
+                <button @click="set_vote_good" type="button" class="set-vote">ثبت</button>
+            </span>
+            <span class="group-not-good-product fl-left">
+                <p class="set-font color-b-700 f-10" align="center">نقاط ضعف</p>
+                <input v-model="text_vote_not_good" type="text" class="fl-right set-font input-set-voet">
+                <select class="fl-left" name="" id="">
+                    <option v-for="i in not_good_product" value="">@{{ i }}</option>
+                </select>
+                <button @click="set_vote_not_good" type="button" class="set-vote">ثبت</button>
+            </span>
+            <button type="submit" style="outline: none">ارسال نظر</button>
+        </form>
+    </div>
+@endauth
