@@ -51,6 +51,13 @@
                 </div>
             </div>
         @endforeach
+        <div class="group-filter">
+            <div class="group-title-filter">
+                <a class="title-name-filter text-right">فیلر های اعمال شده</a>
+                <div class="line"></div>
+                <div v-for="item in filter_menu" class="view-filter-send set-font f-11 color-b-700">@{{ item }}</div>
+            </div>
+        </div>
         <button @click="sendFilterBack" class="btn-logout" type="submit">اعمال فیلتر</button>
     </div>
 </div>

@@ -1775,6 +1775,14 @@ a:hover{
     outline: none;
     background-color: #c4eaff !important;
 }
+.view-filter-send{
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-top: 10px;
+    border: 1px solid #d2d2d2;
+}
 @media (max-width: 1000px) {
     .group-index-view-product {
         height: 1000px;
