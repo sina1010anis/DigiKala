@@ -31,7 +31,7 @@ class authController extends Controller
                 $user->save();
                 auth()->loginUsingId($user->id);
             }
-            return redirect()->to('/home');
+            return redirect()->to('/user/profile');
         } catch (Exception $e) {
             return $e->getMessage();
         }

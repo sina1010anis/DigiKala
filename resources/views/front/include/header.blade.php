@@ -52,7 +52,7 @@
         <div class="view-list-user-panel">
             <span>
                 <p align="right">{{auth()->user()->name}}</p>
-                <p align="right"><span class="view-card-min-view-all-product"><a href=""> <i class="fas fa-caret-left"></i>مشاهده پروفایل</a></span></p>
+                <p align="right"><span class="view-card-min-view-all-product"><a href="{{route('user.profile')}}"> <i class="fas fa-caret-left"></i>مشاهده پروفایل</a></span></p>
             </span>
             <div class="line"></div>
             <a href="">

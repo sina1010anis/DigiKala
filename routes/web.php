@@ -28,6 +28,17 @@ Route::prefix('product')->group(function (){
     Route::post('/new/comment' , [\App\Http\Controllers\ProductController::class , 'newComment'])->name('product.newComment');
     Route::post('/filter' , [\App\Http\Controllers\ProductController::class , 'filterProduct'])->name('product.filterProduct');
 });
+Route::prefix('user')->group(function (){
+    Route::get('/profile' , [\App\Http\Controllers\UserController::class , 'index'])->name('user.profile');
+    Route::get('/profile/my/order' , [\App\Http\Controllers\UserController::class , 'order'])->name('user.order');
+    Route::get('/profile/my/comment' , [\App\Http\Controllers\UserController::class , 'comment'])->name('user.comment');
+    Route::get('/profile/my/list' , [\App\Http\Controllers\UserController::class , 'list'])->name('user.list');
+    Route::get('/profile/my/location' , [\App\Http\Controllers\UserController::class , 'location'])->name('user.location');
+    Route::get('/profile/my/card' , [\App\Http\Controllers\UserController::class , 'card'])->name('user.card');
+    Route::get('/profile/my/message' , [\App\Http\Controllers\UserController::class , 'message'])->name('user.message');
+    Route::get('/profile/my/view' , [\App\Http\Controllers\UserController::class , 'view'])->name('user.view');
+    Route::get('/profile/exit' , [\App\Http\Controllers\UserController::class , 'exitUser'])->name('user.exit');
+});
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

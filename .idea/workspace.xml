@@ -2,12 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/data/image/icon/icon_user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/comment.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/index_user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/location.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/order.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/include/menu/profile.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/comment.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/index_page.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/location.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/order.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/user/section/profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/authController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/authController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/view_product_and_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/view_product_and_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +175,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/data/image/image_brand" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/user/include/menu" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,17 +187,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\digikala\resources\views\user\include\menu" />
+      <recent name="C:\wamp64\www\s1\digikala\resources\views\user\section" />
+      <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\image_brand" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\image one product" />
-      <recent name="C:\wamp64\www\s1\digikala\resources\views\front\section" />
-      <recent name="C:\wamp64\www\s1\digikala\resources\views\front" />
-      <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\digikala\resources\views" />
+      <recent name="C:\wamp64\www\s1\digikala\resources\views\user" />
       <recent name="C:\wamp64\www\s1\digikala\app\Listeners" />
       <recent name="C:\wamp64\www\s1\digikala\app\Http\Controllers" />
       <recent name="C:\wamp64\www\s1\digikala\app\Http\Controllers\Auth" />
-      <recent name="C:\wamp64\www\s1\digikala\public\data\image\imge product" />
     </key>
   </component>
   <component name="RunManager">
@@ -226,7 +249,7 @@
       <workItem from="1617885163821" duration="5305000" />
       <workItem from="1617907643748" duration="2183000" />
       <workItem from="1617945882143" duration="3174000" />
-      <workItem from="1617978469003" duration="2039000" />
+      <workItem from="1617978469003" duration="11957000" />
     </task>
     <servers />
   </component>

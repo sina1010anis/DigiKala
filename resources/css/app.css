@@ -403,7 +403,7 @@ a {
     width: 100%;
     height: 100%;
     position: fixed;
-    z-index: 15;
+    z-index: 9;
     background-color: #464646;
     top: 0;
     display: none;
@@ -1790,6 +1790,69 @@ a:hover{
     border: 1px solid #ff6161;
     color: white;
 }
+.group-profile-user{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    height: 650px;
+}
+.group-profile-user > div{
+    width: 100%;height: 100%;
+}
+.view-option-profile{
+    width: 75%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.view-option-profile >div{
+    width: 100%;
+    height: 100%;background-color: white;
+    border-radius: 10px;
+}
+.view-menu-profile{
+    width: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.view-menu-profile>div{
+    width: 100%;
+    height: 100%;background-color: white;
+    border-radius: 10px;
+}
+.group-view-index-profile img{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+.group-view-index-profile{
+    width: 100%;
+    padding: 5px ;
+    box-sizing: border-box;
+    float: left;
+}
+.text-view-profile{
+    margin: 0 10px;
+}
+.view-menu-profile .line{
+    margin: 76px 0 0 0 !important;
+}
+.group-view-menu-profile{
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.group-view-menu-profile ul{
+    margin: 0;
+    padding: 0;
+}
+.group-view-menu-profile li{
+    list-style: none;
+    text-align: right;
+    margin: 25px 0;
+}
 @media (max-width: 1000px) {
     .group-index-view-product {
         height: 1000px;
@@ -1968,7 +2031,12 @@ a:hover{
     .fa-filter {
         display: inline-block;
     }
-
+    .view-menu-profile{
+        display: none;
+    }
+.view-option-profile{
+    width: 100%;
+}
     .view-menu-product {
         width: 100%;
     }
