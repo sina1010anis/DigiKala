@@ -24,12 +24,14 @@ const app = createApp({
         text_filter:''
     }),
     methods: {
+        deleteItemFilter(index){
+          this.filter_menu.splice(index,1);
+        },
         sendFilterBack(){
             axios.post('/product/filter' , {
                 id:this.menu_id,
                 item_filter:this.filter_menu
             }).then((res)=>{
-                console.log(res.data)
                 $(".view-product-menu-search").html( res.data)
             })
         },

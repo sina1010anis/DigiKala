@@ -1776,12 +1776,19 @@ a:hover{
     background-color: #c4eaff !important;
 }
 .view-filter-send{
-    padding: 5px;
+    padding: 5px 15px;
     border-radius: 5px;
+    cursor: pointer;
     display: inline-block;
     box-sizing: border-box;
     margin-top: 10px;
     border: 1px solid #d2d2d2;
+    transition: 0.2s;
+}
+.view-filter-send:hover{
+    background-color: #ff6161;
+    border: 1px solid #ff6161;
+    color: white;
 }
 @media (max-width: 1000px) {
     .group-index-view-product {

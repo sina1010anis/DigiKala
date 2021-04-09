@@ -55,7 +55,7 @@
             <div class="group-title-filter">
                 <a class="title-name-filter text-right">فیلر های اعمال شده</a>
                 <div class="line"></div>
-                <div v-for="item in filter_menu" class="view-filter-send set-font f-11 color-b-700">@{{ item }}</div>
+                <div v-for="(item,index) in filter_menu" title="حذف فیلتر" @click="deleteItemFilter(index)" class="view-filter-send set-font f-11 color-b-700">@{{ item }}</div>
             </div>
         </div>
         <button @click="sendFilterBack" class="btn-logout" type="submit">اعمال فیلتر</button>

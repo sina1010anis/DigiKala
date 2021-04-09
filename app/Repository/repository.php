@@ -116,35 +116,35 @@ class repository
     {
         $product_send='';
         $data = attr_product::whereIn('attr_filter_id' , $request->item_filter)->pluck('product_id');
-        $arr = json_decode($data , true);
-        $AD = array_unique($arr);
-        $products = product::whereIn('id' , $AD)->get();
-        function add_off($off , $price){
-            if ($off > 0){
-               echo '
-                                           <div class="add-off-product">
-                                <a class="number-off-price">'.$off.'%</a>
-                                <p class="view-products-slider-price-back-off">'.$price.' تومان</p>
-                            </div>
-               ';
-            }elseif ($off == 0){
-                echo '<p class="price-product-menu">' . $price . 'تومان' . '</p>';
+                $arr = json_decode($data , true);
+                $AD = array_unique($arr);
+                $products = product::whereIn('id' , $AD)->get();
+                function add_off($off , $price){
+                    if ($off > 0){
+                       echo '
+                                                   <div class="add-off-product">
+                                        <a class="number-off-price">'.$off.'%</a>
+                                        <p class="view-products-slider-price-back-off">'.$price.' تومان</p>
+                                    </div>
+                       ';
+                    }elseif ($off == 0){
+                        echo '<p class="price-product-menu">' . $price . 'تومان' . '</p>';
 
-            }
-        }
-        foreach ($products as $product ){
-            $i_off=$product->off;
-            $i_image=$product->image;
-            $i_slug=$product->slug;
-            $i_name=$product->name;
-            $i_price=$product->price;
-            $product_send.='<div class="products-menu">'.
-                '<img class="img-product-menu" src="'.url('data/image/image product/').'/'.$i_image.'" alt="img-product-menu">'.
-                '<a href="'.route('product.show' , ['slug'=>$i_slug]).'"><p  class="p-product-menu">'.$i_name.'</p></a>'.
-                //add_off($i_off,$i_price)
-                '<p class="price-product-menu">' . $i_price . 'تومان' . '</p>'
-                .'</div>';
-        }
-        return $product_send;
+                    }
+                }
+                foreach ($products as $product ){
+                    $i_off=$product->off;
+                    $i_image=$product->image;
+                    $i_slug=$product->slug;
+                    $i_name=$product->name;
+                    $i_price=$product->price;
+                    $product_send.='<div class="products-menu">'.
+                        '<img class="img-product-menu" src="'.url('data/image/image product/').'/'.$i_image.'" alt="img-product-menu">'.
+                        '<a href="'.route('product.show' , ['slug'=>$i_slug]).'"><p  class="p-product-menu">'.$i_name.'</p></a>'.
+                        //add_off($i_off,$i_price)
+                        '<p class="price-product-menu">' . $i_price . 'تومان' . '</p>'
+                        .'</div>';
+                }
+                return $product_send;
     }
 }
