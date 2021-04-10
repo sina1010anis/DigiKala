@@ -16,7 +16,7 @@
             <div class="group-profile-user">
                 <div>
                     <div class="view-option-profile">
-                        <div class="fl-left">
+                        <div class="fl-left" style="padding: 10px;box-sizing: border-box">
                             @yield('index_user')
                         </div>
                     </div>

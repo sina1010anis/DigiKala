@@ -42,5 +42,5 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    protected $attributes = ['action' => 0 , 'mobile' => 'null'];
+    protected $attributes = ['action' => 0 , 'mobile' => 'null' , 'code_m' => 'null'];
 }

@@ -52,4 +52,6 @@ Used the latest versions now
 - - End Page Register
 - - End Product introduction
 - - End Filter Page
+- Panel User
+- - My Orders
 

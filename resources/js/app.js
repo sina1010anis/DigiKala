@@ -24,6 +24,14 @@ const app = createApp({
         text_filter:''
     }),
     methods: {
+        exitPage(){
+            $(".page-view-sm-buy").fadeOut(100)
+            $(".blur-web").fadeOut(200)
+        },
+        viewEtSm(){
+          $(".page-view-sm-buy").fadeIn(200)
+          $(".blur-web").fadeIn(100)
+        },
         deleteItemFilter(index){
           this.filter_menu.splice(index,1);
         },
@@ -155,6 +163,7 @@ const app = createApp({
         $(".blur-web").click(function (){
             $('.page-reply-comment-product').fadeOut()
             $('.group-form-new-comment').fadeOut()
+            $('.page-view-sm-buy').fadeOut()
         })
         $(".view-err-sm").click(()=>{
             $(".view-err-sm").fadeOut()
