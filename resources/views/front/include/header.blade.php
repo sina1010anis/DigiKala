@@ -12,7 +12,7 @@
                 <div class="view-products-card">
                     <ul class="item-card">
                         <li>
-                            <img src="{{url('data/image/image product/product_1.jpg')}}"
+                            ><img src="{{url('data/image/image product/product_1.jpg')}}"
                                  alt="کفش راحتی مردانه مدل PART-SO" title="کفش راحتی مردانه مدل PART-SO">
                             <span class="name-product-view-card">کفش راحتی مردانه مدل PART-SO</span>
                             <span class="number-product-view-card">تعداد <span>1</span></span>
@@ -68,7 +68,7 @@
         </div>
     @endif
     <div class="group-icon-header group-logo">
-        <a href="">
+        <a href="{{ route('index.page') }}">
             <img class="logo-index-page" src="{{url('data/image/digikala-3.png')}}" alt="">
         </a>
     </div>
