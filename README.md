@@ -56,4 +56,7 @@ Used the latest versions now
 - - End Filter Page
 - Panel User
 - - My Orders
+- - Favorites list
+- - Comments
+- - Addresses
 
