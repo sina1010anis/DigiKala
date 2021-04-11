@@ -43,4 +43,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     protected $attributes = ['action' => 0 , 'mobile' => 'null' , 'code_m' => 'null'];
+
+    public function addresses()
+    {
+        return $this->hasMany(address::class , 'address_id' , 'id');
+    }
 }

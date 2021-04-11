@@ -13,9 +13,13 @@
         <div id="app">
             @include('front.include.header')
             @include('front.include.navbar')
+            @if(session('msg'))
+                <div align="center" class="set-font f-14 color-b-100 show-msg" >{{session('msg')}}</div>
+                @endif
             <div class="group-profile-user">
                 <div>
                     <div class="view-option-profile">
+                        <i @click="showMenuForMobile" class="fas fa-ellipsis-v fl-right color-b-700"></i>
                         <div class="fl-left" style="padding: 10px;box-sizing: border-box">
                             @yield('index_user')
                         </div>
@@ -23,13 +27,15 @@
                     <div class="view-menu-profile">
                         <div class="fl-right">
                 <span class="group-view-index-profile">
+                    <i @click="hideMenuForMobile" class="fas fa-chevron-up IconHideMenuForMobile"></i>
                     <img src="{{url('data/image/icon/icon_user.svg')}}" alt="">
                     <span class="text-view-profile f-12 set-font color-b-800 fl-right">{{auth()->user()->name}}</span>
                     <br>
                     <br>
                     @if(auth()->user()->mobile == 'null')
                         <span
-                            class="text-view-profile f-12 set-font color-b-600 fl-right"><a href="{{route('user.view')}}">لصفا شماره موبایل خود را وارد کنید</a></span>
+                            class="text-view-profile f-12 set-font color-b-600 fl-right"><a
+                                href="{{route('user.view')}}">لصفا شماره موبایل خود را وارد کنید</a></span>
                     @else
                         <span
                             class="text-view-profile f-12 set-font color-b-600 fl-right">{{auth()->user()->mobile}}</span>
@@ -48,7 +54,7 @@
                                     </li>
                                     <li class="set-font f-14" dir="rtl"><a class="color-b-700"
                                                                            href="{{route('user.comment')}}"> <i
-                                                class="fas fa-bookmark"></i><span
+                                                class="fas fa-comment"></i><span
                                                 style="margin: 0 15px">نظرات</span></a></li>
                                     <li class="set-font f-14" dir="rtl"><a class="color-b-700"
                                                                            href="{{route('user.location')}}"> <i

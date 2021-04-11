@@ -1620,6 +1620,7 @@ a:hover{
     color: white;
     border-radius: 200px;
     cursor: default;
+    text-align: center;
     z-index: 15;
     position: fixed;
     top: 50%;
@@ -1989,6 +1990,128 @@ ul{
     margin: 10px 0;
     height: 20px;
 }
+.view-option-profile > i{
+    position: relative;
+    bottom: 10px;
+    display: none;
+}
+.IconHideMenuForMobile{
+    display: none;
+}
+.group-my-order{
+    width: 100%;
+    height: 100%;
+}
+.group-my-order > span{
+    width: 100%!important;
+}
+.view-product-save{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #dedede;
+    overflow: hidden ;
+    transition: 0.2s;
+}
+.view-product-save img{
+    width: 100%;
+    border-radius: 5px;
+}
+.view-product-save:hover{
+    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+}
+.view-product-save-icon-delete{
+    color: #ff4343;
+    z-index: 8;
+}
+.group-icon-delete-save-product{
+    width: 200px;
+    float: right;
+}
+.view-list-buy li{
+    position: relative;
+}
+.view-list-buy li > i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #1b5d36;
+    font-size: 35px;
+    transform: translate(-50%,-50%);
+}
+.group-item-address{
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    background-color: #fcfcfc;
+    border: 1px solid #f1f1f1;
+}
+.group-item-address label{
+    position: relative;
+    bottom: 2px;
+}
+.btn-new-address{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: unset;
+    border: 1px solid #ff4d4d;
+    border-radius: 100px;
+    padding: 5px 20px;
+    transition: 0.2s;
+    outline: none;
+    cursor: pointer;
+}
+.btn-save-address{
+    left: 112px!important;
+}
+.btn-new-address:hover{
+    background: #ff4d4d;
+    color: white;
+}
+.form-new-address select{
+    width: 49%;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    outline: none;
+    background-color: #f5f5f5;
+    border: none;
+}
+.show-msg{
+    padding: 5px 0;
+    background-color: #65cc8f;
+}
+.btn-save-address{
+    border: 1px solid #65cc8f;
+}
+.btn-save-address:hover {
+    background-color: #65cc8f!important;
+}
+.form-new-address textarea{
+    height: 100px!important;
+    max-height: 100px!important;
+    min-height: 100px!important;
+}
+.form-new-address button{
+    width: 20%!important;
+    outline: none;
+    cursor: pointer;
+    float: right!important;
+    margin: 10px 10px!important;
+    padding: 5px 15px!important;
+}
+.cls{
+    background-color: #cdcdcd !important;
+}
+.checkedInputAddress{
+    background-color: #2a73b0!important;
+}
 @media (max-width: 1000px) {
     .group-index-view-product {
         height: 1000px;
@@ -2049,12 +2172,21 @@ ul{
     }
 }
 @media (max-width: 600px) {
+    .group-my-order span{
+        display: inline-block!important;
+    }
     .view-profile-index-user-buy {
         display: none;
+    }
+    .view-profile-index-user-buy-test{
+        display: inline-block!important;
     }
     .view-profile-index-user-profile{
         width: 100%;
     }
+}
+.view-new-bookmark{
+    right: 70px;
 }
 @media (max-width: 1100px) {
     .group-index-page-banner-up {
@@ -2171,11 +2303,23 @@ ul{
 }
 
 @media (max-width: 900px) {
+    .IconHideMenuForMobile{
+        display: inline-block;
+    }
+    .view-option-profile > i{
+        display: inline-block;
+    }
     .fa-filter {
         display: inline-block;
     }
     .view-menu-profile{
         display: none;
+        position: fixed;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        right: 0;
+        z-index: 10;
     }
 .view-option-profile{
     width: 100%;

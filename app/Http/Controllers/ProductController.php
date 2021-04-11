@@ -15,7 +15,6 @@ class ProductController extends Controller
         return view('front.section.product_view')
             ->with([
                 'data' => resolve(repository::class)->select_products($slug->slug),
-                'data' => resolve(repository::class)->select_products($slug->slug),
             ]);
     }
 
@@ -42,5 +41,8 @@ class ProductController extends Controller
     public function filterProduct(Request $request)
     {
         return resolve(repository::class)->filter_product($request);
+    }
+    public function saveProduct(Request $request){
+        return resolve(repository::class)->save_product($request);
     }
 }

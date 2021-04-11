@@ -30,5 +30,9 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , attr_good_product::class);
         \Illuminate\Support\Facades\View::composer(['*'] , attr_not_good_product::class);
         \Illuminate\Support\Facades\View::composer(['*'] , reply_comment::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , save_product::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , city::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , streets::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , address_all::class);
     }
 }

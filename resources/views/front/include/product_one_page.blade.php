@@ -273,6 +273,9 @@
     <div @click="showPageNewComment" class="view-new-comment">
         <i class="far fa-comment-dots"></i>
     </div>
+    <div @click="saveToSaveProduct('{{$data->id}}')" class="view-new-comment view-new-bookmark">
+        <i class="far fa-bookmark"></i>
+    </div>
     <div class="group-form-new-comment group-input-for-login-register">
         <h4 class="set-font color-b-800" align="center">نظر جدید</h4>
         <div class="line"></div>

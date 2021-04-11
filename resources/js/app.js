@@ -21,9 +21,57 @@ const app = createApp({
         not_good_product:[],
         filter_menu:[],
         menu_id:0,
-        text_filter:''
+        id_city:0,
+        id_check_box:0,
+        view_btn_save_address:false,
+        text_filter:'',
+        style:'style="display: none;"'
     }),
     methods: {
+        setAddressPanelUser(){
+            axios.post('/user/set/address' , {'id':this.id_check_box}).then((res) => {
+                $(".view-err-sm").html('ادرس جدید ثبت شد').fadeIn().css({'padding':'5px 20px'})
+                setTimeout(function (){
+                    $(".view-err-sm").fadeOut()
+                    location.reload();
+                },2000)
+            })
+        },
+        set_view_btn_save_address(){
+            this.view_btn_save_address = true;
+        },
+        showPageNewAddress(){
+            $(".group-form-new-address").stop().fadeIn(200)
+            $(".blur-web").stop().fadeIn(100)
+        },
+        exitPageNewAddress(){
+            $(".group-form-new-address").stop().fadeOut(100)
+            $(".blur-web").stop().fadeOut(200)
+        },
+        saveToSaveProduct(id){
+            axios.post('/product/save' , {
+                id
+            }).then((res)=>{
+                if (res.data == 'ok'){
+                    $(".view-err-sm").html('محصول شما با موفقیت ذخیره شد').fadeIn().css({'padding':'5px 20px'})
+                    setTimeout(function (){
+                        $(".view-err-sm").fadeOut()
+                    },2000)
+                }
+                if (res.data == 'no'){
+                    $(".view-err-sm").html('هر محصول را فقط یک بار میتوانید ذخیره کنید').fadeIn().css({'padding':'5px 20px'})
+                    setTimeout(function (){
+                        $(".view-err-sm").fadeOut()
+                    },2000)
+                }
+            })
+        },
+        hideMenuForMobile(){
+            $('.view-menu-profile').stop().slideToggle(200)
+        },
+        showMenuForMobile(){
+            $('.view-menu-profile').stop().slideToggle(200)
+        },
         exitPage(){
             $(".page-view-sm-buy").fadeOut(100)
             $(".blur-web").fadeOut(200)
@@ -164,6 +212,7 @@ const app = createApp({
             $('.page-reply-comment-product').fadeOut()
             $('.group-form-new-comment').fadeOut()
             $('.page-view-sm-buy').fadeOut()
+            $('.group-form-new-address').fadeOut()
         })
         $(".view-err-sm").click(()=>{
             $(".view-err-sm").fadeOut()

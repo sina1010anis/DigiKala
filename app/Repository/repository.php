@@ -11,6 +11,7 @@ use App\Models\attr_product;
 use App\Models\comment_product;
 use App\Models\product;
 use App\Models\property;
+use App\Models\save_product;
 use App\Models\title_filter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -146,5 +147,22 @@ class repository
                         .'</div>';
                 }
                 return $product_send;
+    }
+
+    public function save_product(Request $request)
+    {
+        if ($request->ajax()){
+            $count = save_product::where(['product_id'=>$request->id , 'user_id' => auth()->user()->id])->count();
+            if ($count == 0){
+                $save_product = new save_product();
+                $save_product->product_id = $request->id;
+                $save_product->user_id = auth()->user()->id;
+                $save_product->save();
+                return 'ok';
+            }else{
+                return 'no';
+            }
+
+        }
     }
 }

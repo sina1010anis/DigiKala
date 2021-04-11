@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\comment_product;
+use App\Repository\repository_user;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -24,7 +26,8 @@ class UserController extends Controller
     }
     public function comment()
     {
-        return view('user.section.comment');
+        $comment_all=comment_product::orderBy('id' , 'DESC')->get();
+        return view('user.section.comment' , compact('comment_all'));
     }
     public function location()
     {
@@ -46,5 +49,14 @@ class UserController extends Controller
     {
         auth()->logout();
         return redirect('/');
+    }
+    public function newAddress(Request $request)
+    {
+        resolve(repository_user::class)->newAddress($request);
+        return back()->with('msg' , 'ادرس جدید ثبت شد');
+    }
+    public function setAddress(Request $request)
+    {
+        return resolve(repository_user::class)->setAddress($request);
     }
 }

@@ -27,6 +27,7 @@ Route::prefix('product')->group(function (){
     Route::get('/view/{slug}' , [\App\Http\Controllers\ProductController::class , 'show'])->name('product.show');
     Route::post('/new/comment' , [\App\Http\Controllers\ProductController::class , 'newComment'])->name('product.newComment');
     Route::post('/filter' , [\App\Http\Controllers\ProductController::class , 'filterProduct'])->name('product.filterProduct');
+    Route::post('/save' , [\App\Http\Controllers\ProductController::class , 'saveProduct'])->name('product.saveProduct');
 });
 Route::prefix('user')->group(function (){
     Route::get('/profile' , [\App\Http\Controllers\UserController::class , 'index'])->name('user.profile');
@@ -38,6 +39,8 @@ Route::prefix('user')->group(function (){
     Route::get('/profile/my/message' , [\App\Http\Controllers\UserController::class , 'message'])->name('user.message');
     Route::get('/profile/my/view' , [\App\Http\Controllers\UserController::class , 'view'])->name('user.view');
     Route::get('/profile/exit' , [\App\Http\Controllers\UserController::class , 'exitUser'])->name('user.exit');
+    Route::post('/new/address' , [\App\Http\Controllers\UserController::class , 'newAddress'])->name('user.newAddress');
+    Route::post('/set/address' , [\App\Http\Controllers\UserController::class , 'setAddress'])->name('user.setAddress');
 });
 Auth::routes();
 
