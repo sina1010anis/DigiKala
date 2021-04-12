@@ -21,4 +21,5 @@ class menuController extends Controller
                 'menu_id'=>$slug->sub_all_menu_id
                 ]);
     }
+
 }

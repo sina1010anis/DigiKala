@@ -1,4 +1,5 @@
-<div class="group-save-product" style="position:relative;">
+@if($address_all->count() > 0)
+    <div class="group-save-product" style="position:relative;">
     <span style="width: 100%!important;" class="view-profile-index-user-buy fl-left view-profile-index-user-buy-test">
         <span>
             <button class="set-font f-12 color-b-600 btn-new-address" @click="showPageNewAddress">اضافه کردن</button>
@@ -19,6 +20,13 @@
         </span>
     </span>
 </div>
+@else
+    <div class="group-null">
+        <img src="{{url('data/image/icon/location.png')}}" alt="">
+        <p class="f-20 color-b-400 set-font">ادرسی درج نشده است</p>
+        <button style="position: unset!important;" class="set-font f-12 color-b-600 btn-new-address" @click="showPageNewAddress">اضافه کردن</button>
+    </div>
+@endif
 <div class="group-form-new-comment group-input-for-login-register group-form-new-address">
     <h4 class="set-font color-b-800" align="center">ادرس جدید</h4>
     <div class="line"></div>

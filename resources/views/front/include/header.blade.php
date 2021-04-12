@@ -4,20 +4,32 @@
     right: 5px;"></i></button>
 
         @auth()
-            <span class="basket-number">0</span>
+            <span class="basket-number">{{$my_basket_count}}</span>
+        @if($my_basket_count > 0)
             <div style="cursor: default!important;" class="view-card-min">
-                <span class="view-card-min-count-product">1 کالا</span>
+                <span class="view-card-min-count-product">{{$my_basket_count}} کالا</span>
                 <span class="view-card-min-view-all-product"><a href=""> <i class="fas fa-caret-left"></i>مشاهده سبد خرید</a></span>
                 <div class="line"></div>
                 <div class="view-products-card">
                     <ul class="item-card">
-                        <li>
-                            ><img src="{{url('data/image/image product/product_1.jpg')}}"
-                                 alt="کفش راحتی مردانه مدل PART-SO" title="کفش راحتی مردانه مدل PART-SO">
-                            <span class="name-product-view-card">کفش راحتی مردانه مدل PART-SO</span>
-                            <span class="number-product-view-card">تعداد <span>1</span></span>
-                            <i class="fas fa-trash-alt delete-product-card" title="حذف محصول"></i>
-                        </li>
+                        <?php
+                        $price=0;
+                        ?>
+                        @foreach($all_item_card as $item)
+                            @if($item->user_id == auth()->user()->id)
+                            <?php
+                                $price+=$item->total_price*$item->number;
+                            ?>
+                                <li>
+                                    <img src="{{url('data/image/image product/').'/'.$item->products->image}}"
+                                         alt="{{$item->products->name}}" title="{{$item->products->name}}">
+                                    <span class="name-product-view-card"><a href="{{route('product.show' , ['slug'=>$item->products->slug])}}">{{$item->products->name}}</a></span>
+                                    <span
+                                        class="number-product-view-card">تعداد <span>{{$item->number}}</span></span>
+                                    <i class="fas fa-trash-alt delete-product-card" title="حذف محصول"></i>
+                                </li>
+                            @endif
+                        @endforeach
                     </ul>
                 </div>
                 <div class="line"></div>
@@ -25,13 +37,14 @@
                 <span class="total-price">
                     مبلغ قابل پرداخت :
                     <br>
-                    25000 تومان
+                    {{$price}} تومان
                 </span>
-                    <a href="" class="btn-buy-view-card">
+                    <a href="{{route('user.card')}}" class="btn-buy-view-card">
                         ثبت سفارش
                     </a>
                 </div>
             </div>
+            @endif
         @endauth
     </div>
 
@@ -52,7 +65,8 @@
         <div class="view-list-user-panel">
             <span>
                 <p align="right">{{auth()->user()->name}}</p>
-                <p align="right"><span class="view-card-min-view-all-product"><a href="{{route('user.profile')}}"> <i class="fas fa-caret-left"></i>مشاهده پروفایل</a></span></p>
+                <p align="right"><span class="view-card-min-view-all-product"><a href="{{route('user.profile')}}"> <i
+                                class="fas fa-caret-left"></i>مشاهده پروفایل</a></span></p>
             </span>
             <div class="line"></div>
             <a href="">

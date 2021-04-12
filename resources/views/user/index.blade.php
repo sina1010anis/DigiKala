@@ -62,8 +62,8 @@
                                                 style="margin: 0 15px">نشانی ها</span></a></li>
                                     <li class="set-font f-14" dir="rtl"><a class="color-b-700"
                                                                            href="{{route('user.card')}}"> <i
-                                                class="fas fa-credit-card"></i><span
-                                                style="margin: 0 15px">کارت هدیه</span></a></li>
+                                                class="fas fa-shopping-basket"></i><span
+                                                style="margin: 0 15px">سبد خرید</span></a></li>
                                     <li class="set-font f-14" dir="rtl"><a class="color-b-700"
                                                                            href="{{route('user.message')}}"> <i
                                                 class="fas fa-envelope"></i><span style="margin: 0 15px">پیغام ها</span></a>

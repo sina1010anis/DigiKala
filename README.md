@@ -44,7 +44,8 @@ Used the latest versions now
 
 ## TODO :
 
-- [ ] v-1.0
+<input type="checkbox" checked> v-1.0.0
+
 - Create DataBase
 - Index Page
 - - End Header
@@ -59,4 +60,5 @@ Used the latest versions now
 - - Favorites list
 - - Comments
 - - Addresses
+- - Card
 

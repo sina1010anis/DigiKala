@@ -26,7 +26,7 @@ class UserController extends Controller
     }
     public function comment()
     {
-        $comment_all=comment_product::orderBy('id' , 'DESC')->get();
+        $comment_all=comment_product::orderBy('id' , 'DESC')->whereUser_id(auth()->user()->id)->get();
         return view('user.section.comment' , compact('comment_all'));
     }
     public function location()

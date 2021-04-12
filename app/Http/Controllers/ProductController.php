@@ -45,4 +45,9 @@ class ProductController extends Controller
     public function saveProduct(Request $request){
         return resolve(repository::class)->save_product($request);
     }
+
+    public function plusCard(product $slug)
+    {
+        return resolve(repository::class)->plus_card($slug);
+    }
 }

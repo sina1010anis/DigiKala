@@ -8,6 +8,7 @@ use App\Events\ReplyComment;
 use App\Models\attr_comment;
 use App\Models\attr_filter;
 use App\Models\attr_product;
+use App\Models\basket;
 use App\Models\comment_product;
 use App\Models\product;
 use App\Models\property;
@@ -164,5 +165,38 @@ class repository
             }
 
         }
+    }
+
+    public function plus_card($slug)
+    {
+        $card = new basket();
+        if (auth()->check()){
+            $count = basket::where(['user_id' => auth()->user()->id , 'product_id' => $slug->id])->count();
+            if ($count == 0){
+                if ($slug->off > 0){
+                    $price_back = $slug->price * ($slug->off / 100);
+                    $price_next = $slug->price - $price_back;
+                    $card->product_id = $slug->id;
+                    $card->user_id = auth()->user()->id;
+                    $card->number = 1;
+                    $card->total_price =$price_next;
+                    $card->save();
+                    return back()->with('msg' , 'محصول به سبد خرید شما اضافه شد');
+                }else{
+                    $card->product_id = $slug->id;
+                    $card->user_id = auth()->user()->id;
+                    $card->number = 1;
+                    $card->total_price =$slug->price;
+                    $card->save();
+                    return back()->with('msg' , 'محصول به سبد خرید شما اضافه شد');
+                }
+            }else{
+                basket::where(['user_id' => auth()->user()->id , 'product_id' => $slug->id])->increment('number');
+                return back()->with('msg' , 'محصول به سبد خرید شما اضافه شد');
+            }
+        }else {
+            return redirect()->route('/login');
+        }
+
     }
 }

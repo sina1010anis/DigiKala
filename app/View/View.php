@@ -34,5 +34,7 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , city::class);
         \Illuminate\Support\Facades\View::composer(['*'] , streets::class);
         \Illuminate\Support\Facades\View::composer(['*'] , address_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , all_item_card::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , my_basket::class);
     }
 }

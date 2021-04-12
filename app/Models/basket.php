@@ -11,6 +11,9 @@ class basket extends Model
     protected $guarded =[];
 
     public function products(){
-        return $this->belongsTo(product::class);
+        return $this->belongsTo(product::class , 'product_id' ,'id');
+    }
+    public function users(){
+        return $this->hasMany(User::class , 'user_id' , 'id');
     }
 }

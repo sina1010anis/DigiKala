@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/plus/card/{slug}' , [\App\Http\Controllers\ProductController::class , 'plusCard'])->name('plusCard');
 Route::get('/', function () {return view('front.section.index_page');})->name('index.page');
 Route::get('/google-login', [\App\Http\Controllers\authController::class , 'redirectToProvider'])->name('google_login');
 Route::get('/callback', [\App\Http\Controllers\authController::class , 'handleProviderCallback'])->name('callback');
@@ -22,7 +23,7 @@ Route::post('/set_dis_like' , [\App\Http\Controllers\ProductController::class , 
 Route::get('/logout' , function (){
     auth()->logout();
 });
-Route::prefix('product')->group(function (){
+Route::prefix('/product')->group(function (){
     Route::post('/new/comment/reply/{id}' , [\App\Http\Controllers\ProductController::class , 'replyComment'])->name('product.replyComment');
     Route::get('/view/{slug}' , [\App\Http\Controllers\ProductController::class , 'show'])->name('product.show');
     Route::post('/new/comment' , [\App\Http\Controllers\ProductController::class , 'newComment'])->name('product.newComment');

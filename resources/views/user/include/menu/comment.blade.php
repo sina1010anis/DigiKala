@@ -1,4 +1,5 @@
-<div class="group-save-product">
+@if($comment_all->count() > 0)
+    <div class="group-save-product">
     <span style="width: 100%!important;" class="view-profile-index-user-buy fl-left view-profile-index-user-buy-test">
         <span>
             <h4 class="set-font color-b-700" align="right">نظرات</h4>
@@ -6,7 +7,6 @@
             <span class="view-list-buy" style="padding: 10px;box-sizing: border-box;background-color: unset">
                         <ul>
             @foreach($comment_all as $comment)
-                                @if($comment->user_id == auth()->user()->id)
                                     <li>
                                     @if($comment->status == 1)
                                         <i title="مورد تایید پشتیبانی دیجی کالا قرار گرفته است" class="fas fa-check-circle"></i>
@@ -31,9 +31,14 @@
 
                         </div>
         </ul>
-                    @endif
                 @endforeach
             </span>
         </span>
     </span>
 </div>
+@else
+    <div class="group-null">
+        <img src="{{url('data/image/icon/comment.png')}}" alt="">
+        <p class="f-20 color-b-400 set-font">نظری ار سمت شما ثبت نشده</p>
+    </div>
+@endif

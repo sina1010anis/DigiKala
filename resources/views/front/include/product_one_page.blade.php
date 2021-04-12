@@ -97,7 +97,7 @@
                     echo '<span style="margin: 0 5px!important;color: #414141" class="view-price-for-mobile view-products-slider-price">' . $price_next . 'تومان' . '</span>';
                     ?>
                 @endif
-                <a class="btn-send-card set-font f-12" href="">افزودن به سبد خرید</a>
+                    <a class="btn-send-card set-font" href="{{route('plusCard' , ['slug' => $data->slug] )}}">افزودن به سبد خرید</a>
             </div>
 
         </span>

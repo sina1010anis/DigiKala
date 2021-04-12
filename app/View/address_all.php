@@ -10,6 +10,6 @@ class address_all
 {
     public function compose(\Illuminate\View\View $view)
     {
-        return $view->with('address_all' , address::orderBy('id'  , 'desc')->get());
+        return $view->with('address_all' , address::orderBy('id'  , 'desc')->whereUser_id(auth()->user()->id)->get());
     }
 }
