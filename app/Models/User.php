@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address_id',
     ];
 
     /**
@@ -42,7 +43,7 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-    protected $attributes = ['action' => 0 , 'mobile' => 'null' , 'code_m' => 'null'];
+    protected $attributes = ['action' => 0 , 'mobile' => 'null' , 'code_m' => 'null' , 'address_id'=>0];
 
     public function addresses()
     {

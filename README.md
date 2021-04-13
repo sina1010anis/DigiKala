@@ -61,4 +61,6 @@ Used the latest versions now
 - - Comments
 - - Addresses
 - - Card
+- - Message
+- - View and Edit Profile
 

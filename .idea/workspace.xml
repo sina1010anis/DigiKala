@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/View/message_all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/image/icon/message.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/repository_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository_user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/message.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +242,8 @@
       <workItem from="1618143463280" duration="11787000" />
       <workItem from="1618206887569" duration="6060000" />
       <workItem from="1618229867668" duration="8203000" />
-      <workItem from="1618315130287" duration="294000" />
+      <workItem from="1618315130287" duration="13355000" />
+      <workItem from="1618330564419" duration="386000" />
     </task>
     <servers />
   </component>

@@ -36,5 +36,7 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , address_all::class);
         \Illuminate\Support\Facades\View::composer(['*'] , all_item_card::class);
         \Illuminate\Support\Facades\View::composer(['*'] , my_basket::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , message_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , user::class);
     }
 }

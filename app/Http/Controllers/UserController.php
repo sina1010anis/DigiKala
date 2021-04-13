@@ -59,4 +59,24 @@ class UserController extends Controller
     {
         return resolve(repository_user::class)->setAddress($request);
     }
+    public function editName(Request $request)
+    {
+        return resolve(repository_user::class)->editName($request);
+    }
+    public function editEmail(Request $request)
+    {
+        return resolve(repository_user::class)->editEmail($request);
+    }
+    public function editMobile(Request $request)
+    {
+        return resolve(repository_user::class)->editMobile($request);
+    }
+    public function editCode(Request $request)
+    {
+        return resolve(repository_user::class)->editCode($request);
+    }
+    public function editPassword(Request $request)
+    {
+        return resolve(repository_user::class)->editPassword($request);
+    }
 }

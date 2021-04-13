@@ -22,7 +22,7 @@ Route::post('/set_like' , [\App\Http\Controllers\ProductController::class , 'set
 Route::post('/set_dis_like' , [\App\Http\Controllers\ProductController::class , 'set_dis_like']);
 Route::get('/logout' , function (){
     auth()->logout();
-});
+})->middleware('authController');
 Route::prefix('/product')->group(function (){
     Route::post('/new/comment/reply/{id}' , [\App\Http\Controllers\ProductController::class , 'replyComment'])->name('product.replyComment');
     Route::get('/view/{slug}' , [\App\Http\Controllers\ProductController::class , 'show'])->name('product.show');
@@ -42,6 +42,13 @@ Route::prefix('user')->group(function (){
     Route::get('/profile/exit' , [\App\Http\Controllers\UserController::class , 'exitUser'])->name('user.exit');
     Route::post('/new/address' , [\App\Http\Controllers\UserController::class , 'newAddress'])->name('user.newAddress');
     Route::post('/set/address' , [\App\Http\Controllers\UserController::class , 'setAddress'])->name('user.setAddress');
+    Route::prefix('edit')->group(function (){
+        Route::post('/name' , [\App\Http\Controllers\UserController::class , 'editName'])->name('user.edit.name');
+        Route::post('/email' , [\App\Http\Controllers\UserController::class , 'editEmail'])->name('user.edit.email');
+        Route::post('/mobile' , [\App\Http\Controllers\UserController::class , 'editMobile'])->name('user.edit.mobile');
+        Route::post('/code' , [\App\Http\Controllers\UserController::class , 'editCode'])->name('user.edit.code');
+        Route::post('/password' , [\App\Http\Controllers\UserController::class , 'editPassword'])->name('user.edit.password');
+    });
 });
 Auth::routes();
 
