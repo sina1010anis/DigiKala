@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/View/all_item_card.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/my_basket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/comment.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/list.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/shop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/digikala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/digikala.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/address_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/address_all.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/product_one_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/product_one_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/comment.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/location.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/location.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +228,8 @@
       <workItem from="1618120166059" duration="227000" />
       <workItem from="1618143463280" duration="11787000" />
       <workItem from="1618206887569" duration="6060000" />
-      <workItem from="1618229867668" duration="8017000" />
+      <workItem from="1618229867668" duration="8203000" />
+      <workItem from="1618315130287" duration="294000" />
     </task>
     <servers />
   </component>

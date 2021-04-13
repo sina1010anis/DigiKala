@@ -10,6 +10,8 @@ class my_basket
 {
     public function compose(\Illuminate\View\View $view)
     {
-        return $view->with('my_basket_count' , basket::whereUser_id(auth()->user()->id)->count());
+        if (auth()->check()) {
+            return $view->with('my_basket_count', basket::whereUser_id(auth()->user()->id)->count());
+        }
     }
 }
