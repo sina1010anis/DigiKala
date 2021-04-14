@@ -63,4 +63,5 @@ Used the latest versions now
 - - Card
 - - Message
 - - View and Edit Profile
+- - Connect to the payment gateway
 
