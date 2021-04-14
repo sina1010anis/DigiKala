@@ -1,13 +1,19 @@
 <nav class="nax-bar-index-page">
     <div class="group-location group-icon-header">
-        @if(auth()->user()->address_id != 0)
-            @foreach($address_all as $address)
-                @if(auth()->user()->address_id == $address->id)
-                    <a href="{{route('user.location')}}">
-                        <i class="fas fa-search-location"></i><span>  {{$address->citys->name}}  </span>
-                    </a>
-                @endif
-            @endforeach
+        @if(auth()->check())
+            @if(auth()->user()->address_id != 0)
+                @foreach($address_all as $address)
+                    @if(auth()->user()->address_id == $address->id)
+                        <a href="{{route('user.location')}}">
+                            <i class="fas fa-search-location"></i><span>  {{$address->citys->name}}  </span>
+                        </a>
+                    @endif
+                @endforeach
+            @else
+                <a href="{{route('user.location')}}">
+                    <i class="fas fa-search-location"></i><span>  انتخاب شهر  </span>
+                </a>
+            @endif
         @else
             <a href="{{route('user.location')}}">
                 <i class="fas fa-search-location"></i><span>  انتخاب شهر  </span>

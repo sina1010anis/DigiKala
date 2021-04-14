@@ -216,4 +216,12 @@ class repository
         }
         return $data;
     }
+
+    public function deleteProduct(Request $request)
+    {
+        if ($request->ajax()){
+            basket::whereId($request->id)->delete();
+            return 'ok';
+        }
+    }
 }

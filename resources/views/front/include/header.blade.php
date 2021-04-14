@@ -26,7 +26,7 @@
                                     <span class="name-product-view-card"><a href="{{route('product.show' , ['slug'=>$item->products->slug])}}">{{$item->products->name}}</a></span>
                                     <span
                                         class="number-product-view-card">تعداد <span>{{$item->number}}</span></span>
-                                    <i class="fas fa-trash-alt delete-product-card" title="حذف محصول"></i>
+                                    <i @click="deleteProductCard('{{$item->id}}')" class="fas fa-trash-alt delete-product-card" title="حذف محصول"></i>
                                 </li>
                             @endif
                         @endforeach
@@ -94,3 +94,4 @@
     <i class="fas fa-search btn-search-for-mobile"></i>
 </header>
 <div class="view-search-product"></div>
+<div class="view-err-sm"></div>

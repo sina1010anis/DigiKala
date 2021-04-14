@@ -21,5 +21,25 @@ class menuController extends Controller
                 'menu_id'=>$slug->sub_all_menu_id
                 ]);
     }
+    public function test()
+    {
+        //return view('user.include.bank.unsuccessful');
+        $a = 21;
+        $b = 4;
+        $c = 0;
+        while ($a >= $b){
+            $e = $a-$b;
+            $c++;
+            if ($e <= $b){
+                break;
+            }
+            $a-=$b;
+        }
+        $a = $e;
+
+        echo 'باقی مانده ==>'.$a;
+        echo '<br>';
+        echo 'خراج قسمت ==>'.$c;
+    }
 
 }

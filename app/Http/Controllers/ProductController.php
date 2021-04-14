@@ -55,4 +55,9 @@ class ProductController extends Controller
     {
         return resolve(repository::class)->searchProduct($request);
     }
+
+    public function deleteProduct(Request $request)
+    {
+        return resolve(repository::class)->deleteProduct($request);
+    }
 }

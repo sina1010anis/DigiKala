@@ -7,8 +7,11 @@
             <span class="view-list-buy" style="padding: 10px;box-sizing: border-box;background-color: unset">
                 <?php $price = 0; ?>
                 @foreach($all_item_card as $save_product)
-                    <a class="view-product-save fl-right"
+
+                        <a class="view-product-save fl-right"
                        href="{{route('product.show' , ['slug'=>$save_product->products->slug])}}">
+                                                    <i @click="deleteProductCard('{{$save_product->id}}')" class="fas fa-trash-alt delete-product-card" title="حذف محصول"></i>
+
                             <img src="{{url('data/image/image product/').'/'.$save_product->products->image}}"
                                  alt="{{$save_product->products->name}}" title="{{$save_product->products->name}}">
                             <p align="center" class="set-font f-13 color-b-800">{{$save_product->products->name}}</p>
@@ -30,8 +33,11 @@
             @if(auth()->user()->address_id == 0)
                 <p class="set-font f-12 color-b-600 btn-new-address view-err-card">ادرسی وارد نشده لطفا در قسمت نشانی ها ادرس جدیدی اضافه کنید</p>
             @else
-                <button class="set-font f-12 color-b-600 btn-new-address" @click="showPageNewAddress">پرداخت با مبلغ
+                <form action="{{route('user.buyProduct')}}" method="post">
+                    @csrf
+                    <button type="submit" class="set-font f-12 color-b-600 btn-new-address" @click="showPageNewAddress">پرداخت با مبلغ
                     : {{$price}}</button>
+                </form>
             @endif
         @endif
     </div>

@@ -5,7 +5,10 @@ namespace App\Repository;
 
 
 use App\Models\address;
+use App\Models\basket;
+use App\Models\factor;
 use App\Models\User;
+use App\Payment\zarinPal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
@@ -77,5 +80,38 @@ class repository_user
         User::whereId(auth()->user()->id)->update(['password'=>Hash::make($request->password)]);
         auth()->logout();
         return redirect()->route('login');
+    }
+    public function buyProduct()
+    {
+        $user = auth()->user();
+        $factor = new factor();
+        $total_price = 0;
+        if (auth()->check()) {
+            $all_item_card=basket::orderBy('id', 'desc')->whereUser_id(auth()->user()->id)->whereStatus(0)->get(['product_id' , 'number']);
+            $price=basket::orderBy('id', 'desc')->whereUser_id(auth()->user()->id)->whereStatus(0)->get();
+        }
+        foreach ($price as $item){
+            $total_price+=$item->total_price*$item->number;
+        }
+        $factor->user_id = $user->id;
+        $factor->address_id = $user->address_id;
+        $factor->product = $all_item_card;
+        $factor->total_price =$total_price;
+        $factor->save();
+        return redirect()->route('user.bank');
+    }
+
+    public function bank()
+    {
+        $factor = factor::where('user_id' , auth()->user()->id)->orderBy('id' , 'desc')->first();
+        $zarinPal = new zarinPal();
+        $zarinPal->request($factor->total_price);
+    }
+
+    public function bankVerify()
+    {
+        $zarinPal = new zarinPal();
+        return $zarinPal->verify();
+
     }
 }

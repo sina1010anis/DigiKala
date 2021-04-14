@@ -29,6 +29,25 @@ const app = createApp({
         text_search_index_page:''
     }),
     methods: {
+        deleteProductCard(id){
+                axios.post('/product/delete' , {
+                    id:id
+                }).then((res)=>{
+                    if (res.data == 'ok'){
+                        $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({'padding': '5px 20px'})
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    }else {
+                        $(".view-err-sm").html('مشکلی پیش اماده است.').fadeIn().css({'padding': '5px 20px'})
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)                    }
+
+                })
+        },
         searchIndexPage(){
             if (this.text_search_index_page != ''){
                 axios.post('/search/product' , {

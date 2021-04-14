@@ -10,6 +10,8 @@ class basket extends Model
     use HasFactory;
     protected $guarded =[];
 
+    protected $attributes =['status' => 0];
+
     public function products(){
         return $this->belongsTo(product::class , 'product_id' ,'id');
     }

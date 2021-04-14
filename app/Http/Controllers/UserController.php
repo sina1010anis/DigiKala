@@ -79,4 +79,19 @@ class UserController extends Controller
     {
         return resolve(repository_user::class)->editPassword($request);
     }
+
+    public function buyProduct()
+    {
+        return resolve(repository_user::class)->buyProduct();
+    }
+
+    public function bank()
+    {
+        return resolve(repository_user::class)->bank();
+    }
+
+    public function bankVerify()
+    {
+        return resolve(repository_user::class)->bankVerify();
+    }
 }

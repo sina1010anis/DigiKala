@@ -11,7 +11,7 @@ class my_basket
     public function compose(\Illuminate\View\View $view)
     {
         if (auth()->check()) {
-            return $view->with('my_basket_count', basket::whereUser_id(auth()->user()->id)->count());
+            return $view->with('my_basket_count', basket::whereUser_id(auth()->user()->id)->whereStatus(0)->count());
         }
     }
 }

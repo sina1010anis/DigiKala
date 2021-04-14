@@ -21,6 +21,7 @@ Route::get('/menu/{slug}' , [\App\Http\Controllers\menuController::class , 'inde
 Route::post('/set_like' , [\App\Http\Controllers\ProductController::class , 'set_like']);
 Route::post('/set_dis_like' , [\App\Http\Controllers\ProductController::class , 'set_dis_like']);
 Route::post('/search/product' , [\App\Http\Controllers\ProductController::class , 'searchProduct']);
+Route::get('/test' , [\App\Http\Controllers\menuController::class , 'test']);
 Route::get('/logout' , function (){
     auth()->logout();
 })->middleware('authController');
@@ -30,6 +31,7 @@ Route::prefix('/product')->group(function (){
     Route::post('/new/comment' , [\App\Http\Controllers\ProductController::class , 'newComment'])->name('product.newComment');
     Route::post('/filter' , [\App\Http\Controllers\ProductController::class , 'filterProduct'])->name('product.filterProduct');
     Route::post('/save' , [\App\Http\Controllers\ProductController::class , 'saveProduct'])->name('product.saveProduct');
+    Route::post('/delete' , [\App\Http\Controllers\ProductController::class , 'deleteProduct'])->name('product.delete');
 });
 Route::prefix('user')->group(function (){
     Route::get('/profile' , [\App\Http\Controllers\UserController::class , 'index'])->name('user.profile');
@@ -43,6 +45,9 @@ Route::prefix('user')->group(function (){
     Route::get('/profile/exit' , [\App\Http\Controllers\UserController::class , 'exitUser'])->name('user.exit');
     Route::post('/new/address' , [\App\Http\Controllers\UserController::class , 'newAddress'])->name('user.newAddress');
     Route::post('/set/address' , [\App\Http\Controllers\UserController::class , 'setAddress'])->name('user.setAddress');
+    Route::post('/buy/product' , [\App\Http\Controllers\UserController::class , 'buyProduct'])->name('user.buyProduct');
+    Route::get('/bank' , [\App\Http\Controllers\UserController::class , 'bank'])->name('user.bank');
+    Route::get('/bank/verify' , [\App\Http\Controllers\UserController::class , 'bankVerify'])->name('user.bankVerify');
     Route::prefix('edit')->group(function (){
         Route::post('/name' , [\App\Http\Controllers\UserController::class , 'editName'])->name('user.edit.name');
         Route::post('/email' , [\App\Http\Controllers\UserController::class , 'editEmail'])->name('user.edit.email');

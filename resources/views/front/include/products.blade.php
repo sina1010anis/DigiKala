@@ -9,7 +9,7 @@
                     <a href="{{route('product.show' , ['slug'=>$discounted_product->slug])}}"
                        class="view-product-buy-good-list-one">
                         <img src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
-                        <p class="view-products-slider-name" align="center">{{$discounted_product->name}}</p>
+                        <p class="view-products-slider-name set-font f-12" align="center">{{$discounted_product->name}}</p>
                         <div class="price-view-product-buy-good-list-one">
                             <span class="off-view-product-buy-good-list-one">{{$discounted_product->off}}%</span>
                             <span class="price-off-view-product-buy-good-list-one">{{$discounted_product->price}}</span>
@@ -42,7 +42,7 @@
                     <a href="{{route('product.show' , ['slug'=>$discounted_product->slug])}}"
                        class="view-product-buy-good-list-one">
                         <img src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
-                        <p class="view-products-slider-name" align="center">{{$discounted_product->name}}</p>
+                        <p class="view-products-slider-name set-font f-12" align="center">{{$discounted_product->name}}</p>
                         <div class="price-view-product-buy-good-list-one">
                             @if($discounted_product->off > 0)
                                 <span class="off-view-product-buy-good-list-one">{{$discounted_product->off}}%</span>
