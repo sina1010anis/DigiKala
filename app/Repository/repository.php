@@ -199,4 +199,21 @@ class repository
         }
 
     }
+
+    public function searchProduct(Request $request)
+    {
+        $data = '';
+        $product = product::where('name' , 'LIKE' , '%'.$request->text.'%')->get();
+        foreach ($product as $item){
+            $image = $item->image;
+            $name = $item->name;
+            $off = $item->off;
+            $data .='<a href="'.route('product.show' , ['slug'=>$item->slug]).'">'.
+                '<img src="'.'data/image/image product/'.'/'.$image.'">'.
+                '<span class="name-product-search set-font color-b-700 f-12 ">'.$name.'</span>'
+
+                .'</a>'.'<div class="line fl-right"></div>';
+        }
+        return $data;
+    }
 }

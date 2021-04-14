@@ -2205,6 +2205,72 @@ a:hover{
     border-radius: 5px;
     border: 1px solid #d4d4d4;
 }
+.view-err-card:after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    border-radius:100px ;
+    padding:5px;
+    opacity:100%;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #b3b3b3;
+    animation: select_item_pen 0.4s infinite linear;
+
+}
+.view-search-product{
+    width: 500px;
+    border-radius: 5px;
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    z-index: 2;
+    display: none;
+    overflow-y: scroll;
+    right: 152px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow:1px 10px 10px rgba(0,0,0,.5);
+}
+.text-not-product-search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.view-search-product > a{
+    width: 100%;
+    padding: 5px;
+    height: auto;
+    position: relative;
+    float: right;
+}
+.view-search-product img{
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+.view-search-product > a .name-product-search{
+    float: right;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: right;
+    direction: rtl;
+    transform: translate(-50%, -50%);
+}
+.off-product-search{
+    position: absolute;
+    top: 50%;
+    background: red;
+    transform: translate(0%,-50%);
+    padding: 10px;
+    border-radius: 100px;
+    color: white;
+}
 @keyframes select_item_pen {
     from{
         padding:5px;

@@ -25,9 +25,31 @@ const app = createApp({
         id_check_box: 0,
         view_btn_save_address: false,
         text_filter: '',
-        style: 'style="display: none;"'
+        style: 'style="display: none;"',
+        text_search_index_page:''
     }),
     methods: {
+        searchIndexPage(){
+            if (this.text_search_index_page != ''){
+                axios.post('/search/product' , {
+                    text:this.text_search_index_page
+                }).then((res)=>{
+                    if (res.data != ''){
+                        $('.view-search-product').stop().fadeIn();
+                        $('.view-search-product').html('<img class="text-not-product-search" style="width: 300px;height: 200px" src="data/gif/lod_search_product.gif">');
+                        setTimeout(()=>{
+                            $('.view-search-product').html(res.data);
+                        },1500)
+                    }else {
+                        $('.view-search-product').html('<p class="text-not-product-search set-font f-12 color-b-500">چیزی پیدا نشد</p>');
+                    }
+
+                })
+            }else {
+                $('.view-search-product').stop().fadeOut();
+            }
+
+        },
         showPageEdit(name) {
             $(".group-page-edit-profile ." + name).stop().fadeIn(200)
             $(".blur-web").stop().fadeIn(100)

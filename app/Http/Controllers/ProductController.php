@@ -50,4 +50,9 @@ class ProductController extends Controller
     {
         return resolve(repository::class)->plus_card($slug);
     }
+
+    public function searchProduct(Request $request)
+    {
+        return resolve(repository::class)->searchProduct($request);
+    }
 }

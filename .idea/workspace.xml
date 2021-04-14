@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/View/message_all.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/data/image/icon/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/gif/lod_search_product.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/repository_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/message.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/message.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +32,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/sina1010anis/DigiKala" />
+      </set>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -160,7 +164,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/data/image/icon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/data/gif" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -172,11 +176,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\digikala\public\data\gif" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\user\include\menu" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\user\section" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\image_brand" />
-      <recent name="C:\wamp64\www\s1\digikala\public\data\image\image one product" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\s1\digikala\resources\views" />
@@ -243,7 +247,8 @@
       <workItem from="1618206887569" duration="6060000" />
       <workItem from="1618229867668" duration="8203000" />
       <workItem from="1618315130287" duration="13355000" />
-      <workItem from="1618330564419" duration="386000" />
+      <workItem from="1618330564419" duration="519000" />
+      <workItem from="1618375185220" duration="5964000" />
     </task>
     <servers />
   </component>

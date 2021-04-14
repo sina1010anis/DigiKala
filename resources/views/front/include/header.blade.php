@@ -88,8 +88,9 @@
     </div>
     <div class="group-icon-header group-input-search">
         <i class="fas fa-search"></i>
-        <input type="text" class="input-search-index-page" name="search-index-page"
+        <input v-model="text_search_index_page" @keyup="searchIndexPage" type="text" class="input-search-index-page" name="search-index-page"
                placeholder="جستوجو در دیجی کالا...">
     </div>
     <i class="fas fa-search btn-search-for-mobile"></i>
 </header>
+<div class="view-search-product"></div>

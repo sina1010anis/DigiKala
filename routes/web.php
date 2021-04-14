@@ -20,6 +20,7 @@ Route::get('/callback', [\App\Http\Controllers\authController::class , 'handlePr
 Route::get('/menu/{slug}' , [\App\Http\Controllers\menuController::class , 'index'])->name('menu_view');
 Route::post('/set_like' , [\App\Http\Controllers\ProductController::class , 'set_like']);
 Route::post('/set_dis_like' , [\App\Http\Controllers\ProductController::class , 'set_dis_like']);
+Route::post('/search/product' , [\App\Http\Controllers\ProductController::class , 'searchProduct']);
 Route::get('/logout' , function (){
     auth()->logout();
 })->middleware('authController');

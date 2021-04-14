@@ -1,6 +1,18 @@
 <nav class="nax-bar-index-page">
     <div class="group-location group-icon-header">
-        <i class="fas fa-search-location"></i><span>  انتخاب شهر  </span>
+        @if(auth()->user()->address_id != 0)
+            @foreach($address_all as $address)
+                @if(auth()->user()->address_id == $address->id)
+                    <a href="{{route('user.location')}}">
+                        <i class="fas fa-search-location"></i><span>  {{$address->citys->name}}  </span>
+                    </a>
+                @endif
+            @endforeach
+        @else
+            <a href="{{route('user.location')}}">
+                <i class="fas fa-search-location"></i><span>  انتخاب شهر  </span>
+            </a>
+        @endif
     </div>
     <div class="group-menu-index-page group-icon-header">
         <img class="logo-index-page logo-index-page-menu" src="{{url('data/image/digikala-3.png')}}" alt="">
@@ -27,14 +39,9 @@
             <span v-if="{{$sub_all_menu->all_menu_id}} == all_menu_id" class="group-item-select-menu">
             <h4> <i class="fas fa-angle-down"></i> {{$sub_all_menu->name}} </h4>
                 @foreach($sub_all_menu->down_all_menus as $name)
-                    <a style="color: #585858" href="{{route('menu_view' , ['slug'=>$name->slug])}}"><p align="right">{{$name->name}}</p></a>
+                    <a style="color: #585858" href="{{route('menu_view' , ['slug'=>$name->slug])}}"><p
+                            align="right">{{$name->name}}</p></a>
                 @endforeach
-<!--            <p align="right">موبایل</p>
-            <p align="right">موبایل</p>
-            <p align="right">موبایل</p>
-            <p align="right">موبایل</p>
-            <p align="right">موبایل</p>
-            <p align="right">موبایل</p>-->
         </span>
         @endforeach
     </div>
