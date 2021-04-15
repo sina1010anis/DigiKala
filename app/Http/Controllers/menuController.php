@@ -23,23 +23,18 @@ class menuController extends Controller
     }
     public function test()
     {
-        //return view('user.include.bank.unsuccessful');
-        $a = 21;
-        $b = 4;
-        $c = 0;
-        while ($a >= $b){
-            $e = $a-$b;
-            $c++;
-            if ($e <= $b){
+        $a=1;
+        $c=36;
+        while ($a < $c){
+            $a+=2;
+            if ($a == $c){
+                echo 'no';
+                break;
+            }else{
+                echo 'ok';
                 break;
             }
-            $a-=$b;
         }
-        $a = $e;
-
-        echo 'باقی مانده ==>'.$a;
-        echo '<br>';
-        echo 'خراج قسمت ==>'.$c;
     }
 
 }

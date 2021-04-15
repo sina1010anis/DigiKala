@@ -20,6 +20,9 @@ class address extends Model
     {
         return $this->belongsTo(street::class , 'street_id' , 'id');
     }
-
+    public function users()
+    {
+        return $this->belongsTo(User::class , 'user_id' , 'id');
+    }
     public $timestamps = false;
 }

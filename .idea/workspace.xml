@@ -2,30 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Payment/zarinPal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/include/bank/successful.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/include/bank/unsuccessful.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/section/bank.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/digikala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/digikala.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repository/repository_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/addresses.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/data/image/icon/admin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/address.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/attrFilter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/bannerCenter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/bannerUp.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/brand.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/city.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/commentAdmin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/commentProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/commentReply.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/factor.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/imageProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/menuDown.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/menuHeader.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/menuSub.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/menuTop.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/property.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/saveProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/slider.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/street.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/titleFilter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/user.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/address.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/attrFilter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/bannerCenter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/bannerUp.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/brand.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/card.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/city.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/commentAdmin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/commentProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/commentReply.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/factor.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/imageProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/menuDown.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/menuHeader.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/menuSub.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/menuTop.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/property.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/saveProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/slider.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/street.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/titleFilter.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/user.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/repository_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository_user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/all_item_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/all_item_card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/my_basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/my_basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/address.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/navbar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/navbar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/include/products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +216,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/data/gif" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/include" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -191,11 +228,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\s1\digikala\public\data\gif" />
+      <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\include" />
+      <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\section" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
+      <recent name="C:\wamp64\www\s1\digikala\public\data\gif" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\user\include\menu" />
-      <recent name="C:\wamp64\www\s1\digikala\resources\views\user\section" />
-      <recent name="C:\wamp64\www\s1\digikala\public\data\image\image_brand" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\s1\digikala\resources\views" />
@@ -265,7 +302,10 @@
       <workItem from="1618330564419" duration="519000" />
       <workItem from="1618375185220" duration="8017000" />
       <workItem from="1618402607833" duration="7248000" />
-      <workItem from="1618412087560" duration="8380000" />
+      <workItem from="1618412087560" duration="8677000" />
+      <workItem from="1618427191479" duration="3149000" />
+      <workItem from="1618464316228" duration="3094000" />
+      <workItem from="1618491364558" duration="6553000" />
     </task>
     <servers />
   </component>

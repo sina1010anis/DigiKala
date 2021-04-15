@@ -2271,6 +2271,72 @@ a:hover{
     border-radius: 100px;
     color: white;
 }
+.page-all-admin{
+    width: 100%;
+}
+.part-menu-panel-admin{
+    width: 20%;
+    background-color: #efefef;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.part-menu-panel-admin img{
+    margin: 0 83px;
+    width: 80px;
+}
+.part-view-panel-admin{
+    width: 80%;
+    padding: 10px;
+
+    box-sizing: border-box;
+    background-color: #ffffff;
+    height: 100vh;
+}
+.part-menu-panel-admin li{
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 5px 0;
+    margin:5px 0 ;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+*{
+    font-family: IRANY;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+.view-title-menu{
+    padding: 5px 0;
+    color: white;
+    border-radius: 100px;
+    background-color: #ff5165;
+}
+.btn-delete{
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    background-color: #ff4242;
+}
+.btn-delete:hover{
+    color: white!important;
+}
+.w-5{
+    display: none!important;
+}
 @keyframes select_item_pen {
     from{
         padding:5px;

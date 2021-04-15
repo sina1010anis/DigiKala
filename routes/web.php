@@ -33,6 +33,36 @@ Route::prefix('/product')->group(function (){
     Route::post('/save' , [\App\Http\Controllers\ProductController::class , 'saveProduct'])->name('product.saveProduct');
     Route::post('/delete' , [\App\Http\Controllers\ProductController::class , 'deleteProduct'])->name('product.delete');
 });
+Route::prefix('admin')->middleware(['authController','role'])->group(function (){
+    Route::get('/index' , [\App\Http\Controllers\AdminController::class , 'index'])->name('admin.index');
+    Route::get('/address' , [\App\Http\Controllers\AdminController::class , 'address'])->name('admin.address');
+    Route::get('/menuTop' , [\App\Http\Controllers\AdminController::class , 'menuTop'])->name('admin.menuTop');
+    Route::get('/menuSub' , [\App\Http\Controllers\AdminController::class , 'menuSub'])->name('admin.menuSub');
+    Route::get('/menuDown' , [\App\Http\Controllers\AdminController::class , 'menuDown'])->name('admin.menuDown');
+    Route::get('/menuHeader' , [\App\Http\Controllers\AdminController::class , 'menuHeader'])->name('admin.menuHeader');
+    Route::get('/attrFilter' , [\App\Http\Controllers\AdminController::class , 'attrFilter'])->name('admin.attrFilter');
+    Route::get('/titleFilter' , [\App\Http\Controllers\AdminController::class , 'titleFilter'])->name('admin.titleFilter');
+    Route::get('/bannerCenter' , [\App\Http\Controllers\AdminController::class , 'bannerCenter'])->name('admin.bannerCenter');
+    Route::get('/bannerUp' , [\App\Http\Controllers\AdminController::class , 'bannerUp'])->name('admin.bannerUp');
+    Route::get('/slider' , [\App\Http\Controllers\AdminController::class , 'slider'])->name('admin.slider');
+    Route::get('/card' , [\App\Http\Controllers\AdminController::class , 'card'])->name('admin.card');
+    Route::get('/brand' , [\App\Http\Controllers\AdminController::class , 'brand'])->name('admin.brand');
+    Route::get('/city' , [\App\Http\Controllers\AdminController::class , 'city'])->name('admin.city');
+    Route::get('/street' , [\App\Http\Controllers\AdminController::class , 'street'])->name('admin.street');
+    Route::get('/commentProduct' , [\App\Http\Controllers\AdminController::class , 'commentProduct'])->name('admin.commentProduct');
+    Route::get('/factor' , [\App\Http\Controllers\AdminController::class , 'factor'])->name('admin.factor');
+    Route::get('/imageProduct' , [\App\Http\Controllers\AdminController::class , 'imageProduct'])->name('admin.imageProduct');
+    Route::get('/commentAdmin' , [\App\Http\Controllers\AdminController::class , 'commentAdmin'])->name('admin.commentAdmin');
+    Route::get('/commentReply' , [\App\Http\Controllers\AdminController::class , 'commentReply'])->name('admin.commentReply');
+    Route::get('/product' , [\App\Http\Controllers\AdminController::class , 'product'])->name('admin.product');
+    Route::get('/property' , [\App\Http\Controllers\AdminController::class , 'property'])->name('admin.property');
+    Route::get('/saveProduct' , [\App\Http\Controllers\AdminController::class , 'saveProduct'])->name('admin.saveProduct');
+    Route::get('/user' , [\App\Http\Controllers\AdminController::class , 'user'])->name('admin.user');
+    Route::get('/exit' , [\App\Http\Controllers\AdminController::class , 'exitPage'])->name('admin.exit');
+    Route::prefix('/delete')->group(function (){
+        Route::get('/address/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteAddress'])->name('admin.delete.address');
+    });
+});
 Route::prefix('user')->group(function (){
     Route::get('/profile' , [\App\Http\Controllers\UserController::class , 'index'])->name('user.profile');
     Route::get('/profile/my/order' , [\App\Http\Controllers\UserController::class , 'order'])->name('user.order');

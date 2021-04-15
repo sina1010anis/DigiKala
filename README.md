@@ -64,4 +64,7 @@ Used the latest versions now
 - - Message
 - - View and Edit Profile
 - - Connect to the payment gateway
+- Panel Admin
+- - View Menu
+- - Address
 
