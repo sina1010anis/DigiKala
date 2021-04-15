@@ -10,6 +10,16 @@ This personal project took about two months and was designed from zero to one hu
 
 <hr>
 
+## Install
+    git clone https://github.com/sina1010anis/Online-shop-DigiKala-.git
+    composer update
+    npm update
+    php artisan migrate
+
+## Panel Admin
+    Username : siis@gmail.com
+    Password : sina1010
+
 ## Items used:
 
 This website is designed with laravel and vuejs as well as related libraries like jquery
