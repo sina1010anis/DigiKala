@@ -12,7 +12,7 @@ class banner_up extends Model
     protected $guarded =[];
 
     public function products(){
-        return $this->belongsTo(product::class);
+        return $this->belongsTo(product::class , 'product_id' , 'id');
     }
     public $timestamps = false;
 }

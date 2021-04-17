@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\address;
+use App\Models\attr_filter;
+use App\Models\banner_center;
+use App\Models\basket;
+use App\Models\comment_product;
 use App\Repository\repository_admin;
+use App\View\comment_all;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -110,5 +115,77 @@ class AdminController extends Controller
     }
     public function deleteAddress(address $id){
         return resolve(repository_admin::class)->deleteAddress($id);
+    }
+    public function deleteBannerCenter(banner_center $id){
+        return resolve(repository_admin::class)->deleteBannerCenter($id);
+    }
+    public function deleteAttrFilter(attr_filter $id)
+    {
+        return resolve(repository_admin::class)->deleteAttrFilter($id);
+    }
+    public function createAttrFilter(Request $request)
+    {
+        return resolve(repository_admin::class)->createAttrFilter($request);
+    }
+    public function createBannerCenter(Request $request)
+    {
+        return resolve(repository_admin::class)->createBannerCenter($request);
+    }
+
+    public function createBannerUp(Request $request)
+    {
+        return resolve(repository_admin::class)->createBannerUp($request);
+    }
+    public function deleteBannerUp(Request $request)
+    {
+        return resolve(repository_admin::class)->deleteBannerUp($request);
+    }
+    public function deleteBrand(Request $request)
+    {
+        return resolve(repository_admin::class)->deleteBrand($request);
+    }
+    public function createBrand(Request $request)
+    {
+        return resolve(repository_admin::class)->createBrand($request);
+    }
+
+    public function deleteBasket(basket $id)
+    {
+        return resolve(repository_admin::class)->deleteBasket($id);
+    }
+
+    public function deleteCity($id)
+    {
+        return resolve(repository_admin::class)->deleteCity($id);
+    }
+
+    public function createCity(Request $request)
+    {
+        return resolve(repository_admin::class)->createCity($request);
+    }
+
+    public function deleteCommentAdmin($id)
+    {
+        return resolve(repository_admin::class)->deleteCommentAdmin($id);
+    }
+
+    public function createCommentAdmin(Request $request)
+    {
+        return resolve(repository_admin::class)->createCommentAdmin($request);
+    }
+
+    public function inactiveCommentProduct(comment_product $id)
+    {
+        return resolve(repository_admin::class)->inactiveCommentProduct($id);
+    }
+
+    public function deleteCommentProduct($id)
+    {
+        return resolve(repository_admin::class)->deleteCommentProduct($id);
+    }
+
+    public function deleteReplyComment($id)
+    {
+        return resolve(repository_admin::class)->deleteReplyComment($id);
     }
 }

@@ -29,6 +29,14 @@ const app = createApp({
         text_search_index_page:''
     }),
     methods: {
+        hideAllPage(){
+            $(".page-create-admin").stop().fadeOut(100)
+            $(".blur-web").stop().fadeOut(200)
+        },
+        showPageCreate(){
+            $(".page-create-admin").stop().fadeIn(200)
+            $(".blur-web").stop().fadeIn(100)
+        },
         deleteProductCard(id){
                 axios.post('/product/delete' , {
                     id:id

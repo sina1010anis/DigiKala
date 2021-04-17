@@ -11,7 +11,7 @@ class reply_comment extends Model
     protected $guarded =[];
 
     public function comment_products(){
-        return $this->belongsTo(comment_product::class);
+        return $this->belongsTo(comment_product::class , 'comment_id' , 'id');
     }
     public function users(){
         return $this->belongsTo(User::class , 'user_id' , 'id');

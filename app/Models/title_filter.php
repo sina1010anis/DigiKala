@@ -11,6 +11,6 @@ class title_filter extends Model
     protected $guarded =[];
     public $timestamps= false;
     public function sub_menus(){
-        return $this->belongsTo(sub_all_menu::class);
+        return $this->belongsTo(sub_all_menu::class,'sub_menu_id','id');
     }
 }

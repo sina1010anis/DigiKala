@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="" />
+    <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/View/attr_filter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/card_all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/comment_all_panel_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/title_filter.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/user_all.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/attr_filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/attr_filter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/banner_center.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/banner_center.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/banner_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/banner_up.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/basket.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/brand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/comment_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/comment_product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/reply_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/reply_comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/title_filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/title_filter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/repository_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/city.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/city.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/attrFilter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/attrFilter.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/bannerCenter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/bannerCenter.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/bannerUp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/bannerUp.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/brand.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/brand.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/card.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/city.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/commentAdmin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/commentAdmin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/commentProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/commentProduct.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/commentReply.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/commentReply.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,7 +279,12 @@
       <workItem from="1618412087560" duration="8677000" />
       <workItem from="1618427191479" duration="3149000" />
       <workItem from="1618464316228" duration="3094000" />
-      <workItem from="1618491364558" duration="6851000" />
+      <workItem from="1618491364558" duration="7158000" />
+      <workItem from="1618550119971" duration="2210000" />
+      <workItem from="1618561464181" duration="7031000" />
+      <workItem from="1618582547879" duration="326000" />
+      <workItem from="1618583190638" duration="3156000" />
+      <workItem from="1618635312696" duration="3368000" />
     </task>
     <servers />
   </component>

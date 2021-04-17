@@ -2329,10 +2329,39 @@ tr:nth-child(even) {
     padding: 5px 20px;
     color: white;
     border-radius: 5px;
+    border: 1px solid #ff4242;
     background-color: #ff4242;
 }
 .btn-delete:hover{
-    color: white!important;
+    color: #393939!important;
+    background-color: unset;
+}
+.btn-create{
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #40b833;
+    background-color: #40b833;
+}
+.btn-create:hover{
+    color: #393939 !important;
+    background-color: unset;
+
+}
+.btn-war{
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #faae46;
+    background-color: #faae46;
+}
+.btn-war:hover{
+    color: #393939 !important;
+    background-color: unset;
+
+}
+.tr-view-item-table-admin img{
+    width: 40%!important;
 }
 .w-5{
     display: none!important;

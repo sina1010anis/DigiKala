@@ -39,5 +39,11 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , message_all::class);
         \Illuminate\Support\Facades\View::composer(['*'] , user::class);
         \Illuminate\Support\Facades\View::composer(['*'] , addresses::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , attr_filter::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , title_filter::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , card_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , message::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , user_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , comment_all_panel_admin::class);
     }
 }

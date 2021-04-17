@@ -61,6 +61,26 @@ Route::prefix('admin')->middleware(['authController','role'])->group(function ()
     Route::get('/exit' , [\App\Http\Controllers\AdminController::class , 'exitPage'])->name('admin.exit');
     Route::prefix('/delete')->group(function (){
         Route::get('/address/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteAddress'])->name('admin.delete.address');
+        Route::get('/attrFilter/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteAttrFilter'])->name('admin.delete.attrFilter');
+        Route::get('/bannerCenter/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteBannerCenter'])->name('admin.delete.deleteBannerCenter');
+        Route::get('/bannerUp/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteBannerUp'])->name('admin.delete.deleteBannerUp');
+        Route::get('/brand/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteBrand'])->name('admin.delete.deleteBrand');
+        Route::get('/basket/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteBasket'])->name('admin.delete.deleteBasket');
+        Route::get('/city/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteCity'])->name('admin.delete.deleteCity');
+        Route::get('/commentAdmin/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteCommentAdmin'])->name('admin.delete.deleteCommentAdmin');
+        Route::get('/commentProduct/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteCommentProduct'])->name('admin.delete.deleteCommentProduct');
+        Route::get('/replyComment/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteReplyComment'])->name('admin.delete.deleteReplyComment');
+    });
+    Route::prefix('/create')->group(function(){
+        Route::post('/attrFilter' , [\App\Http\Controllers\AdminController::class,'createAttrFilter'])->name('admin.create.attrFilter');
+        Route::post('/bannerCenter' , [\App\Http\Controllers\AdminController::class,'createBannerCenter'])->name('admin.create.createBannerCenter');
+        Route::post('/bannerUp' , [\App\Http\Controllers\AdminController::class,'createBannerUp'])->name('admin.create.createBannerUp');
+        Route::post('/brand' , [\App\Http\Controllers\AdminController::class,'createBrand'])->name('admin.create.createBrand');
+        Route::post('/city' , [\App\Http\Controllers\AdminController::class,'createCity'])->name('admin.create.createCity');
+        Route::post('/commentAdmin' , [\App\Http\Controllers\AdminController::class,'createCommentAdmin'])->name('admin.create.createCommentAdmin');
+    });
+    Route::prefix('/inactive')->group(function(){
+        Route::get('/commentProduct/{id}' , [\App\Http\Controllers\AdminController::class , 'inactiveCommentProduct'])->name('admin.inactive.commentProduct');
     });
 });
 Route::prefix('user')->group(function (){

@@ -8,6 +8,8 @@ use App\Repository\repository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
+use function Symfony\Component\String\b;
+
 class menuController extends Controller
 {
     public function index(down_all_menu $slug)
@@ -23,18 +25,14 @@ class menuController extends Controller
     }
     public function test()
     {
-        $a=1;
-        $c=36;
-        while ($a < $c){
-            $a+=2;
-            if ($a == $c){
-                echo 'no';
-                break;
-            }else{
-                echo 'ok';
-                break;
-            }
+        $a=1234;
+        $k=10;
+        while($a>0){
+            $b=$a%$k;
+            echo $b.' - ';
+            $a/=10;
         }
+
     }
 
 }

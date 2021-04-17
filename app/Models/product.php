@@ -12,7 +12,7 @@ class product extends Model
     protected $guarded =[];
 
     public function all_menus(){
-        return $this->belongsTo(all_menu::class);
+        return $this->belongsTo(all_menu::class , 'menu_id' , 'id');
     }
     public function down_all_menus(){
         return $this->belongsTo(all_menu::class);

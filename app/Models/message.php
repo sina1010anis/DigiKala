@@ -13,7 +13,7 @@ class message extends Model
 
     public function users()
     {
-        return $this->hasMany(User::class);
+        return $this->belongsTo(User::class , 'user_id' , 'id');
     }
 
 }

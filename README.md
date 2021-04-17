@@ -18,7 +18,7 @@ This personal project took about two months and was designed from zero to one hu
 
 ## Panel Admin
     Username : siis@gmail.com
-    Password : sina1010
+    Password : 123456789
 
 ## Items used:
 
@@ -58,13 +58,13 @@ Used the latest versions now
 
 - Create DataBase
 - Index Page
-- - End Header
-- - End NavBar
-- - End Slider
-- - End Page Login
-- - End Page Register
-- - End Product introduction
-- - End Filter Page
+- -  Header
+- -  NavBar
+- -  Slider
+- -  Page Login
+- -  Page Register
+- -  Product introduction
+- -  Filter Page
 - Panel User
 - - My Orders
 - - Favorites list
@@ -75,6 +75,13 @@ Used the latest versions now
 - - View and Edit Profile
 - - Connect to the payment gateway
 - Panel Admin
-- - View Menu
-- - Address
+- -  View Menu
+- -  View Address And Delete Address
+- -  View Banner Center And Delete Banner Center
+- -  View Banner Up And Delete Banner Up And Create Banner Up
+- -  View Brand And Delete Brand And Create Brand
+- -  View Card And Delete Card
+- -  View City And Delete City And Create City
+- -  View Comment Product And Delete Comment Product And Inactive Comment Product
+- -  View Reply Comment And Delete Reply Comment
 

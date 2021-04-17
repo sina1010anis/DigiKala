@@ -12,6 +12,6 @@ class banner_center extends Model
     protected $guarded =[];
 
     public function products(){
-        return $this->belongsTo(product::class);
+        return $this->belongsTo(product::class , 'product_id' , 'id');
     }
 }

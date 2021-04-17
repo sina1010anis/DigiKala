@@ -14,6 +14,6 @@ class attr_filter extends Model
     public $timestamps = false;
 
     public function title_filters(){
-        return $this->belongsTo(title_filter::class);
+        return $this->belongsTo(title_filter::class,'title_filter_id','id');
     }
 }
