@@ -7,6 +7,7 @@ use App\Models\attr_filter;
 use App\Models\banner_center;
 use App\Models\basket;
 use App\Models\comment_product;
+use App\Models\product;
 use App\Repository\repository_admin;
 use App\View\comment_all;
 use Illuminate\Http\Request;
@@ -187,5 +188,36 @@ class AdminController extends Controller
     public function deleteReplyComment($id)
     {
         return resolve(repository_admin::class)->deleteReplyComment($id);
+    }
+    public function deleteProduct($id)
+    {
+        return resolve(repository_admin::class)->deleteProduct($id);
+    }
+
+    public function createProduct(Request $request)
+    {
+        return resolve(repository_admin::class)->createProduct($request);
+    }
+
+    public function editProduct(product $id)
+    {
+        return resolve(repository_admin::class)->editProduct($id);
+    }
+    public function updateProduct(Request $request , $id){
+        return resolve(repository_admin::class)->updateProduct($request , $id);
+    }
+    public function deleteImageProduct($id){
+        return resolve(repository_admin::class)->deleteImageProduct($id);
+    }
+    public function createImageProduct(Request $request){
+        return resolve(repository_admin::class)->createImageProduct($request);
+    }
+
+    public function deleteProperty($id)
+    {
+        return resolve(repository_admin::class)->deleteProperty($id);
+    }
+    public function createProperty(Request $request){
+        return resolve(repository_admin::class)->createProperty($request);
     }
 }

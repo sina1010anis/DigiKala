@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.js'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import axios from "axios";
+import test from './components/test'
 
 const app = createApp({
     data: () => ({
@@ -26,15 +27,33 @@ const app = createApp({
         view_btn_save_address: false,
         text_filter: '',
         style: 'style="display: none;"',
-        text_search_index_page:''
+        text_search_index_page:'',
+        id_view_min_product:0
     }),
+
     methods: {
+        MT_id_view_min_product(id){
+            this.id_view_min_product = id
+            $(".page-createAdmin-admin").stop().fadeIn(100)
+        },
+        hidePageMinProduct(){
+            $(".page-createAdmin-admin").stop().fadeOut(100)
+        },
+        showEMproduct(id){
+            $(".selectEm").stop().fadeIn(100)
+            $(".blur-web").stop().fadeIn(200)
+        },
+        set_id_view_min_product(id){
+            this.id_view_min_product=id;
+            $(".page-createAdmin-admin").stop().fadeIn(100)
+            $(".blur-web").stop().fadeIn(200)
+        },
         hideAllPage(){
-            $(".page-create-admin").stop().fadeOut(100)
+            $(".page-createAdmin-admin").stop().fadeOut(100)
             $(".blur-web").stop().fadeOut(200)
         },
         showPageCreate(){
-            $(".page-create-admin").stop().fadeIn(200)
+            $(".page-createAdmin-admin").stop().fadeIn(200)
             $(".blur-web").stop().fadeIn(100)
         },
         deleteProductCard(id){
@@ -414,6 +433,9 @@ const app = createApp({
                 // instead of a settings object
             ]
         });
+    },
+    components:{
+      test
     },
     created() {
     }

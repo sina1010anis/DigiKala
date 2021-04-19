@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "web" middleware group. Now createAdmin something great!
 |
 */
 
@@ -70,17 +70,30 @@ Route::prefix('admin')->middleware(['authController','role'])->group(function ()
         Route::get('/commentAdmin/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteCommentAdmin'])->name('admin.delete.deleteCommentAdmin');
         Route::get('/commentProduct/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteCommentProduct'])->name('admin.delete.deleteCommentProduct');
         Route::get('/replyComment/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteReplyComment'])->name('admin.delete.deleteReplyComment');
+        Route::get('/product/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteProduct'])->name('admin.delete.deleteProduct');
+        Route::get('/imageProduct/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteImageProduct'])->name('admin.delete.deleteImageProduct');
+        Route::get('/property/{id}' , [\App\Http\Controllers\AdminController::class , 'deleteProperty'])->name('admin.delete.deleteProperty');
     });
-    Route::prefix('/create')->group(function(){
-        Route::post('/attrFilter' , [\App\Http\Controllers\AdminController::class,'createAttrFilter'])->name('admin.create.attrFilter');
-        Route::post('/bannerCenter' , [\App\Http\Controllers\AdminController::class,'createBannerCenter'])->name('admin.create.createBannerCenter');
-        Route::post('/bannerUp' , [\App\Http\Controllers\AdminController::class,'createBannerUp'])->name('admin.create.createBannerUp');
-        Route::post('/brand' , [\App\Http\Controllers\AdminController::class,'createBrand'])->name('admin.create.createBrand');
-        Route::post('/city' , [\App\Http\Controllers\AdminController::class,'createCity'])->name('admin.create.createCity');
-        Route::post('/commentAdmin' , [\App\Http\Controllers\AdminController::class,'createCommentAdmin'])->name('admin.create.createCommentAdmin');
+    Route::prefix('/createAdmin')->group(function(){
+        Route::post('/attrFilter' , [\App\Http\Controllers\AdminController::class,'createAttrFilter'])->name('admin.createAdmin.attrFilter');
+        Route::post('/bannerCenter' , [\App\Http\Controllers\AdminController::class,'createBannerCenter'])->name('admin.createAdmin.createBannerCenter');
+        Route::post('/bannerUp' , [\App\Http\Controllers\AdminController::class,'createBannerUp'])->name('admin.createAdmin.createBannerUp');
+        Route::post('/brand' , [\App\Http\Controllers\AdminController::class,'createBrand'])->name('admin.createAdmin.createBrand');
+        Route::post('/city' , [\App\Http\Controllers\AdminController::class,'createCity'])->name('admin.createAdmin.createCity');
+        Route::post('/commentAdmin' , [\App\Http\Controllers\AdminController::class,'createCommentAdmin'])->name('admin.createAdmin.createCommentAdmin');
+        Route::post('/product' , [\App\Http\Controllers\AdminController::class,'createProduct'])->name('admin.createAdmin.createProduct');
+        Route::post('/imageProduct' , [\App\Http\Controllers\AdminController::class,'createImageProduct'])->name('admin.createAdmin.createImageProduct');
+        Route::post('/property' , [\App\Http\Controllers\AdminController::class,'createProperty'])->name('admin.createAdmin.createProperty');
     });
     Route::prefix('/inactive')->group(function(){
         Route::get('/commentProduct/{id}' , [\App\Http\Controllers\AdminController::class , 'inactiveCommentProduct'])->name('admin.inactive.commentProduct');
+    });
+    Route::prefix('/view')->group(function(){
+        Route::get('/product/{id}' , [\App\Http\Controllers\AdminController::class , 'viewProduct'])->name('admin.view.product');
+    });
+    Route::prefix('/edit')->group(function(){
+        Route::get('/product/{id}' , [\App\Http\Controllers\AdminController::class , 'editProduct'])->name('admin.edit.product');
+        Route::post('/updateProduct/{id}' , [\App\Http\Controllers\AdminController::class , 'updateProduct'])->name('admin.edit.updateProduct');
     });
 });
 Route::prefix('user')->group(function (){

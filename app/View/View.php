@@ -45,5 +45,10 @@ class View
         \Illuminate\Support\Facades\View::composer(['*'] , message::class);
         \Illuminate\Support\Facades\View::composer(['*'] , user_all::class);
         \Illuminate\Support\Facades\View::composer(['*'] , comment_all_panel_admin::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , factor_all::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , products_all_admin::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , sub_ll_menu::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , test::class);
+        \Illuminate\Support\Facades\View::composer(['*'] , factor::class);
     }
 }

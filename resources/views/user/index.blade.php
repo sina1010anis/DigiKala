@@ -35,7 +35,7 @@
                     @if(auth()->user()->mobile == 'null')
                         <span
                             class="text-view-profile f-12 set-font color-b-600 fl-right"><a
-                                href="{{route('user.view')}}">لصفا شماره موبایل خود را وارد کنید</a></span>
+                                href="{{route('user.view')}}">لطفا شماره موبایل خود را وارد کنید</a></span>
                     @else
                         <span
                             class="text-view-profile f-12 set-font color-b-600 fl-right">{{auth()->user()->mobile}}</span>

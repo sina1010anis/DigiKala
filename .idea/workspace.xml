@@ -2,41 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/View/attr_filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/card_all.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/comment_all_panel_admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/message.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/title_filter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/View/user_all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DB/Create/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DB/Create/create_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DB/Create/create_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/factor.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/factor_all.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/products_all_admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/sub_ll_menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/test.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/include/viewProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/section/viewProduct.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/attr_filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/attr_filter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/banner_center.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/banner_center.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/banner_up.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/banner_up.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/basket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/basket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/brand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/brand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/comment_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/comment_product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/message.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/image_product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/image_product.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/reply_comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/reply_comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/title_filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/title_filter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/property.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/property.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/repository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Repository/repository_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/repository_user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/repository_user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/View/View.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/View.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/city.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/city.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/attr_filter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/attr_filter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/bootstrap/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Authority" beforeDir="false" afterPath="$PROJECT_DIR$/public/Authority" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/slider.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/include/attrFilter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/attrFilter.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/include/bannerCenter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/bannerCenter.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/include/bannerUp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/bannerUp.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/include/brand.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/brand.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/card.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/card.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/include/city.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/city.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/include/commentAdmin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/commentAdmin.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/commentProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/commentProduct.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/commentReply.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/commentReply.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/factor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/factor.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/imageProduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/imageProduct.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/include/property.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/include/property.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/include/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/bank/successful.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/bank/successful.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/bank/unsuccessful.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/bank/unsuccessful.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/index_user.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/index_user.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/include/menu/order.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/include/menu/order.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +203,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/include" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/section" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -202,8 +215,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\include" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\section" />
+      <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\include" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\gif" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\user\include\menu" />
@@ -284,7 +297,14 @@
       <workItem from="1618561464181" duration="7031000" />
       <workItem from="1618582547879" duration="326000" />
       <workItem from="1618583190638" duration="3156000" />
-      <workItem from="1618635312696" duration="3368000" />
+      <workItem from="1618635312696" duration="5786000" />
+      <workItem from="1618670227267" duration="3207000" />
+      <workItem from="1618726932307" duration="572000" />
+      <workItem from="1618747691406" duration="10384000" />
+      <workItem from="1618764095870" duration="3024000" />
+      <workItem from="1618768361349" duration="826000" />
+      <workItem from="1618808936616" duration="8003000" />
+      <workItem from="1618833772409" duration="3237000" />
     </task>
     <servers />
   </component>

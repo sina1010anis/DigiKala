@@ -12,6 +12,7 @@ class image_product extends Model
     protected $guarded = [];
 
     public function products(){
-        return $this->belongsTo(product::class);
+        return $this->belongsTo(product::class , 'product_id' , 'id');
     }
+    public $timestamps = false;
 }

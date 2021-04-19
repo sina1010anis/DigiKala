@@ -2351,7 +2351,7 @@ tr:nth-child(even) {
 .btn-war{
     padding: 5px 20px;
     color: white;
-    border-radius: 5px;
+    border-radius: 5px;cursor: pointer;
     border: 1px solid #faae46;
     background-color: #faae46;
 }
@@ -2360,11 +2360,50 @@ tr:nth-child(even) {
     background-color: unset;
 
 }
+.view-min-product-factor{
+    width: 100%;
+}
+.p-name-product:hover{
+    cursor: pointer;
+    background-color: #b7b7b7;
+}
 .tr-view-item-table-admin img{
     width: 40%!important;
 }
 .w-5{
     display: none!important;
+}
+.view-product-one input , .view-product-one textarea , .view-product-one select{
+    width: 100%;
+    height: 40px;
+    margin:10px 0;
+    border: 1px solid #d9d9d9;
+    font-family: IRANYekan;
+    border-radius: 5px;
+    text-align: right;
+    direction: rtl;
+    outline: none;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+.selectEm a{
+    margin: 10px 10px;
+}
+.center-obj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view-product-one img{
+    width: 80px;
+}
+.list-order a:hover{
+    background-color: #ff3636;
+}
+.item-exit-view-min{
+    position: absolute;
+    cursor: pointer;
 }
 @keyframes select_item_pen {
     from{

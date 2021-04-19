@@ -4,6 +4,7 @@
 namespace App\Repository;
 
 
+use App\DB\Create\create_admin;
 use App\Models\address;
 use App\Models\attr_filter;
 use App\Models\banner_center;
@@ -12,142 +13,152 @@ use App\Models\basket;
 use App\Models\brand;
 use App\Models\city;
 use App\Models\comment_product;
+use App\Models\image_product;
+use App\Models\product;
+use App\Models\property;
 use App\Models\reply_comment;
 use App\View\message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class repository_admin
 {
-    public function deleteAddress($data){
-        address::whereId($data->id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+    /**
+     * @var create_admin
+     */
+    private $create_admin;
+
+    public function __construct(create_admin $create_admin)
+    {
+        $this->create_admin = $create_admin;
     }
-    public function deleteAttrFilter($data){
-        attr_filter::whereId($data->id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+
+    public function deleteAddress($data)
+    {
+        return $this->create_admin->delete_address($data->id);
+    }
+
+    public function deleteAttrFilter($data)
+    {
+        return $this->create_admin->delete_attr_filter($data->id);
+
     }
 
     public function createAttrFilter(Request $request)
     {
-        $v= $request->validate(['name' => 'required']);
-        $attrFilter = new attr_filter();
-        $attrFilter->name = $request->name;
-        $attrFilter->title_filter_id = $request->title_filter_id;
-        $attrFilter->save();
-        return redirect()->back()->with('msg','یک اتیم جدید به فیلر اضافه شده');
-
+        return $this->create_admin->create_attr_filter($request);
     }
 
     public function createBannerCenter(Request $request)
     {
-        $v= $request->validate(['name' => 'required' , 'image'=>'image']);
-        $bannerCenter = new banner_center();
-        $tmp =  $request->file('file');
-        $name = rand(0,100).$tmp->getClientOriginalName();
-        $tmp->move(public_path('/data/image/image banner/'),$name);
-        $bannerCenter->product_id = $request->product_id;
-        $bannerCenter->title = $request->name;
-        $bannerCenter->alt = $request->name;
-        $bannerCenter->address = $name;
-        $bannerCenter->save();
-        return redirect()->back()->with('msg','یک بنر جدید به سایت اضافه شده');
+        return $this->create_admin->create_banner_center($request);
     }
-    public function deleteBannerCenter($data){
-        banner_center::whereId($data->id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+
+    public function deleteBannerCenter($data)
+    {
+        return $this->create_admin->delete_banner_center($data->id);
     }
-    public function deleteBannerUp($data){
-        banner_up::whereId($data->id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+
+    public function deleteBannerUp($data)
+    {
+        return $this->create_admin->delete_banner_up($data);
+
     }
-    public function deleteBrand($data){
-        brand::whereId($data->id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+
+    public function deleteBrand($data)
+    {
+        return $this->create_admin->delete_brand($data);
     }
+
     public function createBannerUp(Request $request)
     {
-        $v= $request->validate(['name' => 'required' , 'image'=>'image']);
-        $bannerCenter = new banner_up();
-        $tmp =  $request->file('file');
-        $name = rand(0,100).$tmp->getClientOriginalName();
-        $tmp->move(public_path('/data/image/image banner/'),$name);
-        $bannerCenter->product_id = $request->product_id;
-        $bannerCenter->title = $request->name;
-        $bannerCenter->alt = $request->name;
-        $bannerCenter->address = $name;
-        $bannerCenter->status = 1;
-        $bannerCenter->save();
-        return redirect()->back()->with('msg','یک بنر جدید به سایت اضافه شده');
+        return $this->create_admin->create_banner_up($request);
     }
 
     public function createBrand(Request $request)
     {
-        $v= $request->validate(['name' => 'required' , 'image'=>'image']);
-        $bannerCenter = new brand();
-        $tmp =  $request->file('file');
-        $name = rand(0,100).$tmp->getClientOriginalName();
-        $tmp->move(public_path('/data/image/image_brand/'),$name);
-        $bannerCenter->name = $request->name;
-        $bannerCenter->image = $name;
-        $bannerCenter->save();
-        return redirect()->back()->with('msg','یک برند جدید به سایت اضافه شده');
+        return $this->create_admin->create_brand($request);
+
     }
 
     public function deleteBasket($data)
     {
-        basket::whereId($data->id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+        return $this->create_admin->delete_basket($data);
     }
 
     public function deleteCity($data)
     {
-        city::whereId($data)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+        return $this->create_admin->delete_city($data);
     }
+
     public function deleteCommentAdmin($data)
     {
-        \App\Models\message::whereId($data)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+        return $this->create_admin->delete_comment_admin($data);
     }
+
     public function createCity(Request $request)
     {
-        $v= $request->validate(['name' => 'required']);
-        $city = new city();
-        $city->name = $request->name;
-        $city->save();
-        return redirect()->back()->with('msg','یک برند جدید به سایت اضافه شده');
+        return $this->create_admin->create_city($request);
     }
 
     public function createCommentAdmin(Request $request)
     {
-        $v= $request->validate(['title' => 'required' , 'text'=>'required']);
-        $bannerCenter = new \App\Models\message();
-        $bannerCenter->title = $request->title;
-        $bannerCenter->text = $request->text;
-        $bannerCenter->user_id = $request->user_id;
-        $bannerCenter->save();
-        return redirect()->back()->with('msg','با موفقیت اضافه شد');
+        return $this->create_admin->create_comment_admin($request);
     }
 
     public function inactiveCommentProduct($data)
     {
-        if ($data->status == 0){
-            comment_product::whereId($data->id)->update(['status' => 1]);
-        }else {
-            comment_product::whereId($data->id)->update(['status' => 0]);
-        }
-        return redirect()->back()->with('msg','تغییر کرد');
+        return $this->create_admin->inactive_comment_product($data);
     }
 
     public function deleteCommentProduct($id)
     {
-        comment_product::whereId($id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+        return $this->create_admin->deleteCommentProduct($id);
     }
 
     public function deleteReplyComment($id)
     {
-        reply_comment::whereId($id)->delete();
-        return redirect()->back()->with('msg','با موفقیت حذف شد');
+        return $this->create_admin->deleteReplyComment($id);
+    }
+
+    public function deleteProduct($id)
+    {
+        return $this->create_admin->deleteProduct($id);
+    }
+
+    public function createProduct(Request $request)
+    {
+        return $this->create_admin->deleteProduct($request);
+    }
+
+    public function editProduct($id)
+    {
+        return view('admin.section.viewProduct', compact('id'));
+    }
+
+    public function updateProduct($data , $id)
+    {
+        return $this->create_admin->updateProduct($data,$id);
+
+
+    }
+
+    public function deleteImageProduct($id)
+    {
+        return $this->create_admin->deleteImageProduct($id);
+    }
+
+    public function deleteProperty($id)
+    {
+        return $this->create_admin->deleteProperty($id);
+    }
+    public function createImageProduct(Request $request){
+        return $this->create_admin->createImageProduct($request);
+
+    }
+
+    public function createProperty(Request $request)
+    {
+        return $this->create_admin->createProperty($request);
     }
 }

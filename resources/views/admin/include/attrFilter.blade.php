@@ -32,11 +32,10 @@
 <a @click="showPageCreate" class="btn-create" style="cursor: pointer">جدید</a>
 <br>
 <br>
-{{$attr_filter->links()}}
 <div class="group-form-new-comment group-input-for-login-register page-create-admin">
     <h4 class="set-font color-b-800" align="center">ایتم جدید فیلتر</h4>
     <div class="line"></div>
-    <form  action="{{route('admin.create.attrFilter')}}" method="post">
+    <form  action="{{route('admin.createAdmin.attrFilter')}}" method="post">
         @csrf
         <input v-model="text_title" type="text" name="name" placeholder="نام ....">
         @error('name')

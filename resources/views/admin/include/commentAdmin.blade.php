@@ -39,7 +39,7 @@
 <div class="group-form-new-comment group-input-for-login-register page-create-admin">
     <h4 class="set-font color-b-800" align="center">کامنت جدید</h4>
     <div class="line"></div>
-    <form action="{{route('admin.create.createCommentAdmin')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('admin.createAdmin.createCommentAdmin')}}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="text" name="title" placeholder="موضوع ....">
         @error('title')

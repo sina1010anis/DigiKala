@@ -25,13 +25,14 @@ class menuController extends Controller
     }
     public function test()
     {
-        $a=1234;
-        $k=10;
-        while($a>0){
-            $b=$a%$k;
-            echo $b.' - ';
-            $a/=10;
-        }
+        return view('test');
+//        $a=1234;
+//        $k=10;
+//        while($a>0){
+//            $b=$a%$k;
+//            echo $b.' - ';
+//            $a/=10;
+//        }
 
     }
 

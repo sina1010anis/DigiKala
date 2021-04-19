@@ -35,7 +35,7 @@
 <div class="group-form-new-comment group-input-for-login-register page-create-admin">
     <h4 class="set-font color-b-800" align="center">برند جدید</h4>
     <div class="line"></div>
-    <form action="{{route('admin.create.createBrand')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('admin.createAdmin.createBrand')}}" method="post" enctype="multipart/form-data">
         @csrf
         <input type="text" name="name" placeholder="نام ....">
         @error('name')

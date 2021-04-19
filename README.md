@@ -14,7 +14,6 @@ This personal project took about two months and was designed from zero to one hu
     git clone https://github.com/sina1010anis/Online-shop-DigiKala-.git
     composer update
     npm update
-    php artisan migrate
 
 ## Panel Admin
     Username : siis@gmail.com
@@ -84,4 +83,6 @@ Used the latest versions now
 - -  View City And Delete City And Create City
 - -  View Comment Product And Delete Comment Product And Inactive Comment Product
 - -  View Reply Comment And Delete Reply Comment
+- -  View Image Product And Delete Image Product
+- -  View Product And Delete Product And Edit Product
 
