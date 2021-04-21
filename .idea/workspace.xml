@@ -4,6 +4,13 @@
     <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/menuController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/slider_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/slider_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +163,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/section" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/data/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -168,11 +175,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\digikala\public\data\image" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\section" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\include" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\gif" />
-      <recent name="C:\wamp64\www\s1\digikala\resources\views\user\include\menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\s1\digikala\resources\views" />
@@ -257,7 +264,11 @@
       <workItem from="1618764095870" duration="3024000" />
       <workItem from="1618768361349" duration="826000" />
       <workItem from="1618808936616" duration="8003000" />
-      <workItem from="1618833772409" duration="4264000" />
+      <workItem from="1618833772409" duration="5342000" />
+      <workItem from="1618844466958" duration="903000" />
+      <workItem from="1618851388977" duration="1487000" />
+      <workItem from="1618898977788" duration="3357000" />
+      <workItem from="1618977165151" duration="4361000" />
     </task>
     <servers />
   </component>

@@ -21,7 +21,8 @@ Route::get('/menu/{slug}' , [\App\Http\Controllers\menuController::class , 'inde
 Route::post('/set_like' , [\App\Http\Controllers\ProductController::class , 'set_like']);
 Route::post('/set_dis_like' , [\App\Http\Controllers\ProductController::class , 'set_dis_like']);
 Route::post('/search/product' , [\App\Http\Controllers\ProductController::class , 'searchProduct']);
-Route::get('/test' , [\App\Http\Controllers\menuController::class , 'test']);
+Route::get('/test' , [\App\Http\Controllers\menuController::class , 'test'])->name('test');
+Route::post('/test_2' , [\App\Http\Controllers\menuController::class , 'test_2'])->name('test_2');
 Route::get('/logout' , function (){
     auth()->logout();
 })->middleware('authController');

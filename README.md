@@ -19,6 +19,7 @@ This personal project took about two months and was designed from zero to one hu
     Username : siis@gmail.com
     Password : 123456789
 
+To enter the admin panel, first log in with the user above and go to the user's button and click the admin panel button
 ## Items used:
 
 This website is designed with laravel and vuejs as well as related libraries like jquery

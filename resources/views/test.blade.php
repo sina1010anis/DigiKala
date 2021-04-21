@@ -8,7 +8,19 @@
 </head>
 <body>
 <div id="app">
-    <test :msg="{{$all_city}}"></test>
+{{--    ارساال اطلعات به vue با استفاده از laravel--}}
+{{--    <test :msg="{{$all_city}}"></test>--}}
+    <form action="{{route('test_2')}}" method="post">
+        @csrf
+        <input type="text" name="name">
+        <input type="text" name="phone">
+        <select name="city" id="">
+            <option value="1">mashhad</option>
+            <option value="2">tehran</option>
+            <option value="3">shiraz</option>
+        </select>
+        <input type="submit" value="send">
+    </form>
 </div>
 <script src="{{url('js/app.js')}}"></script>
 </body>

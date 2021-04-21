@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\down_all_menu;
+use App\Models\factor;
 use App\Models\product;
+use App\Models\User;
 use App\Repository\repository;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 use function Symfony\Component\String\b;
@@ -23,9 +27,21 @@ class menuController extends Controller
                 'menu_id'=>$slug->sub_all_menu_id
                 ]);
     }
+
+    public function test_2(Request $request)
+    {
+        return request()->num;
+    }
     public function test()
     {
         return view('test');
+//        $num_test = \request()->has('num');
+//        echo \request()->num;
+//        while ($num_test>0){
+//            echo $num_test.'<br>';
+//            $num_test=(int)$num_test/2;
+//        }
+        //return view('test');
 //        $a=1234;
 //        $k=10;
 //        while($a>0){

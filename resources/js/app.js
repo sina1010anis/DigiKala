@@ -435,7 +435,7 @@ const app = createApp({
         });
     },
     components:{
-      test
+      test,
     },
     created() {
     }
