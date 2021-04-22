@@ -239,6 +239,7 @@
                                                align="right">{{jdate($reply_comment->created_at)->format('%A, %d %B %y')}}
                                                 <span></span>
                                                 .
+
                                                 <span>{{$reply_comment->users->name}}</span></p>
                                             <div class="line"></div>
                                             <p class="text-comment set-font">{{$reply_comment->text}}</p>
@@ -270,11 +271,46 @@
     </form>
 </div>
 @auth()
-    <div @click="showPageNewComment" class="view-new-comment">
+    <div v-if="product_vs_1 != 0">
+        <div class="view-product-vs-1">
+            <img src="{{url('data/image/image product').'/'.$data->image}}" alt="">
+        </div>
+        <div class="view-product-vs-2-group"></div>
+        <div @click="stertVs" class="view-btn-f-vs">
+                <i class="fas fa-sync-alt"></i>
+        </div>
+        <div @click="showPageProductVs" class="view-icon-plus">
+            <i class="fas fa-plus"></i>
+        </div>
+        <div class="page-select-item-vs">
+            <h4 class="set-font color-b-600" align="center">انتخاب محصول برای مقایسه</h4>
+            <div class="line">
+                <input v-model="searchVsProduct" @keyup="MTsearchVsProduct" type="text" class="search-product-vs"
+                       placeholder="جستوجو..." dir="rtl"
+                       align="right">
+                <div class="group-view-item-product-vs">
+                    @foreach($products_all as $i)
+                        @if($i->menu_id == $data->menu_id)
+                            <div class="view-product-and-vs" @click="saveProduct_vs_2('{{$i->id}}')">
+                                <img src="{{url('data/image/image product').'/'.$i->image}}" alt="{{$i->name}}"
+                                     title="{{$i->name}}">
+                                <span class="view-name-product-vs set-font color-b-700 f-13">{{$i->name}}</span>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+    <div title="نظر جدید" @click="showPageNewComment" class="view-new-comment">
         <i class="far fa-comment-dots"></i>
     </div>
-    <div @click="saveToSaveProduct('{{$data->id}}')" class="view-new-comment view-new-bookmark">
+    <div title="اضافه لیست مورد علاقه" @click="saveToSaveProduct('{{$data->id}}')"
+         class="view-new-comment view-new-bookmark">
         <i class="far fa-bookmark"></i>
+    </div>
+    <div title="مقایسه" @click="saveProduct_vs_1({{$data->id}})" class="view-new-comment view-vs-product">
+        <i class="fas fa-exchange-alt"></i>
     </div>
     <div class="group-form-new-comment group-input-for-login-register">
         <h4 class="set-font color-b-800" align="center">نظر جدید</h4>

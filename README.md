@@ -58,7 +58,7 @@ Used the latest versions now
 
 ## TODO :
 
-<input type="checkbox" checked> v-1.0.0
+## v-1.0.0
 
 - Create DataBase
 - Index Page
@@ -90,4 +90,10 @@ Used the latest versions now
 - -  View Reply Comment And Delete Reply Comment
 - -  View Image Product And Delete Image Product
 - -  View Product And Delete Product And Edit Product
+    
 
+## v-1.5.5
+
+- Compare products
+
+<img src="/public/data/image/6.jpg">

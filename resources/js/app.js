@@ -27,71 +27,109 @@ const app = createApp({
         view_btn_save_address: false,
         text_filter: '',
         style: 'style="display: none;"',
-        text_search_index_page:'',
-        id_view_min_product:0
+        text_search_index_page: '',
+        id_view_min_product: 0,
+        product_vs_1: 0,
+        product_vs_2: 0,
+        searchVsProduct: '',
     }),
 
     methods: {
-        MT_id_view_min_product(id){
+        stertVs(){
+            location.assign('/product/'+this.product_vs_1+'/VS/'+this.product_vs_2);
+        },
+        showPageProductVs(){
+            $(".page-select-item-vs").stop().fadeIn(100)
+            $(".blur-web").stop().fadeIn(200)
+        },
+        MTsearchVsProduct() {
+            if (this.searchVsProduct != '') {
+                setTimeout(() => {
+                    axios.post('/product/vsProduct', {
+                        name: this.searchVsProduct,
+                        id:this.product_vs_1,
+                    }).then((res) => {
+                        $(".group-view-item-product-vs").html(res.data)
+                    })
+                }, 1000)
+            }
+        },
+        saveProduct_vs_2(id) {
+            this.product_vs_2 = id;
+            $(".page-select-item-vs").stop().fadeOut(100)
+            $(".blur-web").stop().fadeOut(200)
+            axios.post('/product/searchVsProduct' , {
+                id:this.product_vs_2
+            }).then((res)=>{
+                $(".view-product-vs-2-group").html(res.data);
+                $(".view-icon-plus").stop().fadeOut(1);
+                $(".view-btn-f-vs").stop().fadeIn(1);
+            })
+        },
+        saveProduct_vs_1(id) {
+            this.product_vs_1 = id;
+        },
+        MT_id_view_min_product(id) {
             this.id_view_min_product = id
             $(".page-createAdmin-admin").stop().fadeIn(100)
         },
-        hidePageMinProduct(){
+        hidePageMinProduct() {
             $(".page-createAdmin-admin").stop().fadeOut(100)
         },
-        showEMproduct(id){
+        showEMproduct(id) {
             $(".selectEm").stop().fadeIn(100)
             $(".blur-web").stop().fadeIn(200)
         },
-        set_id_view_min_product(id){
-            this.id_view_min_product=id;
+        set_id_view_min_product(id) {
+            this.id_view_min_product = id;
             $(".page-createAdmin-admin").stop().fadeIn(100)
             $(".blur-web").stop().fadeIn(200)
         },
-        hideAllPage(){
+        hideAllPage() {
             $(".page-createAdmin-admin").stop().fadeOut(100)
             $(".blur-web").stop().fadeOut(200)
         },
-        showPageCreate(){
+        showPageCreate() {
             $(".page-createAdmin-admin").stop().fadeIn(200)
             $(".blur-web").stop().fadeIn(100)
         },
-        deleteProductCard(id){
-                axios.post('/product/delete' , {
-                    id:id
-                }).then((res)=>{
-                    if (res.data == 'ok'){
-                        $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({'padding': '5px 20px'})
-                        setTimeout(function () {
-                            $(".view-err-sm").fadeOut()
-                            location.reload();
-                        }, 2000)
-                    }else {
-                        $(".view-err-sm").html('مشکلی پیش اماده است.').fadeIn().css({'padding': '5px 20px'})
-                        setTimeout(function () {
-                            $(".view-err-sm").fadeOut()
-                            location.reload();
-                        }, 2000)                    }
+        deleteProductCard(id) {
+            axios.post('/product/delete', {
+                id: id
+            }).then((res) => {
+                if (res.data == 'ok') {
+                    $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                } else {
+                    $(".view-err-sm").html('مشکلی پیش اماده است.').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }
 
-                })
+            })
         },
-        searchIndexPage(){
-            if (this.text_search_index_page != ''){
-                axios.post('/search/product' , {
-                    text:this.text_search_index_page
-                }).then((res)=>{
-                    if (res.data != ''){
+        searchIndexPage() {
+            if (this.text_search_index_page != '') {
+                axios.post('/search/product', {
+                    text: this.text_search_index_page
+                }).then((res) => {
+                    if (res.data != '') {
                         $('.view-search-product').stop().fadeIn();
                         $('.view-search-product').html('<img class="text-not-product-search" style="width: 300px;height: 200px" src="data/gif/lod_search_product.gif">');
-                        setTimeout(()=>{
+                        setTimeout(() => {
                             $('.view-search-product').html(res.data);
-                        },1500)
-                    }else {
+                        }, 1500)
+                    } else {
                         $('.view-search-product').html('<p class="text-not-product-search set-font f-12 color-b-500">چیزی پیدا نشد</p>');
                     }
 
                 })
-            }else {
+            } else {
                 $('.view-search-product').stop().fadeOut();
             }
 
@@ -282,6 +320,7 @@ const app = createApp({
     mounted() {
         $(".blur-web").click(function () {
             $('.page-reply-comment-product').fadeOut()
+            $('.page-select-item-vs').fadeOut()
             $('.group-form-new-comment').fadeOut()
             $('.page-view-sm-buy').fadeOut()
             $('.group-form-new-address').fadeOut()
@@ -434,8 +473,8 @@ const app = createApp({
             ]
         });
     },
-    components:{
-      test,
+    components: {
+        test,
     },
     created() {
     }

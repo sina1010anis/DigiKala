@@ -33,6 +33,9 @@ Route::prefix('/product')->group(function (){
     Route::post('/filter' , [\App\Http\Controllers\ProductController::class , 'filterProduct'])->name('product.filterProduct');
     Route::post('/save' , [\App\Http\Controllers\ProductController::class , 'saveProduct'])->name('product.saveProduct');
     Route::post('/delete' , [\App\Http\Controllers\ProductController::class , 'deleteProduct'])->name('product.delete');
+    Route::post('/vsProduct' , [\App\Http\Controllers\ProductController::class , 'vsProduct'])->name('product.vsProduct');
+    Route::post('/searchVsProduct' , [\App\Http\Controllers\ProductController::class , 'searchVsProduct'])->name('product.searchVsProduct');
+    Route::get('/{id_1}/VS/{id_2}' , [\App\Http\Controllers\ProductController::class , 'VsStart'])->name('product.VsStart');
 });
 Route::prefix('admin')->middleware(['authController','role'])->group(function (){
     Route::get('/index' , [\App\Http\Controllers\AdminController::class , 'index'])->name('admin.index');

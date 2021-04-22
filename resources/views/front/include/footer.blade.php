@@ -1,4 +1,4 @@
-<footer>
+<footer class="fl-right">
     <div class="group-view-tb">
         <div class="div-view-tb">
             <div class="group-tb-icon">
