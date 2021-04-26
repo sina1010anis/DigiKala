@@ -39,6 +39,7 @@
         "scss": "^0.2.4",
         "slick-carousel": "^1.8.1",
         "vue": "^3.0.10",
-        "vue-owl-carousel": "^2.0.3"
+        "vue-owl-carousel": "^2.0.3",
+        "vuex": "^4.0.0"
     }
 }

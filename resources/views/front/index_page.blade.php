@@ -11,6 +11,7 @@
 <div id="shit">
     <div id="row">
         <div id="app">
+            @{{user.name}}
             @yield('index')
         </div>
     </div>

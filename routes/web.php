@@ -22,7 +22,7 @@ Route::post('/set_like' , [\App\Http\Controllers\ProductController::class , 'set
 Route::post('/set_dis_like' , [\App\Http\Controllers\ProductController::class , 'set_dis_like']);
 Route::post('/search/product' , [\App\Http\Controllers\ProductController::class , 'searchProduct']);
 Route::get('/test' , [\App\Http\Controllers\menuController::class , 'test'])->name('test');
-Route::post('/test_2' , [\App\Http\Controllers\menuController::class , 'test_2'])->name('test_2');
+Route::get('/test_2/{id}' , [\App\Http\Controllers\menuController::class , 'test_2'])->where('id' , '[0-9]+')->name('test_2');
 Route::get('/logout' , function (){
     auth()->logout();
 })->middleware('authController');
@@ -123,6 +123,6 @@ Route::prefix('user')->group(function (){
         Route::post('/password' , [\App\Http\Controllers\UserController::class , 'editPassword'])->name('user.edit.password');
     });
 });
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -84,7 +84,7 @@ class create
         }
     }
 
-    public function filter_product()
+    public function filter_product(Request $request)
     {
         $product_send='';
         $data = attr_product::whereIn('attr_filter_id' , $request->item_filter)->pluck('product_id');

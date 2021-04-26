@@ -7,6 +7,9 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import axios from "axios";
 import test from './components/test'
+import store from "./store";
+import footer_vue from './components/product/footer'
+import {mapSate, mapState} from 'vuex'
 
 const app = createApp({
     data: () => ({
@@ -314,7 +317,7 @@ const app = createApp({
             $(".view-all-menu-item").stop().slideUp(100)
         },
         test() {
-            alert('ok test')
+            alert('ok sort')
         }
     },
     mounted() {
@@ -475,8 +478,16 @@ const app = createApp({
     },
     components: {
         test,
+        footer_vue,
+    },
+    computed:{
+        product(){
+            return this.$store.state.product
+        },
+        ...mapState(['user'])
     },
     created() {
     }
 })
+app.use(store)
 app.mount('#app')

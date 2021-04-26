@@ -9,8 +9,8 @@
 <body>
 <div id="app">
 {{--    ارساال اطلعات به vue با استفاده از laravel--}}
-{{--    <test :msg="{{$all_city}}"></test>--}}
-    <form action="{{route('test_2')}}" method="post">
+{{--    <sort :msg="{{$all_city}}"></sort>--}}
+{{--    <form action="{{route('test_2')}}" method="post">
         @csrf
         <input type="text" name="name">
         <input type="text" name="phone">
@@ -20,7 +20,8 @@
             <option value="3">shiraz</option>
         </select>
         <input type="submit" value="send">
-    </form>
+    </form>--}}
+    <a href="{{\Illuminate\Support\Facades\URL::temporarySignedRoute('test_2',now()->addSeconds(10),['id' => 55])}}">send</a>
 </div>
 <script src="{{url('js/app.js')}}"></script>
 </body>
