@@ -9,7 +9,8 @@ import axios from "axios";
 import test from './components/test'
 import store from "./store";
 import footer_vue from './components/product/footer'
-import {mapSate, mapState} from 'vuex'
+import { mapState , mapGetters} from 'vuex'
+import btn from './components/product/baseBtn'
 
 const app = createApp({
     data: () => ({
@@ -479,12 +480,13 @@ const app = createApp({
     components: {
         test,
         footer_vue,
+        btn
     },
     computed:{
         product(){
             return this.$store.state.product
         },
-        ...mapState(['user'])
+        ...mapGetters(['userName'])
     },
     created() {
     }
