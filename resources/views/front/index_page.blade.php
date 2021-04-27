@@ -12,14 +12,14 @@
 <div id="shit">
     <div id="row">
         <div id="app">
-            <btn>
+<!--            <btn>
                 <template v-slot:title="slotProps">
                     <h1>@{{slotProps.msg}}</h1>
                 </template>
                 <template v-slot="slotProps">
                     <p>@{{ slotProps.msg }}</p>
                 </template>
-            </btn>
+            </btn>-->
             @yield('index')
         </div>
     </div>
