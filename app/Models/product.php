@@ -24,4 +24,7 @@ class product extends Model
     {
         return 'slug';
     }
+    public function seller(){
+        return $this->belongsTo(User::class , 'seller','id');
+    }
 }

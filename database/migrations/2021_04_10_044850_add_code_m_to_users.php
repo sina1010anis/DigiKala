@@ -14,7 +14,7 @@ class AddCodeMToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('code_m')->nullable()->after('mobile');
+            $table->string('code_m')->nullable();
         });
     }
 

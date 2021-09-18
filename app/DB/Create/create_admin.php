@@ -181,6 +181,7 @@ class create_admin
         $product->menu_id = $request->menu_id;
         $product->sub_menu_id = $request->sub_menu;
         $product->brand_id = $request->brand;
+        $product->seller = 0;
         $product->image = $name_img;
         $product->save();
         return redirect()->back()->with('msg', 'با موفقیت اضافه شد');
