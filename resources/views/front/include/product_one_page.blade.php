@@ -57,9 +57,19 @@
                     <p dir="rtl" class="set-font f-12 color-b-800 p-f-p" align="right">فروشنده</p>
                     <div class="set-font view-dl f-12 ">
                         <i style="color: #ff2f2f" class="far fa-heart f-22"></i>
+
                         رضایت در دیجی کالا 4.5
                         <i class="fas fa-chevron-left arrow-dl"></i>
                     </div>
+                    @if($data->seller > 0)
+                        <div class="set-font view-dl f-12 ">
+                            <i style="color: #2a73ff" class="fas fa-store f-22"></i>
+                            <a class="color-b-700 f-10" href="{{route('shop.view' , ['name' => $data->sellers->id])}}">
+                            فروشنده این کالا دیجی کالا نیست (کلیک برای نمایش دیگر محصولات)
+                                </a>
+                            <i class="fas fa-chevron-left arrow-dl"></i>
+                        </div>
+                    @endif
                     <div class="line"></div>
                     <div class="set-font view-dl f-12 ">
                         <i style="color: #2a73ff" class="fas fa-shipping-fast f-22"></i>

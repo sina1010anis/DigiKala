@@ -12,8 +12,22 @@ This personal project took about two months and was designed from zero to one hu
 
 ## Install
     git clone https://github.com/sina1010anis/Online-shop-DigiKala-.git
-    composer update
-    npm update
+    composer install
+    npm install
+
+Tips : If you encounter a session error, follow the procedure below.
+    php artisan make:migration create_session_table
+
+Copy the following value into the file
+            Schema::create('sessions', function (Blueprint $table) {
+            $table->string('id')->unique();
+            $table->unsignedInteger('user_id')->nullable();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->text('payload');
+            $table->integer('last_activity');
+        });
+
 
 ## Panel Admin
     Username : siis@gmail.com

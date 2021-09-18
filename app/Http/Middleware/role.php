@@ -19,6 +19,8 @@ class role
         if (auth()->check()){
             if (auth()->user()->action == 1){
                 return $next($request);
+            }if (auth()->user()->action == 2){
+                return redirect()->route('shop.index');
             }
         }
         return redirect()->route('login');

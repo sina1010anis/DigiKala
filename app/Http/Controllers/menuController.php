@@ -40,7 +40,7 @@ class menuController extends Controller
 
     public function test()
     {
-
+        return 'OK';
         // مرتب کردن عدد ها
 /*        $arr_1 = [5, 9, 7, 6, 4, 3, 11 , 7 , 2];
         for ($i=0;$i<count($arr_1);$i++){

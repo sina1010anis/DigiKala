@@ -14,6 +14,9 @@
                             <span class="off-view-product-buy-good-list-one">{{$discounted_product->off}}%</span>
                             <span class="price-off-view-product-buy-good-list-one">{{$discounted_product->price}}</span>
                         </div>
+                        @if($discounted_product->seller > 0 )
+                            <p class="price-p-view-product-buy-good-list-one color-b-500 f-11">فروشنده ({{$discounted_product->sellers->name}})</p>
+                        @endif
                         <?php
                         $price_back = $discounted_product->price * ($discounted_product->off / 100);
                         $price_next = $discounted_product->price - $price_back;

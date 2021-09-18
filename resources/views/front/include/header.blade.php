@@ -84,6 +84,9 @@
             @if(auth()->user()->action == 1)
                 <a style="width: 100%;" class="btn-logout" href="{{route('admin.index')}}">پنل مدریتی</a>
             @endif
+            @if(auth()->user()->action == 2)
+                <a style="width: 100%;" class="btn-logout" href="{{route('shop.index')}}">پنل فروشنده</a>
+            @endif
         </div>
     @endif
     <div class="group-icon-header group-logo">

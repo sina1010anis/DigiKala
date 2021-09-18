@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix('/shop')->group(function(){
+    Route::get('/index' , [\App\Http\Controllers\ShopController::class , 'index'])->name('shop.index');
+    Route::get('/{name}' , [\App\Http\Controllers\ShopController::class , 'view_product_shop'])->name('shop.view');
+});
 Route::get('/plus/card/{slug}' , [\App\Http\Controllers\ProductController::class , 'plusCard'])->name('plusCard');
 Route::get('/', function () {return view('front.section.index_page');})->name('index.page');
 Route::get('/google-login', [\App\Http\Controllers\authController::class , 'redirectToProvider'])->name('google_login');
@@ -123,6 +127,7 @@ Route::prefix('user')->group(function (){
         Route::post('/password' , [\App\Http\Controllers\UserController::class , 'editPassword'])->name('user.edit.password');
     });
 });
+
 Auth::routes(['verify' => true]);
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

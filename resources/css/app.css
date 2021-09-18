@@ -3047,3 +3047,9 @@ tr:nth-child(even) {
         border: unset;
     }
 }
+.box-shop{
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+}
