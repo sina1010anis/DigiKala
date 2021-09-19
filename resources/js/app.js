@@ -36,9 +36,14 @@ const app = createApp({
         product_vs_1: 0,
         product_vs_2: 0,
         searchVsProduct: '',
+        id_shop_product:0,
     }),
 
     methods: {
+        set_id_and_send_data(id){
+            this.id_shop_product = id
+            $('#box-item-shop-seller-'+id).stop().fadeToggle()
+        },
         stertVs(){
             location.assign('/product/'+this.product_vs_1+'/VS/'+this.product_vs_2);
         },

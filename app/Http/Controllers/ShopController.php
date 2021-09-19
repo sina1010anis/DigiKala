@@ -12,7 +12,9 @@ class ShopController extends Controller
     {
         if (auth()->check()){
             if (auth()->user()->action == 2){
-                return 'Seller';
+                $data = product::whereSeller(auth()->user()->id)->get();
+                $user = User::find(auth()->user()->id);
+                return view('front.section.shop_panel' , compact('data','user'));
             }
         }
         return 'OK';
