@@ -3079,3 +3079,6 @@ tr:nth-child(even) {
     transform: scale(0.8);
     margin-right: 10px;
 }
+.ul-nav-bar a{
+    color: #404040!important;
+}

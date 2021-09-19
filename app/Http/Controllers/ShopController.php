@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\factor;
 use App\Models\product;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -25,5 +26,27 @@ class ShopController extends Controller
         $data = product::whereSeller($name)->get();
         $user = User::find($name);
         return view('front.section.shop_view' , compact('data' , 'user'));
+    }
+
+    public function buy()
+    {
+        if (auth()->check()){
+            if (auth()->user()->action == 2){
+                $user = User::find(auth()->user()->id);
+                return view('front.section.shop_panel_buy' , compact('user'));
+            }
+        }
+        return 'OK';
+    }
+
+    public function profile()
+    {
+        if (auth()->check()){
+            if (auth()->user()->action == 2){
+                $user = User::find(auth()->user()->id);
+                return view('front.section.shop_panel_profile' , compact('user'));
+            }
+        }
+        return 'OK';
     }
 }

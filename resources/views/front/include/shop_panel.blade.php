@@ -2,11 +2,9 @@
     <p align="right" dir="rtl" class="f-19 set-font"><span class="color-b-500">فروشگاه فروشنده </span><span>{{$user->name}}</span></p>
 </div>
 @include('front.include.nav_bar_panel')
-<br>
 <div class="menu-view">
     <div class="view-menu-product" style="width: 100%">
         <div class="sm-filter">
-            <div class="line"></div>
             <div class="view-product-menu-search">
                 @foreach($data as $i)
                     <div class="products-menu  @if($i->off > 0) border-off @endif">

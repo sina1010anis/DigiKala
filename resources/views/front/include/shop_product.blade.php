@@ -4,7 +4,6 @@
 <div class="menu-view">
     <div class="view-menu-product" style="width: 100%">
         <div class="sm-filter">
-            <div class="line"></div>
             <div class="view-product-menu-search">
                 @foreach($data as $i)
                     <div class="products-menu  @if($i->off > 0) border-off @endif">

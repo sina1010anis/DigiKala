@@ -4,9 +4,9 @@
         <ul class="ul-nav-bar">
             <li ><span class="li-action-edit"> پنل فروشنده <i class="fas fa-bars"></i> </span>
             </li>
-            <li><span>محصولات</span></li>
-            <li><span>فروش های موفق</span></li>
-            <li><span>مشخصات</span></li>
+            <li class="color-b-700"><a href="{{route('shop.index')}}">محصولات</a></li>
+            <li class="color-b-700"><a href="{{route('shop.buy')}}">فروش های موفق</a></li>
+            <li class="color-b-700"><a href="{{route('shop.profile')}}">مشخصات</a></li>
         </ul>
     </div>
     <button @click="viewMenuFotMobile" class="btn-btn-search-for-mobile-menu">

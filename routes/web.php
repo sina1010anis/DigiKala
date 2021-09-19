@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('/shop')->group(function(){
     Route::get('/index' , [\App\Http\Controllers\ShopController::class , 'index'])->name('shop.index');
+    Route::get('/buy' , [\App\Http\Controllers\ShopController::class , 'buy'])->name('shop.buy');
+    Route::get('/buy' , [\App\Http\Controllers\ShopController::class , 'buy'])->name('shop.buy');
+    Route::get('/profile' , [\App\Http\Controllers\ShopController::class , 'profile'])->name('shop.profile');
     Route::get('/{name}' , [\App\Http\Controllers\ShopController::class , 'view_product_shop'])->name('shop.view');
 });
 Route::get('/plus/card/{slug}' , [\App\Http\Controllers\ProductController::class , 'plusCard'])->name('plusCard');

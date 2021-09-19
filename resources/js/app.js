@@ -37,9 +37,14 @@ const app = createApp({
         product_vs_2: 0,
         searchVsProduct: '',
         id_shop_product:0,
+        panel_data:0,
     }),
 
     methods: {
+        view_es_shop_panel(id){
+            this.panel_data = id
+            alert(this.panel_data)
+        },
         set_id_and_send_data(id){
             this.id_shop_product = id
             $('#box-item-shop-seller-'+id).stop().fadeToggle()
