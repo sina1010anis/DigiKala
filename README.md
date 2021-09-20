@@ -111,3 +111,9 @@ Used the latest versions now
 - Compare products
 
 <img src="/public/data/image/6.jpg">
+
+## v-1.6.0
+
+- Multi-vendor capability
+
+<img src="/public/data/image/7.jpg">
