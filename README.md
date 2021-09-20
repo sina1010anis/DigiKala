@@ -116,4 +116,4 @@ Used the latest versions now
 
 - Multi-vendor capability
 
-<img src="/public/data/image/7.jpg">
+<img src="/public/data/image/7.png">
