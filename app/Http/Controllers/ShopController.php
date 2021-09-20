@@ -36,7 +36,6 @@ class ShopController extends Controller
                 return view('front.section.shop_panel_buy' , compact('user'));
             }
         }
-        return 'OK';
     }
 
     public function profile()
@@ -48,5 +47,17 @@ class ShopController extends Controller
             }
         }
         return 'OK';
+    }
+
+    public function delete_product_seller(Request $request)
+    {
+        $count = product::whereId($request->id)->count();
+        if ($count){
+             product::whereId($request->id)->delete();
+            return 'OK';
+        }else{
+            return 'NO';
+        }
+
     }
 }

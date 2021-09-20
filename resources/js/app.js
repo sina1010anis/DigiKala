@@ -9,7 +9,7 @@ import axios from "axios";
 import test from './components/test'
 import store from "./store";
 import footer_vue from './components/product/footer'
-import { mapState , mapGetters} from 'vuex'
+import {mapState, mapGetters} from 'vuex'
 import btn from './components/product/baseBtn'
 
 const app = createApp({
@@ -36,23 +36,40 @@ const app = createApp({
         product_vs_1: 0,
         product_vs_2: 0,
         searchVsProduct: '',
-        id_shop_product:0,
-        panel_data:0,
+        id_shop_product: 0,
+        panel_data: 0,
     }),
 
     methods: {
-        view_es_shop_panel(id){
+        delete_product_seller(id) {
+            axios.post('/shop/delete/product', {id: id}).then((res) => {
+                if (res.data == 'OK') {
+                    $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }else {
+                    $(".view-err-sm").html('محصول قبلا حذف شده.').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }
+            })
+        },
+        view_es_shop_panel(id) {
             this.panel_data = id
             alert(this.panel_data)
         },
-        set_id_and_send_data(id){
+        set_id_and_send_data(id) {
             this.id_shop_product = id
-            $('#box-item-shop-seller-'+id).stop().fadeToggle()
+            $('#box-item-shop-seller-' + id).stop().fadeToggle()
         },
-        stertVs(){
-            location.assign('/product/'+this.product_vs_1+'/VS/'+this.product_vs_2);
+        stertVs() {
+            location.assign('/product/' + this.product_vs_1 + '/VS/' + this.product_vs_2);
         },
-        showPageProductVs(){
+        showPageProductVs() {
             $(".page-select-item-vs").stop().fadeIn(100)
             $(".blur-web").stop().fadeIn(200)
         },
@@ -61,7 +78,7 @@ const app = createApp({
                 setTimeout(() => {
                     axios.post('/product/vsProduct', {
                         name: this.searchVsProduct,
-                        id:this.product_vs_1,
+                        id: this.product_vs_1,
                     }).then((res) => {
                         $(".group-view-item-product-vs").html(res.data)
                     })
@@ -72,9 +89,9 @@ const app = createApp({
             this.product_vs_2 = id;
             $(".page-select-item-vs").stop().fadeOut(100)
             $(".blur-web").stop().fadeOut(200)
-            axios.post('/product/searchVsProduct' , {
-                id:this.product_vs_2
-            }).then((res)=>{
+            axios.post('/product/searchVsProduct', {
+                id: this.product_vs_2
+            }).then((res) => {
                 $(".view-product-vs-2-group").html(res.data);
                 $(".view-icon-plus").stop().fadeOut(1);
                 $(".view-btn-f-vs").stop().fadeIn(1);
@@ -492,8 +509,8 @@ const app = createApp({
         footer_vue,
         btn
     },
-    computed:{
-        product(){
+    computed: {
+        product() {
             return this.$store.state.product
         },
         ...mapGetters(['userName'])

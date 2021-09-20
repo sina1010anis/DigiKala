@@ -10,7 +10,7 @@
                     <div class="products-menu  @if($i->off > 0) border-off @endif">
                         <span @click="set_id_and_send_data({{$i->id}})" id="select-{{$i->id}}" class="fl-right position-absolute bar-select-shop-seller"><i class="fas fa-bars"></i></span>
                         <span class="fl-right position-absolute box-item-shop-seller" id="box-item-shop-seller-{{$i->id}}">
-                            <span class="fl-right position-absolute bar-select-shop-seller bar-item-shop-seller"><i class="far fa-trash-alt"></i></span>
+                            <span @click="delete_product_seller({{$i->id}})" class="fl-right position-absolute bar-select-shop-seller bar-item-shop-seller"><i class="far fa-trash-alt"></i></span>
                             <span class="fl-right position-absolute bar-select-shop-seller bar-item-shop-seller"><i class="far fa-edit"></i></span>
                         </span>
                         <img class="img-product-menu" src="{{url('data/image/image product/').'/'.$i->image}}" alt="img-product-menu">

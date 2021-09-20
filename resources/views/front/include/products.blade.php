@@ -1,14 +1,14 @@
 <div class="index-page-product">
     <div class="view-products-buy-good">
         <div class="view-img-buy-good">
-            <img class="img-banner_buy_good" src="{{'data/image/image banner/banner_buy_good.png'}}" alt="">
+            <img  loading="lazy" class="img-banner_buy_good" src="{{'data/image/image banner/banner_buy_good.png'}}" alt="">
         </div>
         <div class="view-product-buy-good-list">
             <div class="view-product-buy-good-list-all responsive">
                 @foreach($discounted_products as $discounted_product)
                     <a href="{{route('product.show' , ['slug'=>$discounted_product->slug])}}"
                        class="view-product-buy-good-list-one">
-                        <img src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
+                        <img  loading="lazy" src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
                         <p class="view-products-slider-name set-font f-12" align="center">{{$discounted_product->name}}</p>
                         <div class="price-view-product-buy-good-list-one">
                             <span class="off-view-product-buy-good-list-one">{{$discounted_product->off}}%</span>
@@ -30,21 +30,21 @@
     <div class="group-index-page-banner-up">
         @foreach($banner_ups as $banner_up)
             <span class="view-banner-up span-banner-up-1">
-                    <img src="{{url('data/image/image banner').'/'.$banner_up->address}}" alt="{{$banner_up->alt}}"
+                    <img  loading="lazy" src="{{url('data/image/image banner').'/'.$banner_up->address}}" alt="{{$banner_up->alt}}"
                          title="{{$banner_up->title}}">
                 </span>
         @endforeach
     </div>
     <div class="view-products-buy-good view-products-super">
         <div class="view-img-buy-good 2">
-            <img class="img-banner_buy_good" src="{{'data/image/image banner/banner_super_index_page.png'}}" alt="">
+            <img  loading="lazy" class="img-banner_buy_good" src="{{'data/image/image banner/banner_super_index_page.png'}}" alt="">
         </div>
         <div class="view-product-buy-good-list view-product-buy-good-list2">
             <div class="view-product-buy-good-list-all responsive">
                 @foreach($market_products as $discounted_product)
                     <a href="{{route('product.show' , ['slug'=>$discounted_product->slug])}}"
                        class="view-product-buy-good-list-one">
-                        <img src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
+                        <img  loading="lazy" src="{{url('data/image/image product/').'/'.$discounted_product->image}}" alt="">
                         <p class="view-products-slider-name set-font f-12" align="center">{{$discounted_product->name}}</p>
                         <div class="price-view-product-buy-good-list-one">
                             @if($discounted_product->off > 0)
@@ -76,7 +76,7 @@
             <div class="group-view-products-slider responsive-group2">
                 @foreach($mobile_products as $mobile_product)
                     <span title="محصول test">
-                        <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
+                        <img  loading="lazy" src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
                         <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
@@ -106,7 +106,7 @@
                     @foreach($mobile_products as $mobile_product)
                         @if($mobile_product->off > 0)
                                 <div class="item-off-mobile">
-                                    <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}" alt="">
+                                    <img  loading="lazy" src="{{url('data/image/image product/').'/'.$mobile_product->image}}" alt="">
                                     <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                                     <div class="add-off-product">
                                         <a class="number-off-price">{{$mobile_product->off}}%</a>
@@ -134,7 +134,7 @@
     <div class="group-index-page-banner-up">
         @foreach($banner_centers as $banner_up)
             <span class="view-banner-up span-banner-up-1">
-                    <img src="{{url('data/image/image banner').'/'.$banner_up->address}}" alt="{{$banner_up->alt}}"
+                    <img  loading="lazy" src="{{url('data/image/image banner').'/'.$banner_up->address}}" alt="{{$banner_up->alt}}"
                          title="{{$banner_up->title}}">
                 </span>
         @endforeach
@@ -146,7 +146,7 @@
             <div class="group-view-products-slider responsive-group5">
                 @foreach($mobile_tools as $mobile_product)
                     <span title="محصول test">
-                        <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
+                        <img  loading="lazy" src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
                         <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
@@ -178,7 +178,7 @@
             <div class="group-view-products-slider responsive-group5">
                 @foreach($watch_products as $mobile_product)
                     <span title="محصول test">
-                        <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
+                        <img  loading="lazy" src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
                         <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)
@@ -210,7 +210,7 @@
             <div class="group-view-products-slider responsive-group5">
                 @foreach($spicer_products as $mobile_product)
                     <span title="محصول test">
-                        <img src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
+                        <img  loading="lazy" src="{{url('data/image/image product/').'/'.$mobile_product->image}}"
                              alt="{{$mobile_product->name}}" title="{{$mobile_product->name}}">
                         <a href="{{route('product.show' , ['slug'=>$mobile_product->slug])}}"><p class="view-products-slider-name" align="center">{{$mobile_product->name}}</p></a>
                         @if($mobile_product->off > 0)

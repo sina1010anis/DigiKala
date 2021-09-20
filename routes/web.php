@@ -19,6 +19,7 @@ Route::prefix('/shop')->group(function(){
     Route::get('/buy' , [\App\Http\Controllers\ShopController::class , 'buy'])->name('shop.buy');
     Route::get('/profile' , [\App\Http\Controllers\ShopController::class , 'profile'])->name('shop.profile');
     Route::get('/{name}' , [\App\Http\Controllers\ShopController::class , 'view_product_shop'])->name('shop.view');
+    Route::post('/delete/product' , [\App\Http\Controllers\ShopController::class , 'delete_product_seller'])->name('shop.delete.product');
 });
 Route::get('/plus/card/{slug}' , [\App\Http\Controllers\ProductController::class , 'plusCard'])->name('plusCard');
 Route::get('/', function () {return view('front.section.index_page');})->name('index.page');
