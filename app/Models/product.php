@@ -11,6 +11,7 @@ class product extends Model
 
     protected $guarded =[];
 
+
     public function all_menus(){
         return $this->belongsTo(sub_all_menu::class , 'menu_id' , 'id');
     }

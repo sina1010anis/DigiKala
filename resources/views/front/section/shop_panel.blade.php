@@ -4,7 +4,11 @@
 
     @include('front.include.header')
     @include('front.include.navbar')
-    @include('front.include.shop_panel')
+    @if(isset($edit))
+        @include('front.include.shop_panel_edit')
+    @else
+        @include('front.include.shop_panel')
+    @endif
     @include('front.include.footer')
 
 @endsection

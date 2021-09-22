@@ -38,6 +38,8 @@ const app = createApp({
         searchVsProduct: '',
         id_shop_product: 0,
         panel_data: 0,
+        seller_menu_1:0,
+        seller_menu_2:0,
     }),
 
     methods: {

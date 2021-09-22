@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/data/image/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="4440e19c-7bbd-4b1c-9b46-75320db26173" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,11 +174,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\s1\Online-shop-DigiKala-\public\data\image" />
       <recent name="C:\wamp64\www\s1\digikala\public\data\image" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\front\section" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\section" />
       <recent name="C:\wamp64\www\s1\digikala\resources\views\admin\include" />
-      <recent name="C:\wamp64\www\s1\digikala\public\data\image\icon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\s1\digikala\resources\views" />
@@ -292,7 +289,7 @@
       <workItem from="1631969080933" duration="8416000" />
       <workItem from="1632029975340" duration="3535000" />
       <workItem from="1632053512410" duration="7597000" />
-      <workItem from="1632115819907" duration="2648000" />
+      <workItem from="1632115819907" duration="2766000" />
     </task>
     <servers />
   </component>

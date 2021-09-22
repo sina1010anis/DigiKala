@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\down_all_menu;
 use App\Models\factor;
 use App\Models\product;
 use App\Models\User;
@@ -59,5 +60,13 @@ class ShopController extends Controller
             return 'NO';
         }
 
+    }
+    public function edit_product_seller(product $name){
+        $edit = true;
+        $down_all_menu = down_all_menu::all();
+        if($name->seller == auth()->user()->id)
+            return view('front.section.shop_panel' , compact('edit' , 'down_all_menu'))->with('data' , $name);
+        else
+            return abort(404);
     }
 }
