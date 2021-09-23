@@ -3095,3 +3095,16 @@ tr:nth-child(even) {
     padding: 5px 10px;
     box-sizing: border-box;
 }
+.view-item-attr-seller{
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.view-item-attr-seller:hover{
+    background-color: #EF394E;
+    color: white;
+}

@@ -13,7 +13,7 @@ class product extends Model
 
 
     public function all_menus(){
-        return $this->belongsTo(sub_all_menu::class , 'menu_id' , 'id');
+        return $this->belongsTo(all_menu::class , 'menu_id' , 'id');
     }
     public function down_all_menus(){
         return $this->belongsTo(down_all_menu::class , 'sub_menu_id' , 'id');

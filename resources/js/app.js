@@ -60,6 +60,23 @@ const app = createApp({
                 }
             })
         },
+        delete_item_attr_product_seller(id){
+            axios.post('/shop/delete/attr/product' , {id:id}).then((res) => {
+                if (res.data == 'OK') {
+                    $(".view-err-sm").html(' حذف شد').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }else {
+                    $(".view-err-sm").html(' قبلا حذف شده').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }
+            })
+        },
         view_es_shop_panel(id) {
             this.panel_data = id
             alert(this.panel_data)
