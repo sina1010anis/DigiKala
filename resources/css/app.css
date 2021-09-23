@@ -3108,3 +3108,33 @@ tr:nth-child(even) {
     background-color: #EF394E;
     color: white;
 }
+.view-filter-attr-seller{
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    list-style: none;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+.view-filter-attr-seller:hover{
+    background-color: rgb(69, 36, 255);
+    color: white;
+}
+
+
+.page-edit-attr-filter{
+    width: 100%;
+    max-width: 450px;
+    background: rgb(255, 255, 255);
+    z-index: 10;
+    position: fixed;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: none;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+}

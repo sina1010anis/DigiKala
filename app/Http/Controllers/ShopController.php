@@ -120,4 +120,7 @@ class ShopController extends Controller
             return 'NO';
         }
     }
+    public function send_attr_product_seller(Request $request){
+
+    }
 }

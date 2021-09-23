@@ -25,6 +25,7 @@ Route::prefix('/shop')->group(function(){
     Route::post('/edit/product/menu/{name}' , [\App\Http\Controllers\ShopController::class , 'edit_product_menu_seller_send'])->name('shop.edit.product.menu.send');
     Route::post('/new/attr/product/{name}' , [\App\Http\Controllers\ShopController::class , 'new_attr_product_seller'])->name('shop.new.attr.product');
     Route::post('/delete/attr/product' , [\App\Http\Controllers\ShopController::class , 'delete_attr_product_seller'])->name('shop.delete.attr.product');
+    Route::post('/send/attr/product' , [\App\Http\Controllers\ShopController::class , 'send_attr_product_seller'])->name('shop.send.attr.product');
 });
 Route::get('/plus/card/{slug}' , [\App\Http\Controllers\ProductController::class , 'plusCard'])->name('plusCard');
 Route::get('/', function () {return view('front.section.index_page');})->name('index.page');

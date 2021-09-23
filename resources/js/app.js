@@ -40,9 +40,25 @@ const app = createApp({
         panel_data: 0,
         seller_menu_1:0,
         seller_menu_2:0,
+        id_edit_attr_filter_seller:0,
+        title_filter_id:0,
+        attr_filter_id:0,
     }),
 
     methods: {
+        send_edit_attr_filter_seller(){
+             axios.post('/shop/send/attr/product' , {title:this.title_filter_id , attr:this.attr_filter_id}).then((res) =>{
+
+             })
+        },
+        edit_attr_filter_seller(id){
+            this.id_edit_attr_filter_seller = id;
+            // axios.post('/shop/send/attr/product' , {id:id}).then((res) =>{
+
+            // })
+            $('.page-edit-attr-filter').stop().fadeToggle()
+            $('.blur-web').stop().fadeToggle()
+        },
         delete_product_seller(id) {
             axios.post('/shop/delete/product', {id: id}).then((res) => {
                 if (res.data == 'OK') {
@@ -369,11 +385,13 @@ const app = createApp({
     },
     mounted() {
         $(".blur-web").click(function () {
+            $('.page-edit-attr-filter').fadeOut()
             $('.page-reply-comment-product').fadeOut()
             $('.page-select-item-vs').fadeOut()
             $('.group-form-new-comment').fadeOut()
             $('.page-view-sm-buy').fadeOut()
             $('.group-form-new-address').fadeOut()
+            $('.blur-web').fadeOut()
         })
         $(".view-err-sm").click(() => {
             $(".view-err-sm").fadeOut()

@@ -102,7 +102,7 @@
                 <ul>
                     @foreach($properties_product as $propertie_product)
                         @if($propertie_product->product_id == $data->id)
-                            <li @click="delete_item_attr_product_seller({{ $propertie_product->id }})" class="set-font f-12 view-item-attr-seller"> <i class="fas fa-caret-left color-b-500 f-10"></i> {{$propertie_product->title}} : {{$propertie_product->name}} </li>
+                            <li dir="rtl" @click="delete_item_attr_product_seller({{ $propertie_product->id }})" class="set-font f-12 view-item-attr-seller"> <i class="fas fa-caret-left color-b-500 f-10"></i> {{$propertie_product->title}} : {{$propertie_product->name}} </li>
                         @endif
                     @endforeach
                 </ul>
@@ -129,3 +129,45 @@
         </div>
     </div>
 </div>
+
+
+<div class="menu-view">
+    <div class="view-menu-product" style="width: 100%">
+        <div class="sm-filter">
+            <div class="view-product-menu-search">
+                <h3 dir="rtl" class="set-fornt color-b-700">ویژگی های فیلتر</h3>
+                <div class="line"></div>
+                <ul>
+                    @foreach($attr_products as $attr_product)
+                        @if($attr_product->product_id == $data->id)
+                            <li @click="edit_attr_filter_seller({{ $attr_product->id }})" dir="rtl" class="set-font f-12 view-filter-attr-seller"> <i class="fas fa-caret-left color-b-500 f-10"></i> {{$attr_product->title_filters->name}} : {{$attr_product->attr_filters->name}} </li>
+                        @endif
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="page-edit-attr-filter">
+        <label for="menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">موضوع فیلتر</label>
+        <select v-model="title_filter_id" class="item-select-seller" name="menu_id" id="menu_id">
+            @foreach ($title_filter as $title)
+                @if ($title->sub_menu_id == $data->menu_id)
+                    <option selected value="{{ $title->id }}">{{ $title->name }}</option>
+                @endif
+            @endforeach
+        </select>
+        <label for="sub_menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار فیلتر</label>
+        <select v-model="attr_filter_id" class="item-select-seller" name="down_all_menu" id="sub_menu_id">
+            @foreach ($attr_filter as $attr)
+                <option v-if="title_filter_id == {{ $attr->title_filter_id }}" value="{{ $attr->id }}">{{ $attr->name }}</option>
+            @endforeach
+        </select>
+        <br>
+        <br>
+        <button @click="send_edit_attr_filter_seller({{ $data->id }})" style="padding:20px" class="btn-logout" type="submit">تایید</button>
+</div>
+
+<div class="blur-web"></div>
