@@ -151,18 +151,10 @@
 
 
 <div class="page-edit-attr-filter">
-        <label for="menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">موضوع فیلتر</label>
-        <select v-model="title_filter_id" class="item-select-seller" name="menu_id" id="menu_id">
-            @foreach ($title_filter as $title)
-                @if ($title->sub_menu_id == $data->menu_id)
-                    <option selected value="{{ $title->id }}">{{ $title->name }}</option>
-                @endif
-            @endforeach
-        </select>
         <label for="sub_menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار فیلتر</label>
         <select v-model="attr_filter_id" class="item-select-seller" name="down_all_menu" id="sub_menu_id">
             @foreach ($attr_filter as $attr)
-                <option v-if="title_filter_id == {{ $attr->title_filter_id }}" value="{{ $attr->id }}">{{ $attr->name }}</option>
+                <option v-if="id_edit_attr_filter_seller == {{ $attr->title_filter_id }}" selected value="{{ $attr->id }}">{{ $attr->name }}</option>
             @endforeach
         </select>
         <br>

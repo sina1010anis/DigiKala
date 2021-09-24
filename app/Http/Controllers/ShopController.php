@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\newAttrProductSeller;
 use App\Http\Requests\updateProductSeller;
+use App\Models\attr_filter;
+use App\Models\attr_product;
 use App\Models\down_all_menu;
 use App\Models\factor;
 use App\Models\product;
@@ -121,6 +123,12 @@ class ShopController extends Controller
         }
     }
     public function send_attr_product_seller(Request $request){
-
+        $data = attr_product::whereId($request->id)->first();
+        if($data->count() > 0){
+            $data->update(['attr_filter_id' => $request->attr]);
+            return 'OK';
+        }else{
+            return 'NO';
+        }
     }
 }

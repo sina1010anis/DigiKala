@@ -47,8 +47,20 @@ const app = createApp({
 
     methods: {
         send_edit_attr_filter_seller(){
-             axios.post('/shop/send/attr/product' , {title:this.title_filter_id , attr:this.attr_filter_id}).then((res) =>{
-
+             axios.post('/shop/send/attr/product' , {id:this.id_edit_attr_filter_seller, attr:this.attr_filter_id}).then((res) =>{
+                if (res.data == 'OK') {
+                    $(".view-err-sm").html('ویرایش انجام شد').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }else {
+                    $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }
              })
         },
         edit_attr_filter_seller(id){
