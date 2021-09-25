@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\imageRequest;
 use App\Http\Requests\newAttrProductSeller;
 use App\Http\Requests\updateProductSeller;
 use App\Models\attr_filter;
 use App\Models\attr_product;
 use App\Models\down_all_menu;
 use App\Models\factor;
+use App\Models\image_product;
 use App\Models\product;
 use App\Models\property;
 use App\Models\User;
@@ -130,5 +132,26 @@ class ShopController extends Controller
         }else{
             return 'NO';
         }
+    }
+    public function delete_image_product_seller(Request $request){
+        $data = image_product::whereId($request->id)->first();
+        if($data->count() > 0){
+            $data->delete();
+            return 'OK';
+        }else{
+            return 'NO';
+        }
+    }
+    public function new_image_product_seller(imageRequest $request , $id)
+    {
+        $tmp = $request->file('image');
+        $name_image = $tmp->getClientOriginalName();
+        $tmp->move(public_path('/data/image/image one product/'), $name_image);
+        image_product::create([
+            'alt_title' => $name_image,
+            'address' => $name_image,
+            'product_id' => $id,
+        ]);
+        return back()->with('msg' , 'با موفقیت اضافه شد');
     }
 }

@@ -46,6 +46,23 @@ const app = createApp({
     }),
 
     methods: {
+        delete_image_product_seller(id){
+            axios.post('/shop/delete/image/product' , {id:id}).then((res) =>{
+                if (res.data == 'OK') {
+                    $(".view-err-sm").html('با موفقیت حذف شد').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }else {
+                    $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({'padding': '5px 20px'})
+                    setTimeout(function () {
+                        $(".view-err-sm").fadeOut()
+                        location.reload();
+                    }, 2000)
+                }
+             })
+        },
         send_edit_attr_filter_seller(){
              axios.post('/shop/send/attr/product' , {id:this.id_edit_attr_filter_seller, attr:this.attr_filter_id}).then((res) =>{
                 if (res.data == 'OK') {

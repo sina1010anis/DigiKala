@@ -150,6 +150,42 @@
 </div>
 
 
+<div class="menu-view">
+    <div class="view-menu-product" style="width: 100%">
+        <div class="sm-filter">
+            <div class="view-product-menu-search">
+                <h3 dir="rtl" class="set-fornt color-b-700">تصاویر</h3>
+                <div class="line"></div>
+                <div class="box-all-img-seller">
+                    <span class="box-img-seller-product">
+                        <img class="image-item-product-seller image-item-product-origin-seller" src="{{url('data/image/image product/').'/'.$data->image}}" alt="">
+                        <span class="text-origin f-11">عکس اصلی</span>
+                    </span>
+                    @foreach ($image_products as $image_product)
+                        <span class="box-img-seller-product" v-if="{{ $image_product->product_id }} == {{ $data->id }}">
+                            <img class="image-item-product-seller" src="{{url('data/image/image one product/').'/'.$image_product->address}}" alt="{{ $image_product->name }}">
+                            <i @click="delete_image_product_seller('{{ $image_product->id }}')" class="far fa-trash-alt"></i>
+                        </span>
+                    @endforeach
+                </div>
+                <form action="{{ route('shop.new.image.product' , ['id' => $data->id])}}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <h4 dir="rtl" class="set-fornt color-b-700">تصویر جدید</h3>
+                    <div class="line"></div>
+                    <label for="email" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">نام محصول</label>
+                    <input @error('image') style="border:1px solid red"  @enderror type="file" name="image" class="input_edit_product_seller">
+                    @error('image')
+                        <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
+                    @enderror
+                    <br>
+                    <br>
+                    <button style="padding:20px" class="btn-logout" type="submit">تایید</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="page-edit-attr-filter">
         <label for="sub_menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار فیلتر</label>
         <select v-model="attr_filter_id" class="item-select-seller" name="down_all_menu" id="sub_menu_id">

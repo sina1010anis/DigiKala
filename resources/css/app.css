@@ -3138,3 +3138,44 @@ tr:nth-child(even) {
     transform: translate(-50%,-50%);
 
 }
+.image-item-product-seller{
+    width: 100%;
+    height: 100%;
+}
+.image-item-product-origin-seller{
+    border-radius: 10px;
+
+}
+.box-img-seller-product{
+    width: 120px;
+    margin: 20px;
+    box-sizing: border-box;
+    height: 120px;
+    float: left;
+    border-radius: 10px;
+    padding: 2px;
+    box-shadow: 1px 1px 10px rgba(121, 121, 121, 0.5);
+    position: relative;
+}
+.box-img-seller-product i{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    cursor: pointer;
+}
+.text-origin{
+    width: 105%;
+    padding: 1px;
+    border-radius: 100px;
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    box-sizing: border-box;
+    bottom: 0;
+    background-color: rgb(255, 67, 67);
+    left: 0;
+}
+.box-all-img-seller{
+    overflow: auto;
+}
