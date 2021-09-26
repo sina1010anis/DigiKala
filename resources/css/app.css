@@ -3051,6 +3051,7 @@ tr:nth-child(even) {
     width: 95%;
     height: auto;
     padding: 20px;
+    box-sizing: border-box;
     margin: auto;
 }
 .nav-bar-shop-seller{
@@ -3178,4 +3179,55 @@ tr:nth-child(even) {
 }
 .box-all-img-seller{
     overflow: auto;
+}
+.box-seting-edit-product{
+    padding: 15px;
+    margin: 10px;
+    margin: auto;
+    overflow: auto;
+}
+.btn-sendre-product{
+    background: unset;
+    border: 1px solid #fbd42c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-sendre-product:hover{
+    background-color: #fbd42c;
+}
+@media (max-width: 600px) {
+    .box-seting-edit-product{
+        width: 100%!important;
+        box-sizing:border-box ;
+    }
+}
+.btn-new-product-seller{
+    position: fixed;
+    bottom: 20px;
+    color: rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    box-shadow: 1px 1px 10px rgba(63, 63, 63, 0.5);
+    cursor: pointer;
+    border-radius: 50%;
+    right: 20px;
+    transition: 0.2s;
+    background-color: rgb(38, 185, 38);
+}
+.btn-new-product-seller i{
+    position: absolute;
+    top: 50%;
+    font-size: 20px;
+    left: 50%;
+    transition: 0.2s;
+    transform: translate(-50%,-50%);
+}
+.btn-new-product-seller:hover{
+    transform: scale(1.2);
+    box-shadow: 1px 1px 20px rgba(51, 51, 51, 0.5);
+}
+.btn-new-product-seller:hover .i-in-btn-new-product-seller{
+    font-size: 25px;
+    color: rgb(255, 255, 255)!important;
 }

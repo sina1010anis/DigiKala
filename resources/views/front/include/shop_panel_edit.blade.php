@@ -23,31 +23,33 @@
                     <input @error('price') style="border:1px solid red"  @enderror value="{{ $data->price }}" type="text" name="price" class="input_edit_product_seller">
                     @error('price')
                     <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
-                @enderror
-                    <label for="email" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">توضیحات محصول</label>
-                    <input @error('description') style="border:1px solid red"  @enderror value="{{ $data->description }}" type="text" name="description" class="input_edit_product_seller">
-                    @error('description')
-                    <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
-                @enderror
-                    <label for="email" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">تخفیف محصول</label>
-                    <input @error('off') style="border:1px solid red"  @enderror value="{{ $data->off }}" type="text" name="off" class="input_edit_product_seller">
-                    @error('off')
-                    <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
-                @enderror
-                <h3 dir="rtl" class="set-fornt color-b-700">ویراش برند</h3>
-                <img src="{{url('data/image/image_brand/').'/'.$data->brands->image}}" alt="{{$data->brands->name}}"
-                title="{{$data->brands->name}}">
-                <select class="item-select-seller" name="brand_id" id="brand_id">
-                    @foreach ($brand_all as $brand_all)
-                        <option @if ($brand_all->id == $data->brand_id)
-                            selected
-                        @endif value="{{ $brand_all->id }}">{{ $brand_all->name }}</option>
-                    @endforeach
-                </select>
+                    @enderror
+                        <label for="email" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">توضیحات محصول</label>
+                        <input @error('description') style="border:1px solid red"  @enderror value="{{ $data->description }}" type="text" name="description" class="input_edit_product_seller">
+                        @error('description')
+                        <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
+                    @enderror
+                        <label for="email" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">تخفیف محصول</label>
+                        <input @error('off') style="border:1px solid red"  @enderror value="{{ $data->off }}" type="text" name="off" class="input_edit_product_seller">
+                        @error('off')
+                        <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
+                    @enderror
+                    <h3 dir="rtl" class="set-fornt color-b-700">ویراش برند</h3>
+                    <img src="{{url('data/image/image_brand/').'/'.$data->brands->image}}" alt="{{$data->brands->name}}"
+                    title="{{$data->brands->name}}">
+                    <select class="item-select-seller" name="brand_id" id="brand_id">
+                        @foreach ($brand_all as $brand_all)
+                            <option @if ($brand_all->id == $data->brand_id)
+                                selected
+                            @endif value="{{ $brand_all->id }}">{{ $brand_all->name }}</option>
+                        @endforeach
+                    </select>
                     <br>
                     <br>
                     <button style="padding:20px" class="btn-logout" type="submit">تایید</button>
                 </form>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">در این بخش فقط مقدار های سطحی از محصولات قابل ویرایش است لطفا کاردی خالی نزارید .</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای ویرایش برند هم از همین بخش اقدام کنید .</p>
             </div>
         </div>
     </div>
@@ -86,6 +88,8 @@
                     <br>
                     <button style="padding:20px" class="btn-logout" type="submit">تایید</button>
                 </form>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای دیدن نمو فعلی در قسمت بالا کنار تیتر بالا نام محصول منو و زیر منو قابل مشاهده است</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">اگر منو ها اول قابل مشاهده نست به این معنی نیست که داخل دسته قرار ندارد .</p>
             </div>
         </div>
     </div>
@@ -125,6 +129,9 @@
                     <br>
                     <button style="padding:20px" class="btn-logout" type="submit">تایید</button>
                 </form>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">فقط قابل نمایش است و با ویژگی های  فیلتر فرق میکند .</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای حذف یکی از ویژگی ها روی یکی از ویژگی ها یک با کلیک کنید .</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">ویژگی ها قابل ویرایش نیستند برای ویرایش یک با حذف و دوباره ایجاد کنید .</p>
             </div>
         </div>
     </div>
@@ -144,6 +151,8 @@
                         @endif
                     @endforeach
                 </ul>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">ویژگی های فیلتر یک مقدار تعین شده است و قابل اصافه شدن نیست و فقط میتوان  را  ویرایش کرد</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای ویرایش لطفا روی یک مقدار یک بار کلید کنید</p>
             </div>
         </div>
     </div>
@@ -181,10 +190,46 @@
                     <br>
                     <button style="padding:20px" class="btn-logout" type="submit">تایید</button>
                 </form>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">تصویر اصلی قابل حذف نمی باشد .</p>
             </div>
         </div>
     </div>
 </div>
+
+<div class="menu-view">
+    <div class="view-menu-product" style="width: 100%">
+        <div class="sm-filter">
+            <h3 dir="rtl" class="set-fornt color-b-700">تنظیمات</h3>
+            <div class="line"></div>
+            <div class="view-product-menu-search">
+                    <div class="w-50 box-seting-edit-product">
+                        <span class="set-font f-12 color-b-600 fl-right">گزارش تغییر بسته بندی</span>
+                        <button class="set-font f-12 btn-sendre-product">گزارش</button>
+                    </div>
+                    <div class="line"></div>                    <div class="w-50 box-seting-edit-product">
+                        <span class="set-font f-12 color-b-600 fl-right">گزارش تغییر محتویات</span>
+                        <button class="set-font f-12 btn-sendre-product">گزارش</button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="w-50 box-seting-edit-product">
+                        <span class="set-font f-12 color-b-600 fl-right">گزارش تغییر استفاده</span>
+                        <button class="set-font f-12 btn-sendre-product">گزارش</button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="w-50 box-seting-edit-product">
+                        <span class="set-font f-12 color-b-600 fl-right">گزارش موجودی</span>
+                        <button class="set-font f-12 btn-sendre-product">گزارش</button>
+                    </div>
+                    <div class="line"></div>
+                    <div class="w-50 box-seting-edit-product">
+                        <span class="set-font f-12 color-b-600 fl-right">گزارش حذف محصول</span>
+                        <button class="set-font f-12 btn-sendre-product">گزارش</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="page-edit-attr-filter">
         <label for="sub_menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار فیلتر</label>

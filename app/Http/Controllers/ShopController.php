@@ -154,4 +154,11 @@ class ShopController extends Controller
         ]);
         return back()->with('msg' , 'با موفقیت اضافه شد');
     }
+    public function new_product_seller(){
+        $down_all_menu = down_all_menu::all();
+        return view('front.section.shop_new_product' , compact('down_all_menu'));
+    }
+    public function new_product_seller_send(Request $request){
+
+    }
 }

@@ -10,5 +10,5 @@
         @include('front.include.shop_panel')
     @endif
     @include('front.include.footer')
-
+    <a href="{{ route('shop.new.product') }}" class="btn-new-product-seller"><i class="fas fa-plus i-in-btn-new-product-seller"></i></a>
 @endsection
