@@ -4,6 +4,7 @@
             <h3 dir="rtl" class="set-fornt color-b-700">محصول جدید</h3>
             <div class="line"></div>
             <form action="{{ route('shop.new.product.send') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <label for="name" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">نام محصول</label>
                 <input @error('name') style="border:1px solid red"  @enderror type="text" name="name" class="input_edit_product_seller">
                 @error('name')
@@ -17,6 +18,11 @@
                 <label for="off" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار تخفیف</label>
                 <input @error('off') style="border:1px solid red"  @enderror type="number" name="off" class="input_edit_product_seller">
                 @error('off')
+                    <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
+                @enderror
+                <label for="price" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">قیمت</label>
+                <input @error('price') style="border:1px solid red"  @enderror type="number" name="price" class="input_edit_product_seller">
+                @error('price')
                     <p style="color:red" class="f-11" dir="rtl" align="center">{{ $message }}</p>
                 @enderror
                 <div class="line"></div>
@@ -46,8 +52,8 @@
                     @endforeach
                 </select>
                 <div class="line"></div>
-                <label for="brnad" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">برند</label>
-                <select class="item-select-seller" name="brnad" id="brnad">
+                <label for="brand_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">برند</label>
+                <select class="item-select-seller" name="brand_id" id="brand_id">
                     @foreach ($brand_all as $brand)
                         <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                     @endforeach

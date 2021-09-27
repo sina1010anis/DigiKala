@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\imageRequest;
 use App\Http\Requests\newAttrProductSeller;
+use App\Http\Requests\newProductRequest;
 use App\Http\Requests\updateProductSeller;
 use App\Models\attr_filter;
 use App\Models\attr_product;
@@ -12,6 +13,8 @@ use App\Models\factor;
 use App\Models\image_product;
 use App\Models\product;
 use App\Models\property;
+use App\Models\sub_all_menu;
+use App\Models\title_filter;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -91,7 +94,7 @@ class ShopController extends Controller
             $name->save();
             return back()->with('msg' , 'با موفقیت اعمال شد');
         }else{
-            throw abort(404);
+            abort(404);
         }
     }
     public function edit_product_menu_seller_send(Request $request , product $name){
@@ -101,7 +104,7 @@ class ShopController extends Controller
             $name->save();
             return back()->with('msg' , 'با موفقیت اعمال شد');
         }else{
-            throw abort(404);
+            abort(404);
         }
     }
     public function new_attr_product_seller(newAttrProductSeller $request , product $name , property $property){
@@ -112,7 +115,7 @@ class ShopController extends Controller
             $property->save();
            return back()->with('msg' , 'با موفقیت اضافه شد');
        }else{
-           throw abort(404);
+            abort(404);
        }
     }
     public function delete_attr_product_seller(Request $request){
@@ -125,7 +128,7 @@ class ShopController extends Controller
         }
     }
     public function send_attr_product_seller(Request $request){
-        $data = attr_product::whereId($request->id)->first();
+        $data = attr_product::whereId($request->id_attr)->first();
         if($data->count() > 0){
             $data->update(['attr_filter_id' => $request->attr]);
             return 'OK';
@@ -158,7 +161,43 @@ class ShopController extends Controller
         $down_all_menu = down_all_menu::all();
         return view('front.section.shop_new_product' , compact('down_all_menu'));
     }
-    public function new_product_seller_send(Request $request){
+    public function new_product_seller_send(newProductRequest $request , product $product){
+        $tmp = $request->file('image');
+        $tmp->move(public_path('/data/image/image product/'), $tmp->getClientOriginalName());
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->slug = Str::slug($request->name);
+        $product->image = $tmp->getClientOriginalName();
+        $product->description = $request->description;
+        $product->off = $request->off;
+        $product->menu_id = $request->menu_id;
+        $product->sub_menu_id = $request->down_all_menu;
+        $product->brand_id = $request->brand_id;
+        $product->seller = auth()->user()->id;
+        $product->save();
+        return redirect('/shop/index')->with('msg' , 'با موفقیت اضافه شد');
+    }
+    public function builder_filter(Request $request , attr_product $attr_product){
+        $product = product::find($request->id);
+        $count = attr_product::whereProduct_id($request->id)->count();
+        if($count <= 0){
+            $filter = title_filter::whereSub_menu_id($product->su_menu_id)->get();
+            if($filter->count() > 0){
+                foreach($filter as $i){
+                    attr_product::create([
+                        'title_filter_id' => $i->id,
+                        'attr_filter_id' => 0,
+                        'product_id' => $request->id,
+                        'menu_id' => $product->menu_id,
+                    ]);
+                }
+                return 'OK';
+            }else{
+                return 'NO';
+            }
+        }else{
+            return 'NO';
+        }
 
     }
 }

@@ -30,6 +30,7 @@ Route::prefix('/shop')->group(function(){
     Route::post('/new/image/product/{id}' , [\App\Http\Controllers\ShopController::class , 'new_image_product_seller'])->name('shop.new.image.product');
     Route::get('/new/product/seller' , [\App\Http\Controllers\ShopController::class , 'new_product_seller'])->name('shop.new.product');
     Route::post('/new/product/seller/send' , [\App\Http\Controllers\ShopController::class , 'new_product_seller_send'])->name('shop.new.product.send');
+    Route::post('/builder/filter' , [\App\Http\Controllers\ShopController::class , 'builder_filter'])->name('shop.builer.filter');
 });
 Route::get('/plus/card/{slug}' , [\App\Http\Controllers\ProductController::class , 'plusCard'])->name('plusCard');
 Route::get('/', function () {return view('front.section.index_page');})->name('index.page');

@@ -1181,6 +1181,7 @@ footer .div-view-tb {
     margin: auto;
     transform: scale(0.8);
     width: 100%;
+    background: unset!important;
 }
 
 .p-product-menu {

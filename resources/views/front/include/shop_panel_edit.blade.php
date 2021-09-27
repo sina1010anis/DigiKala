@@ -147,16 +147,28 @@
                 <ul>
                     @foreach($attr_products as $attr_product)
                         @if($attr_product->product_id == $data->id)
-                            <li @click="edit_attr_filter_seller({{ $attr_product->id }})" dir="rtl" class="set-font f-12 view-filter-attr-seller"> <i class="fas fa-caret-left color-b-500 f-10"></i> {{$attr_product->title_filters->name}} : {{$attr_product->attr_filters->name}} </li>
+                            @if ( $attr_product->attr_filter_id <= 0)
+                                <li @click="edit_attr_filter_seller({{ $attr_product->title_filter_id }} , {{$attr_product->id}})" dir="rtl" class="set-font f-12 view-filter-attr-seller"> <i class="fas fa-caret-left color-b-500 f-10"></i> {{$attr_product->title_filters->name}} : {{$attr_product->attr_filter_id}} </li>
+                            @else
+                                <li @click="edit_attr_filter_seller({{ $attr_product->title_filter_id }} , {{$attr_product->id}})" dir="rtl" class="set-font f-12 view-filter-attr-seller"> <i class="fas fa-caret-left color-b-500 f-10"></i> {{$attr_product->title_filters->name}} : {{$attr_product->attr_filters->name}} </li>
+                            @endif
                         @endif
                     @endforeach
+                    @php
+                        if ($attr_products->where('product_id' , $data->id)->count() <= 0) {
+                            echo '
+                            <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای این محصول فیلتری موجود نیست لطفا برای ساخت فیلتر ها در همین بخش روی دکمه گزارش کلیک کنید .</p>
+<div class="w-50 box-seting-edit-product">
+    <button @click="builder_filter('.$data->id.')" class="set-font f-12 btn-sendre-product">گزارش</button>
+                            ';
+                        }
+                    @endphp
                 </ul>
                 <p class="set-font f-12" style="color:red" align="center" dir="rtl">ویژگی های فیلتر یک مقدار تعین شده است و قابل اصافه شدن نیست و فقط میتوان  را  ویرایش کرد</p>
                 <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای ویرایش لطفا روی یک مقدار یک بار کلید کنید</p>
             </div>
         </div>
     </div>
-</div>
 
 
 <div class="menu-view">
@@ -179,7 +191,7 @@
                 </div>
                 <form action="{{ route('shop.new.image.product' , ['id' => $data->id])}}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <h4 dir="rtl" class="set-fornt color-b-700">تصویر جدید</h3>
+                    <h4 dir="rtl" class="set-fornt color-b-700">تصویر جدید</h4>
                     <div class="line"></div>
                     <label for="email" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">نام محصول</label>
                     <input @error('image') style="border:1px solid red"  @enderror type="file" name="image" class="input_edit_product_seller">
@@ -235,12 +247,12 @@
         <label for="sub_menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار فیلتر</label>
         <select v-model="attr_filter_id" class="item-select-seller" name="down_all_menu" id="sub_menu_id">
             @foreach ($attr_filter as $attr)
-                <option v-if="id_edit_attr_filter_seller == {{ $attr->title_filter_id }}" selected value="{{ $attr->id }}">{{ $attr->name }}</option>
+                <option v-if="id_edit_attr_filter_seller == '{{ $attr->title_filter_id }}'" value="{{ $attr->id }}">{{ $attr->name }}</option>
             @endforeach
         </select>
         <br>
         <br>
-        <button @click="send_edit_attr_filter_seller({{ $data->id }})" style="padding:20px" class="btn-logout" type="submit">تایید</button>
+        <button @click="send_edit_attr_filter_seller()" style="padding:20px" class="btn-logout" type="submit">تایید</button>
 </div>
 
 <div class="blur-web"></div>

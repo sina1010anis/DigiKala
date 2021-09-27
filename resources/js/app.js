@@ -1,6 +1,6 @@
 require('./bootstrap');
 import '../css/app.css'
-import {createApp} from 'vue/dist/vue.esm-bundler.js'
+import { createApp } from 'vue/dist/vue.esm-bundler.js'
 import $ from 'jquery'
 import 'slick-carousel/slick/slick.js'
 import 'slick-carousel/slick/slick-theme.css'
@@ -9,7 +9,7 @@ import axios from "axios";
 import test from './components/test'
 import store from "./store";
 import footer_vue from './components/product/footer'
-import {mapState, mapGetters} from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import btn from './components/product/baseBtn'
 
 const app = createApp({
@@ -38,92 +38,106 @@ const app = createApp({
         searchVsProduct: '',
         id_shop_product: 0,
         panel_data: 0,
-        seller_menu_1:0,
-        seller_menu_2:0,
-        id_edit_attr_filter_seller:0,
-        title_filter_id:0,
-        attr_filter_id:0,
+        seller_menu_1: 0,
+        seller_menu_2: 0,
+        id_edit_attr_filter_seller: 0,
+        title_filter_id: 0,
+        attr_filter_id: 0,
     }),
 
     methods: {
-        delete_image_product_seller(id){
-            axios.post('/shop/delete/image/product' , {id:id}).then((res) =>{
+        builder_filter(id) {
+            axios.post('/shop/builder/filter', { id: id }).then((res) => {
                 if (res.data == 'OK') {
-                    $(".view-err-sm").html('با موفقیت حذف شد').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('با موفقیت اضافه شد').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                         location.reload();
                     }, 2000)
-                }else {
-                    $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({'padding': '5px 20px'})
+                } else {
+                    $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                         location.reload();
                     }, 2000)
-                }
-             })
-        },
-        send_edit_attr_filter_seller(){
-             axios.post('/shop/send/attr/product' , {id:this.id_edit_attr_filter_seller, attr:this.attr_filter_id}).then((res) =>{
-                if (res.data == 'OK') {
-                    $(".view-err-sm").html('ویرایش انجام شد').fadeIn().css({'padding': '5px 20px'})
-                    setTimeout(function () {
-                        $(".view-err-sm").fadeOut()
-                        location.reload();
-                    }, 2000)
-                }else {
-                    $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({'padding': '5px 20px'})
-                    setTimeout(function () {
-                        $(".view-err-sm").fadeOut()
-                        location.reload();
-                    }, 2000)
-                }
-             })
-        },
-        edit_attr_filter_seller(id){
-            this.id_edit_attr_filter_seller = id;
-            // axios.post('/shop/send/attr/product' , {id:id}).then((res) =>{
-
-            // })
-            $('.page-edit-attr-filter').stop().fadeToggle()
-            $('.blur-web').stop().fadeToggle()
-        },
-        delete_product_seller(id) {
-            axios.post('/shop/delete/product', {id: id}).then((res) => {
-                if (res.data == 'OK') {
-                    $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({'padding': '5px 20px'})
-                    setTimeout(function () {
-                        $(".view-err-sm").fadeOut()
-                        location.reload();
-                    }, 2000)
-                }else {
-                    $(".view-err-sm").html('محصول قبلا حذف شده.').fadeIn().css({'padding': '5px 20px'})
-                    setTimeout(function () {
-                        $(".view-err-sm").fadeOut()
-                        location.reload();
-                    }, 2000)
-                }
-            })
-        },
-        delete_item_attr_product_seller(id){
-            axios.post('/shop/delete/attr/product' , {id:id}).then((res) => {
-                if (res.data == 'OK') {
-                    $(".view-err-sm").html(' حذف شد').fadeIn().css({'padding': '5px 20px'})
-                    setTimeout(function () {
-                        $(".view-err-sm").fadeOut()
-                        location.reload();
-                    }, 2000)
-                }else {
-                    $(".view-err-sm").html(' قبلا حذف شده').fadeIn().css({'padding': '5px 20px'})
-                    setTimeout(function () {
-                        $(".view-err-sm").fadeOut()
-                        location.reload();
-                    }, 2000)
-                }
-            })
-        },
-        view_es_shop_panel(id) {
-            this.panel_data = id
+                }});
+            },
+                delete_image_product_seller(id){
+                axios.post('/shop/delete/image/product', { id: id }).then((res) => {
+                    if (res.data == 'OK') {
+                        $(".view-err-sm").html('با موفقیت حذف شد').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    } else {
+                        $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    }
+                })
+            },
+                send_edit_attr_filter_seller(){
+                axios.post('/shop/send/attr/product', {id_attr:this.id_attr, id: this.id_edit_attr_filter_seller, attr: this.attr_filter_id }).then((res) => {
+                    if (res.data == 'OK') {
+                        $(".view-err-sm").html('ویرایش انجام شد').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    } else {
+                        $(".view-err-sm").html('مشکلی پیش اومده').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    }
+                })
+            },
+                edit_attr_filter_seller(id , id_attr){
+                    this.id_edit_attr_filter_seller = id;
+                    this.id_attr = id_attr;
+                    $('.page-edit-attr-filter').stop().fadeToggle()
+                    $('.blur-web').stop().fadeToggle()
+            },
+                delete_product_seller(id) {
+                axios.post('/shop/delete/product', { id: id }).then((res) => {
+                    if (res.data == 'OK') {
+                        $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    } else {
+                        $(".view-err-sm").html('محصول قبلا حذف شده.').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    }
+                })
+            },
+                delete_item_attr_product_seller(id){
+                axios.post('/shop/delete/attr/product', { id: id }).then((res) => {
+                    if (res.data == 'OK') {
+                        $(".view-err-sm").html(' حذف شد').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    } else {
+                        $(".view-err-sm").html(' قبلا حذف شده').fadeIn().css({ 'padding': '5px 20px' })
+                        setTimeout(function () {
+                            $(".view-err-sm").fadeOut()
+                            location.reload();
+                        }, 2000)
+                    }
+                })
+            },
+                view_es_shop_panel(id) {
+                this.panel_data = id
             alert(this.panel_data)
         },
         set_id_and_send_data(id) {
@@ -193,13 +207,13 @@ const app = createApp({
                 id: id
             }).then((res) => {
                 if (res.data == 'ok') {
-                    $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('محصول حذف شد.').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                         location.reload();
                     }, 2000)
                 } else {
-                    $(".view-err-sm").html('مشکلی پیش اماده است.').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('مشکلی پیش اماده است.').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                         location.reload();
@@ -234,8 +248,8 @@ const app = createApp({
             $(".blur-web").stop().fadeIn(100)
         },
         setAddressPanelUser() {
-            axios.post('/user/set/address', {'id': this.id_check_box}).then((res) => {
-                $(".view-err-sm").html('ادرس جدید ثبت شد').fadeIn().css({'padding': '5px 20px'})
+            axios.post('/user/set/address', { 'id': this.id_check_box }).then((res) => {
+                $(".view-err-sm").html('ادرس جدید ثبت شد').fadeIn().css({ 'padding': '5px 20px' })
                 setTimeout(function () {
                     $(".view-err-sm").fadeOut()
                     location.reload();
@@ -258,13 +272,13 @@ const app = createApp({
                 id
             }).then((res) => {
                 if (res.data == 'ok') {
-                    $(".view-err-sm").html('محصول شما با موفقیت ذخیره شد').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('محصول شما با موفقیت ذخیره شد').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
                 }
                 if (res.data == 'no') {
-                    $(".view-err-sm").html('هر محصول را فقط یک بار میتوانید ذخیره کنید').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('هر محصول را فقط یک بار میتوانید ذخیره کنید').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
@@ -316,7 +330,7 @@ const app = createApp({
                     console.log(res.data)
                     $(".group-form-new-comment").stop().fadeOut();
                     $(".blur-web").stop().fadeOut();
-                    $(".view-err-sm").html('با تشکر از نظر شما').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('با تشکر از نظر شما').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
@@ -342,21 +356,21 @@ const app = createApp({
             $(".page-reply-comment-product").fadeIn()
         },
         set_like(id) {
-            axios.post('/set_like', {id}).then(function (res) {
+            axios.post('/set_like', { id }).then(function (res) {
                 if (res.data == 'Err Like') {
-                    $(".view-err-sm").html('فقط یک بار می توانید رای دهید').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('فقط یک بار می توانید رای دهید').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
                 }
                 if (res.data == 'Ok Like') {
-                    $(".view-err-sm").html('با تشکر از رای شما').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('با تشکر از رای شما').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
                 }
                 if (res.data == 'not Login') {
-                    $(".view-err-sm").html('لطفا ابتدا وارد ساید شوید').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('لطفا ابتدا وارد ساید شوید').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2500)
@@ -364,21 +378,21 @@ const app = createApp({
             })
         },
         set_dis_like(id) {
-            axios.post('/set_dis_like', {id}).then(function (res) {
+            axios.post('/set_dis_like', { id }).then(function (res) {
                 if (res.data == 'Err Dis Like') {
-                    $(".view-err-sm").html('فقط یک بار می توانید رای دهید').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('فقط یک بار می توانید رای دهید').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
                 }
                 if (res.data == 'Ok Dis Like') {
-                    $(".view-err-sm").html('با تشکر از رای شما').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('با تشکر از رای شما').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2000)
                 }
                 if (res.data == 'not Login') {
-                    $(".view-err-sm").html('لطفا ابتدا وارد ساید شوید').fadeIn().css({'padding': '5px 20px'})
+                    $(".view-err-sm").html('لطفا ابتدا وارد ساید شوید').fadeIn().css({ 'padding': '5px 20px' })
                     setTimeout(function () {
                         $(".view-err-sm").fadeOut()
                     }, 2500)
