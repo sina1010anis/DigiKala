@@ -16,27 +16,45 @@ use App\Models\property;
 use App\Models\sub_all_menu;
 use App\Models\title_filter;
 use App\Models\User;
+use App\Repository\Auth\Seller;
+use App\Repository\Seller\Image\StaticFactoryImage;
+use App\Repository\Seller\Image\Upload;
+use App\Repository\Seller\Product\AttrProduct;
+use App\Repository\Seller\Product\Product_s;
+use App\Repository\Seller\Product\ProductSeller;
+use App\Repository\Seller\User\UserSeller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class ShopController extends Controller
 {
+    public $seller;
+    public $userSeller;
+    public $productSeller;
+    public const STATUS = true;
+    public $staticFactoryImage;
+    public $product_s;
+    public $attrProduct;
+    public function __construct(AttrProduct $attrProduct,Product_s $product_s,Seller $seller , UserSeller $userSeller , ProductSeller $productSeller , StaticFactoryImage $staticFactoryImage){
+        $this->seller = $seller;
+        $this->userSeller = $userSeller;
+        $this->productSeller = $productSeller;
+        $this->staticFactoryImage = $staticFactoryImage;
+        $this->product_s = $product_s;
+        $this->attrProduct = $attrProduct;
+    }
     public function index()
     {
-        if (auth()->check()){
-            if (auth()->user()->action == 2){
-                $data = product::whereSeller(auth()->user()->id)->get();
-                $user = User::find(auth()->user()->id);
-                return view('front.section.shop_panel' , compact('data','user'));
-            }
-        }
-        return 'OK';
+        $status = $this->seller->auth_check()->auth_seller();
+        $data = $this->productSeller->select_seller(auth()->user()->id);
+        $user = $this->userSeller->find(auth()->user()->id);
+        return ($status) ? view('front.section.shop_panel' , compact('data','user')) : redirect('index.page');
     }
 
     public function view_product_shop($name)
     {
-        $data = product::whereSeller($name)->get();
-        $user = User::find($name);
+        $data = $this->productSeller->select_seller($name);
+        $user = $this->userSeller->find($name);
         return view('front.section.shop_view' , compact('data' , 'user'));
     }
 
@@ -52,130 +70,56 @@ class ShopController extends Controller
 
     public function profile()
     {
-        if (auth()->check()){
-            if (auth()->user()->action == 2){
-                $user = User::find(auth()->user()->id);
-                return view('front.section.shop_panel_profile' , compact('user'));
-            }
-        }
-        return 'OK';
+        $status = $this->seller->auth_check()->auth_seller();
+        $user = $this->userSeller->find(auth()->user()->id);
+        return ($status) ? view('front.section.shop_panel_profile' , compact('user')) : redirect('index.page');
     }
 
     public function delete_product_seller(Request $request)
     {
+        $status = $this->seller->auth_check()->auth_seller();
         $count = product::whereId($request->id)->count();
-        if ($count){
-             product::whereId($request->id)->delete();
-            return 'OK';
-        }else{
-            return 'NO';
-        }
-
+        return ($status && $count) ? product::whereId($request->id)->delete(): 'NO';
     }
     public function edit_product_seller(product $name){
-        $edit = true;
-        $down_all_menu = down_all_menu::all();
-        if($name->seller == auth()->user()->id)
-            return view('front.section.shop_panel' , compact('edit' , 'down_all_menu'))->with('data' , $name);
-        else
-            return abort(404);
+        return ($this->productSeller->check_product_seller($name)) ? view('front.section.shop_panel')->with(['data' => $name , 'edit' => self::STATUS  , 'down_all_menu' => down_all_menu::all()]) : abort(404);
     }
     public function edit_product_seller_send(updateProductSeller $request , product $name){
-        $edit = true;
-        if($name->seller == auth()->user()->id){
-            $name->name = $request->name;
-            $name->price = $request->price;
-            $name->description = $request->description;
-            $name->off = $request->off;
-            // $name->menu_id = $request->menu_id;
-            // $name->sub_menu_id = $request->sub_menu_id;
-            $name->brand_id = $request->brand_id;
-            $name->slug =Str::slug($request->name);
-            $name->save();
-            return back()->with('msg' , 'با موفقیت اعمال شد');
-        }else{
-            abort(404);
-        }
+        return ($this->productSeller->check_product_seller($name)) ? $this->productSeller->edit_step_1($request , $name)->back('با موفقیت اعمال شد') : abort(404);
     }
     public function edit_product_menu_seller_send(Request $request , product $name){
-        if($name->seller == auth()->user()->id){
-             $name->menu_id = $request->menu_id;
-             $name->sub_menu_id = $request->sub_menu_id;
-            $name->save();
-            return back()->with('msg' , 'با موفقیت اعمال شد');
-        }else{
-            abort(404);
-        }
+        return ($this->productSeller->check_product_seller($name)) ? $this->productSeller->edit_step_menu($request , $name)->back('با موفقیت اعمال شد') : abort(404);
     }
     public function new_attr_product_seller(newAttrProductSeller $request , product $name , property $property){
-        if($name->seller == auth()->user()->id){
-            $property->title = $request->title_attr;
-            $property->name = $request->name_attr;
-            $property->product_id = $name->id;
-            $property->save();
-           return back()->with('msg' , 'با موفقیت اضافه شد');
-       }else{
-            abort(404);
-       }
+        return ($this->productSeller->check_product_seller($name)) ? $this->productSeller->new_attr($request , $name , $property)->back('با موفقیت اعمال شد') : abort(404);
     }
     public function delete_attr_product_seller(Request $request){
+        $status = $this->seller->auth_check()->auth_seller();
         $count = property::whereId($request->id)->get();
-        if($count->count() == 1){
-            property::whereId($request->id)->delete();
-            return 'OK';
-        }else{
-            return 'NO';
-        }
+        return ($status && $count) ? property::whereId($request->id)->delete(): 'NO';
     }
     public function send_attr_product_seller(Request $request){
+        $status = $this->seller->auth_check()->auth_seller();
         $data = attr_product::whereId($request->id_attr)->first();
-        if($data->count() > 0){
-            $data->update(['attr_filter_id' => $request->attr]);
-            return 'OK';
-        }else{
-            return 'NO';
-        }
+        return ($status && $data->count() > 0) ? $data->update(['attr_filter_id' => $request->attr]): 'NO';
     }
     public function delete_image_product_seller(Request $request){
+        $status = $this->seller->auth_check()->auth_seller();
         $data = image_product::whereId($request->id)->first();
-        if($data->count() > 0){
-            $data->delete();
-            return 'OK';
-        }else{
-            return 'NO';
-        }
+        return ($status && $data->count() > 0) ? $data->delete(): 'NO';
     }
     public function new_image_product_seller(imageRequest $request , $id)
     {
-        $tmp = $request->file('image');
-        $name_image = $tmp->getClientOriginalName();
-        $tmp->move(public_path('/data/image/image one product/'), $name_image);
-        image_product::create([
-            'alt_title' => $name_image,
-            'address' => $name_image,
-            'product_id' => $id,
-        ]);
-        return back()->with('msg' , 'با موفقیت اضافه شد');
+        $name = $this->staticFactoryImage::upload()->tmp($request)->set_name();
+        $name->move();
+        return $this->staticFactoryImage::image()->create($name->get_name() , $id)->back('با موفقیت اضافه شد');
     }
     public function new_product_seller(){
         $down_all_menu = down_all_menu::all();
         return view('front.section.shop_new_product' , compact('down_all_menu'));
     }
     public function new_product_seller_send(newProductRequest $request , product $product){
-        $tmp = $request->file('image');
-        $tmp->move(public_path('/data/image/image product/'), $tmp->getClientOriginalName());
-        $product->name = $request->name;
-        $product->price = $request->price;
-        $product->slug = Str::slug($request->name);
-        $product->image = $tmp->getClientOriginalName();
-        $product->description = $request->description;
-        $product->off = $request->off;
-        $product->menu_id = $request->menu_id;
-        $product->sub_menu_id = $request->down_all_menu;
-        $product->brand_id = $request->brand_id;
-        $product->seller = auth()->user()->id;
-        $product->save();
-        return redirect('/shop/index')->with('msg' , 'با موفقیت اضافه شد');
+        return $this->product_s->upload($request)->create($request)->backTo('/shop/index' ,'با موفقیت اضافه شد');
     }
     public function builder_filter(Request $request , attr_product $attr_product){
         $product = product::find($request->id);
@@ -184,12 +128,7 @@ class ShopController extends Controller
             $filter = title_filter::whereSub_menu_id($product->su_menu_id)->get();
             if($filter->count() > 0){
                 foreach($filter as $i){
-                    attr_product::create([
-                        'title_filter_id' => $i->id,
-                        'attr_filter_id' => 0,
-                        'product_id' => $request->id,
-                        'menu_id' => $product->menu_id,
-                    ]);
+                    $this->attrProduct->create($request , $i , $product->menu_id);
                 }
                 return 'OK';
             }else{

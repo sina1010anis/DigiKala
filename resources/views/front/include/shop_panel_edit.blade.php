@@ -10,7 +10,7 @@
     <div class="view-menu-product" style="width: 100%">
         <div class="sm-filter">
             <div class="view-product-menu-search">
-                <form action="{{ route('shop.edit.product.send' , ['name' => $data->name]) }}" method="POST">
+                <form action="{{ route('shop.edit.product.send' , ['name' => $data->slug]) }}" method="POST">
                     @csrf
                     <h3 dir="rtl" class="set-fornt color-b-700">ویراش های سطحی</h3>
                     <div class="line"></div>
@@ -60,9 +60,9 @@
     <div class="view-menu-product" style="width: 100%">
         <div class="sm-filter">
             <div class="view-product-menu-search">
-                <form action="{{ route('shop.edit.product.menu.send' , ['name' => $data->name]) }}" method="POST">
+                <form action="{{ route('shop.edit.product.menu.send' , ['name' => $data->slug]) }}" method="POST">
                     @csrf
-                    <h3 dir="rtl" class="set-fornt color-b-700">ویراش منو</h3>
+                    <h3 dir="rtl" class="set-fornt color-b-700">ویرایش منو</h3>
                     <label for="menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">منو اصلی</label>
                     <select v-model="seller_menu_1" class="item-select-seller" name="menu_id" id="menu_id">
                         @foreach ($all_menus as $all_menu)
@@ -111,7 +111,7 @@
                     @endforeach
                 </ul>
                 <div class="line"></div>
-                <form action="{{ route('shop.new.attr.product' , ['name' => $data->name]) }}" method="POST">
+                <form action="{{ route('shop.new.attr.product' , ['name' => $data->slug]) }}" method="POST">
                     <h3 dir="rtl" class="set-fornt color-b-700">ویژگی جدبد</h3>
                     @csrf
                     <label for="title_attr" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">موضوع</label>
@@ -242,6 +242,16 @@
     </div>
 </div>
 
+    <div class="menu-view">
+        <div class="view-menu-product" style="width: 100%">
+            <div class="sm-filter">
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">گزارش ها بعد از 24 ساعت زمان کاری برسی خواهد شد .</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">ابی شدن ایتم ها به معنی ویرایش پذیری است و قرمز شدن ایتم ها به معنی حذف پذیری ان است .</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">برای نمایش کاگت ها در بخش سایت اصلی و دیدن محصول خود قابل دیدن است</p>
+                <p class="set-font f-12" style="color:red" align="center" dir="rtl">فروشنده قادر به تغییر وضعیت کامت ها نمی باشد .</p>
+            </div>
+        </div>
+    </div>
 
 <div class="page-edit-attr-filter">
         <label for="sub_menu_id" class="label-form-register-login text-right col-md-4 col-form-label text-md-right">مقدار فیلتر</label>
@@ -256,3 +266,4 @@
 </div>
 
 <div class="blur-web"></div>
+</div>
